@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "start": "nodemon ./App.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "nodemailer": "^6.9.15",
+    "nodemon": "^3.1.7"
+  }
+}

@@ -1,0 +1,65 @@
+import React from "react";
+import "../thirdsection/thirdsection.css";
+import vscode from "./free-visual-studio-code-3d-icon-download-in-png-blend-fbx-gltf-file-formats--microsoft-logo-python-java-c-coding-lang-pack-logos-icons-7578027.webp";
+import figma from "./figmaimg.webp";
+import mongodb from "./free-mongo-db-3d-icon-download-in-png-blend-fbx-gltf-file-formats--mongodb-database-document-oriented-nosql-coding-lang-pack-logos-icons-7577996.webp";
+import javaimage from "./javaimg.webp";
+import htmlimg from "./htmlimg.webp";
+import reacticon from "./free-react-3d-icon-download-in-png-blend-fbx-gltf-file-formats--facebook-logo-native-javascript-library-user-interfaces-coding-lang-pack-logos-icons-7578010.webp";
+import socialicon from "./business-network-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--people-connection-networking-startup-elements-pack-illustrations-3659246.webp"
+import wifi_icon from "./pngtree-wifi-wireless-internet-3d-icon-hd-image-png-image_6325173.png"
+import codeicon from "./code-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--html-logo-coding-development-business-marketing-pack-illustrations-3930374.webp"
+import wwwicon from "./internet-web-click-3d-icon-download-in-png-blend-fbx-gltf-file-formats--www-worldwide-domain-network-pack-communication-icons-5023509.webp"
+import applicationicon from "./application.webp"
+export default function thirdsection() {
+  return (
+    <div className="Thirdsection">
+      <main>
+        <header>
+          <h1>My Project</h1>
+        </header>
+        <div className="Mydatas">
+          <section className="Toolinfo">
+            
+            <div>
+              <img src={vscode} alt="vscodeicon" />
+              <img src={figma} alt="figmaicon" />
+              <img src={mongodb} alt="mongodbicon" />
+              <img src={javaimage} alt="javaicon" />
+              <img src={htmlimg} alt="htmlicon" />
+              <img src={reacticon} alt="reacticon" />
+            </div>
+            <h2>Tool</h2>
+            <p>My skillset is rooted in web development</p>
+            <a href="/About">see more</a>
+          </section>
+
+          <samp></samp>
+
+          <section className="Experience">
+            <div >
+              <img src={socialicon} alt="socialicon" />
+              <img src={wifi_icon} alt="wifi-icon" />
+            </div>
+            <h2>Experience</h2>
+            <p> I've worked on many web projects</p>
+            <a href="/About#AboutExperience">see more</a>
+          </section>
+
+          <samp style={{backgroundColor:"rgba(0, 229, 255, 1)"}}></samp>
+
+          <section className="work">
+          <div >
+              <img src={codeicon} alt="codeicon" />
+              <img src={wwwicon} alt="wwwicon" />
+              <img src={applicationicon} alt="applicationicon" />
+            </div>
+            <h2>My Art</h2>
+            <p>I maked some web projects and application</p>
+            <a href="/About">see more</a>
+          </section>
+        </div>
+      </main>
+    </div>
+  );
+}

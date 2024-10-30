@@ -1,0 +1,39 @@
+.Header{
+    width: 100%;
+    height: 75px;
+}
+.Header header{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header a{
+    text-decoration: none;
+    color:  white;
+    font-family:Myfont;
+    font-size: 25.5px;
+    letter-spacing: .7px;
+}
+#loco{
+    text-decoration: none;
+    color: white;
+    font-family:Myfont;
+    font-size: 40px;
+    margin: 0 55px;
+    border: 2px solid white;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Links{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+}
+@font-face {
+    font-family: Myfont;
+    src: url(/src/fonts/interbureaubold.ttf);
+}
