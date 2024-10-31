@@ -4,10 +4,16 @@ require("dotenv").config()
 const cors=require("cors")
 const nodemailer = require('nodemailer');
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+    origin:"http://localhost:3000",
+    methods:"GET,POST",
+    credentials:true
+        
+}));
 const PORT=process.env.PORT ;
+
 app.get("/",(req,res)=>{
-    res.send("hello")
+    res.send("my profile server")
 })
 app.post("/Data",async(req,res)=>{
     console.log(req.body)
