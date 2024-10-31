@@ -1,10 +1,11 @@
 const express=require("express")
 const app=express()
+require("dotenv").config()
 const cors=require("cors")
 const nodemailer = require('nodemailer');
 app.use(express.json())
 app.use(cors());
-const PORT=process.env.PORT || 8080;
+const PORT=process.env.PORT ;
 app.get("/",(req,res)=>{
     res.send("hello")
 })
@@ -14,8 +15,8 @@ app.post("/Data",async(req,res)=>{
         const transporter = nodemailer.createTransport({
             service: 'gmail', // e.g., Gmail, Yahoo, etc.
             auth: {
-                user: 'donlockgaming@gmail.com',
-                pass: 'plgg yanz rdsb vbnb'
+                user: process.env.SERVER_EMAIL,
+                pass: process.env.TOWSTEP_EMAIL_PASSWORD
             }
         });
         const emailTemplate = `<!DOCTYPE html>
@@ -117,8 +118,8 @@ app.post("/Data",async(req,res)=>{
 </html>
 `;
             const mailOptions = {
-                from: 'donlockgaming@gmail.com',
-                to: "asfarbismi@gmail.com",
+                from: process.env.SERVER_EMAIL,
+                to: process.env.MY_EMAIL,
                 subject: 'Confirm Your Email',
                 html: emailTemplate
             };
