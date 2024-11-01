@@ -5,7 +5,7 @@ const cors=require("cors")
 const nodemailer = require('nodemailer');
 app.use(express.json())
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:"https://my-portfolio-frontend-07.vercel.app",
     methods:"GET,POST",
     credentials:true
         
