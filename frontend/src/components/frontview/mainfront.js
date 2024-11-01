@@ -23,9 +23,9 @@ class mainfront extends Component {
                 </p>
               </div>
               <div className="contactiocn">
-                <a href="/"><span><i class="fa-brands fa-facebook-f"></i></span></a>
-                <a href="/"><span><i class="fa-brands fa-linkedin-in"></i></span></a>
-                <a href="/"><span><i class="fa-solid fa-envelope"></i></span></a>
+                <a href="/"><span><i className="fa-brands fa-facebook-f"></i></span></a>
+                <a href="/"><span><i className="fa-brands fa-linkedin-in"></i></span></a>
+                <a href="/"><span><i className="fa-solid fa-envelope"></i></span></a>
               </div>
             </div>
           </section>

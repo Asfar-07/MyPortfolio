@@ -13,7 +13,7 @@ export default function useContactpart() {
     e.preventDefault()
     console.log(Message,email,firstname,secondname,phonenumber)
     try{
-      const response = await fetch('http://localhost:8080/Data', {
+      const response = await fetch('https://myportfolio-1tuj.onrender.com/Data', {
         method: 'POST',
         headers: {
         'Content-Type': 'application/json'
