@@ -25,7 +25,7 @@ class mainfront extends Component {
               <div className="contactiocn">
                 <a href="/"><span><i className="fa-brands fa-facebook-f"></i></span></a>
                 <a href="/"><span><i className="fa-brands fa-linkedin-in"></i></span></a>
-                <a href="/"><span><i className="fa-solid fa-envelope"></i></span></a>
+                <a href="https://mail.google.com/" target="_black"><span><i className="fa-solid fa-envelope"></i></span></a>
               </div>
             </div>
           </section>

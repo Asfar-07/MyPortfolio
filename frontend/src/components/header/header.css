@@ -37,3 +37,8 @@ header a{
     font-family: Myfont;
     src: url(/src/fonts/interbureaubold.ttf);
 }
+@media screen and (max-width:800px) {
+    .Header{
+    display: none;
+    }
+}

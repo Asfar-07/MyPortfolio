@@ -1,18 +1,21 @@
 import React ,{useState} from "react";
 import "../contactpart/contact.css";
 import callimage from "../contactpart/pngimg.com - telephone_booth_PNG1.png"
-
-
+import LoadingOverlay from '../../loadingscreen/loadingsection';
 export default function useContactpart() {
   const [email,setEmail]=useState()
   const [firstname,setFirstName]=useState()
   const [secondname,setLastName]=useState()
   const [phonenumber,setPhoneName]=useState()
   const [Message,setMessage]=useState()
+  const [loading,setLoading]=useState(false)
+  const [loadingfinal,setLoadingFinal]=useState(false)
   async function handlesubmit(e){
     e.preventDefault()
     console.log(Message,email,firstname,secondname,phonenumber)
     try{
+      setLoading(true)
+      setLoadingFinal(false)
       const response = await fetch('https://myportfolio-1tuj.onrender.com/Data', {
         method: 'POST',
         headers: {
@@ -22,7 +25,11 @@ export default function useContactpart() {
         body: JSON.stringify({firstname,secondname,phonenumber,email,Message})
         });
     if(response.ok){
-      console.log("Datasend")
+      setLoading(false)
+      setLoadingFinal(true)
+      setTimeout(() => {
+        setLoadingFinal(false);
+      }, 4000);
      const Allinput= document.querySelectorAll(".contactinput input")
      const Alltextarea= document.querySelector(".contactinput textarea")
      console.log(Alltextarea)
@@ -39,6 +46,8 @@ export default function useContactpart() {
   }
   }
   return (
+    <>
+    <LoadingOverlay loadingaction={loading}  loadingend={loadingfinal} />
     <div className="contactsection" id="contactsection">
       <section className="tittlecontact">
         <img src={callimage} alt=""/>
@@ -74,12 +83,8 @@ export default function useContactpart() {
             <button>SUBMIT</button>
           </div>
         </form>
-        {/* <div className="followcontact">
-          <h2>Follow us</h2>
-          <a href="/">Instagram</a>
-          <a href="/" style={{marginLeft:"20px"}}>Facebook</a>
-        </div> */}
       </section>
     </div>
+    </>
   );
 }

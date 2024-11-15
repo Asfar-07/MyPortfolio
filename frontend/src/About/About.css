@@ -1,21 +1,261 @@
-
-.Aboutme main{
-padding: 0 70px;
-margin-top: 90px;
+@font-face {
+    font-family: jerseyM54;
+    src: url(../fonts/Jersey\ M54.ttf);
 }
-.myproject{
+@font-face {
+    font-family: contra_;
+    src: url(../fonts/CONTRA__.ttf);
+}
+.Top-red{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
-.Aboutme  section >h1{
-    margin: 20px 40px;
-}
-.myproject div{
-    width:45%;
-    height: 446px;
+.Top-red p{
+    font-family: Arial, sans-serif;
     margin: 30px 0;
+    letter-spacing: 1.5px;
+    background-color: rgba(234, 20, 24, 1);
+    width: 60%;
+    height: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 157%;
+    font-size: 17px;
+    padding: 0 30px;
 }
-.myproject :nth-child(1){
-    background: linear-gradient(to bottom,rgba(90, 102, 255, 1)0%,rgba(29, 10, 201, 0.86)51%,rgba(29, 19, 156, 1)75%,rgba(25, 11, 153, 1)100%),url(https://www.interviewbit.com/blog/wp-content/uploads/2022/01/Web-Development-Projects-1-2048x1001.png);
+.Aboutme main{
+/* padding: 0 70px; */
+margin-top: 40px;
 }
+.Aboutme > section{
+    padding: 30px 0;
+    width: 100%;
+    background-color: rgba(15, 15, 18, 1);
+}
+.Aboutme >main >section >h1{
+    text-align: center;
+    font-family: heading3;
+    font-size: 55px;
+    letter-spacing: 2px;
+    margin: 60px 0;
+    font-weight: 100;
+}
+.projects{
+    height: 100%;
+    padding:0px 120px;
+}
+.projects >div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+.view-project-c ,.view-project-c-2{
+    width: 451px;
+    height: 536px;
+    border-radius: 30px;
+    z-index: 0;
+    transition: .5s;
+    background-color: rgba(113, 102, 199, 1);
+    /* animation: changecolor 60s linear 3s infinite alternate; */
+    position: relative;
+    overflow: hidden;
+}
+.view-project-c-2{
+    background: url(./desktop-wallpaper-the-great-wander-nigh-atmosphere-sky-moon-stick-people-2d-art-night-thumbnail.jpg);
+
+}
+.view-project-c:hover ,.view-project-c-2:hover{
+    transform: scale(.95);
+}
+
+.view-project-c::before{
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 781.15px;
+    background-color: rgba(91, 101, 203, 1);
+    transform-origin: center center;
+    transform: rotate(46deg) translate(0px, -120px);
+    /* animation: changeimagebefore 60s linear 3s infinite alternate; */
+    z-index: -1;
+}
+.first-p-img{
+    width: 93.13%;
+    height:44.78%;
+    position: absolute;
+    top: 90px;
+}
+.view-project-c .first-p-img{
+    border-radius: 0 15px 15px 0;
+    background: url(./Document\ -\ Google\ Chrome\ 22-06-2024\ 19_04_40\ \(2\).png);
+    background-size: 100% 100%;
+    border: 2px solid rgba(194, 145, 250, 1);
+    border-left: 0;
+    /* animation: changeimage 60s linear 3s infinite alternate; */
+    /* transition: 0s; */
+}
+.view-project-c-2 .first-p-img{
+    right: 0;
+    border-radius:  15px 0 0 15px ;
+    background: url(./desktop-wallpaper-forest-mountains-sunset-cool-weather-xiaomi-minimalistic-phone.jpg);
+    background-size: 100% 100%;
+    border: 2px solid rgba(74, 173, 255, 1);
+    border-right: 0;
+}
+.bottom-p{
+    position: absolute;
+    bottom: 40px;
+    margin: 0 30px;
+}
+.bottom-p h2{
+    font-family: jerseyM54;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+.bottom-p button{
+    background-color: transparent;
+    border: 1px solid white; 
+    color: white;
+    padding: 10px 28px;
+    border-radius: 27px;
+    cursor: pointer;
+}
+.left-s-project{
+    margin-left: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.left-s-project article{
+    position: relative;
+    top: -10px;
+}
+.left-s-project h2{
+    font-size: 50px;
+    margin: 0;
+    font-family: jerseyM54;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+.left-s-project h3{
+    font-size: 32px;
+    width: 70%;
+    font-family: contra_;
+    letter-spacing: .9px;
+
+}
+.left-s-project p{
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 122%;
+}
+.left-s-project a{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    font-family: contra_;
+}
+.left-s-project div{
+    position: relative;
+    width: fit-content;
+}
+.left-s-project  samp{
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(to right,rgba(102, 93, 205, 1),rgba(95, 164, 230, 1),rgba(231, 27, 81, 1));
+    bottom: -3;
+}
+.fa-arrow-down-long{
+    transform: rotate(-90deg);
+    margin: 0 12px;
+    font-size: 24px;
+    background: linear-gradient(to bottom,rgba(102, 93, 205, 1),rgba(95, 164, 230, 1),rgba(231, 27, 81, 1));
+    background-clip: text;
+    color: transparent;
+}
+.gitbutton{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 150px;
+    
+}
+.gitbutton a{
+    width: 286px;
+    height: 60px;
+    padding-top: 8px;
+    border: 0;
+    background: linear-gradient(to right,rgba(162, 124, 243, 1),rgba(0, 160, 175, 1));
+    color: white;
+    font-family: Danson;
+    font-size: 30px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/* @keyframes changeimage {
+    0%    { background-image: url(./Document\ -\ Google\ Chrome\ 22-06-2024\ 19_04_40\ \(2\).png); }
+    20%   { background-image: url(./Document\ -\ Google\ Chrome\ 22-06-2024\ 19_04_40\ \(2\).png); }
+    21%   { background-image: url(./photo_2024-11-06_20-35-56.jpg); }
+    40%   { background-image: url(./photo_2024-11-06_20-35-56.jpg); }
+    41%   { background-image: url(./photo_2_2024-11-06_20-38-31.jpg); }
+    60%   { background-image: url(./photo_2_2024-11-06_20-38-31.jpg); }
+    61%   { background-image: url(./photo_5_2024-11-06_20-38-31.jpg); }
+    80%   { background-image: url(./photo_5_2024-11-06_20-38-31.jpg); }
+    81%   { background-image: url(./photo_3_2024-11-06_20-38-31.jpg); }
+    100%  { background-image: url(./photo_3_2024-11-06_20-38-31.jpg); }
+}
+@keyframes changecolor {
+    0%    { background-color: rgba(113, 102, 199, 1)}
+    20%   {background-color: rgba(113, 102, 199, 1) }
+    21%   {background-color: rgba(71, 70, 242, 1) }
+    40%   { background-color:rgba(71, 70, 242, 1)}
+    41%   { }
+    60%   { }
+    61%   { }
+    80%   { }
+    81%   { }
+    100%  { }
+}
+@keyframes changecolorbefore {
+    0%    { background-color: rgba(91, 101, 203, 1)}
+    20%   {background-color: rgba(91, 101, 203, 1) }
+    21%   {background-color: rgba(139, 140, 255, 1)}
+    40%   { background-color:rgba(139, 140, 255, 1)}
+    41%   { }
+    60%   { }
+    61%   { }
+    80%   { }
+    81%   { }
+    100%  { }
+} */
+/* @media screen and (max-width:1000px) {
+    .view-project-c, .view-project-c-2 {
+        width: 300px;
+        height: 400px;
+    }
+} */
+@media screen and (max-width:1000px) {
+    .projects{
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        padding: 0 0px;
+    }
+    .view-project-c, .view-project-c-2 {
+        margin: 0 50px;
+    }
+  .left-s-project{
+    display: none;
+  }  
+  .Top-red p {
+    display: none;
+  }
+
+ }

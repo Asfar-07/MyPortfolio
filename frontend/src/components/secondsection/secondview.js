@@ -1,9 +1,45 @@
 // src/hooks/useCustomHook.js
-import React from "react";
+import React, { useEffect } from 'react';
 import "../secondsection/secondsection.css";
 import iconimage from "../secondsection/programmer-working-isometric-style.png";
 import cvdocument from "./cv.pdf"
-export default function secondview() {
+
+export default function SecondView() {
+  useEffect(() => {
+    const startCounterAnimation = () => {
+      const counter = document.querySelector('.counter');
+      if (counter) {
+        console.log("ok")
+        counter.classList.remove(".counter")
+        counter.classList.add('animate-counter');
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startCounterAnimation();
+            observer.unobserve(entry.target); // Stop observing after the counter is triggered
+          }
+        });
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the last section is visible
+      }
+    );
+
+    const target = document.querySelector('.Counter-section');
+    if (target) {
+      observer.observe(target);
+    }
+
+    return () => {
+      if (target) {
+        observer.unobserve(target);
+      }
+    };
+  }, []);
   return (
     <div className="secondsection">
       <section className="leftimage">
@@ -20,7 +56,7 @@ export default function secondview() {
             creativity and technical skills to bring ideas to life, each project
             reflecting my commitment to quality and innovation."
           </p>
-          <samp>+5 project done</samp>
+          <samp className='Counter-section'><div><div className="counter" id="counter">0 <br />1 <br /> 2 <br />3 <br /> 4 <br /> 5 <br /></div></div> &nbsp; + project done</samp>
           <div className="CV">
             <a href={cvdocument} download>
               <span></span>

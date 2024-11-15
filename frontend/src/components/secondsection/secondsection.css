@@ -72,6 +72,28 @@
 .rightcontent samp{
     font-family: paragraph;
     font-size: 35px;
+    display: flex;
+}
+.rightcontent samp >div{
+  overflow: hidden;
+  height: 40px;
+  
+  
+}
+.counter {
+  opacity: 0; /* Start hidden until triggered */
+}
+.animate-counter{
+  opacity: 1;
+  animation: counter 4s forwards ;
+}
+@keyframes counter {
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-200px);
+  }
 }
 .CV{
     width: 90%;
