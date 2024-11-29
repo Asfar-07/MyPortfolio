@@ -1,6 +1,8 @@
 import React from "react";
 import Header from "../components/header/header";
 import "./About.css";
+import Skills from "./MySkills";
+import Footer from "../components/footer/footer"
 export default function About() {
   return (
     <div className="Aboutme">
@@ -85,6 +87,8 @@ export default function About() {
           <h1>Experience</h1>
         </section> */}
       </main>
+      <Skills />
+      <Footer />
     </div>
   );
 }

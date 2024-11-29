@@ -216,7 +216,7 @@
         height: 100%;
         display: flex;
     }
-    .rightcontent h2 ,  samp ,.rightcontent p{
+    .rightcontent h2 ,.rightcontent samp ,.rightcontent p{
         margin-left: 30px;
     }
     .CV{
