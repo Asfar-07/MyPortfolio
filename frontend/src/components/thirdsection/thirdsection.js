@@ -6,21 +6,23 @@ import mongodb from "./free-mongo-db-3d-icon-download-in-png-blend-fbx-gltf-file
 import javaimage from "./javaimg.webp";
 import htmlimg from "./htmlimg.webp";
 import reacticon from "./free-react-3d-icon-download-in-png-blend-fbx-gltf-file-formats--facebook-logo-native-javascript-library-user-interfaces-coding-lang-pack-logos-icons-7578010.webp";
-import socialicon from "./business-network-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--people-connection-networking-startup-elements-pack-illustrations-3659246.webp"
-import wifi_icon from "./pngtree-wifi-wireless-internet-3d-icon-hd-image-png-image_6325173.png"
-import codeicon from "./code-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--html-logo-coding-development-business-marketing-pack-illustrations-3930374.webp"
-import wwwicon from "./internet-web-click-3d-icon-download-in-png-blend-fbx-gltf-file-formats--www-worldwide-domain-network-pack-communication-icons-5023509.webp"
-import applicationicon from "./application.webp"
-export default function thirdsection() {
+import socialicon from "./business-network-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--people-connection-networking-startup-elements-pack-illustrations-3659246.webp";
+import wifi_icon from "./pngtree-wifi-wireless-internet-3d-icon-hd-image-png-image_6325173.png";
+import codeicon from "./code-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--html-logo-coding-development-business-marketing-pack-illustrations-3930374.webp";
+import wwwicon from "./internet-web-click-3d-icon-download-in-png-blend-fbx-gltf-file-formats--www-worldwide-domain-network-pack-communication-icons-5023509.webp";
+import applicationicon from "./application.webp";
+import { useTheme } from "../../ThemeContext";
+export default function Thirdsection() {
+  const { listcolor } = useTheme();
+  let Secondrycolor=listcolor.secondrycolor
   return (
-    <div className="Thirdsection">
-      <main>
+    <div className="Thirdsection" style={{ color: "white"}}>
+      <main style={{backgroundColor:Secondrycolor }}>
         <header>
           <h1>My Project</h1>
         </header>
         <div className="Mydatas">
           <section className="Toolinfo">
-            
             <div>
               <img src={vscode} alt="vscodeicon" />
               <img src={figma} alt="figmaicon" />
@@ -37,7 +39,7 @@ export default function thirdsection() {
           <samp></samp>
 
           <section className="Experience">
-            <div >
+            <div>
               <img src={socialicon} alt="socialicon" />
               <img src={wifi_icon} alt="wifi-icon" />
             </div>
@@ -46,10 +48,10 @@ export default function thirdsection() {
             <a href="/About#AboutExperience">see more</a>
           </section>
 
-          <samp style={{backgroundColor:"rgba(0, 229, 255, 1)"}}></samp>
+          <samp style={{ backgroundColor: "rgba(0, 229, 255, 1)" }}></samp>
 
           <section className="work">
-          <div >
+            <div>
               <img src={codeicon} alt="codeicon" />
               <img src={wwwicon} alt="wwwicon" />
               <img src={applicationicon} alt="applicationicon" />

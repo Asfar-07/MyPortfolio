@@ -41,6 +41,7 @@ footer > :last-child > :first-child a {
 }
 footer > :last-child > :last-child{
     width: 216px;
+    color: white;
     background-color: rgba(231, 27, 81, 1);
     height: 40px;
     margin: 20px 0;

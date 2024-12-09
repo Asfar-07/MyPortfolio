@@ -9,7 +9,7 @@ import leftImage3 from './1496522.webp';
 import rightImage from './2809963.png';
 
 const LoadingOverlay = (props) => {
-    console.log(props.loadingaction)
+    // console.log(props.loadingaction)
   return (
     <>
      {props.loadingaction&& (

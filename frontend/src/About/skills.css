@@ -1,14 +1,4 @@
-body,
-      html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        background-color: black;
-        /* overflow: hidden; */
-        /* display: flex;
-            justify-content: center;
-            align-items: center; */
-      }
+
       .Mainskills {
         width: 100%;
         display: flex;

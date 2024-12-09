@@ -2,7 +2,12 @@ import React ,{useState} from "react";
 import "../contactpart/contact.css";
 import callimage from "../contactpart/pngimg.com - telephone_booth_PNG1.png"
 import LoadingOverlay from '../../loadingscreen/loadingsection';
+import { useTheme } from "../../ThemeContext";
 export default function useContactpart() {
+  const { listcolor } = useTheme();
+  let Secondrycolor=listcolor.secondrycolor
+  // console.log(Secondrycolor)
+
   const [email,setEmail]=useState()
   const [firstname,setFirstName]=useState()
   const [secondname,setLastName]=useState()
@@ -48,7 +53,7 @@ export default function useContactpart() {
   return (
     <>
     <LoadingOverlay loadingaction={loading}  loadingend={loadingfinal} />
-    <div className="contactsection" id="contactsection">
+    <div className="contactsection" id="contactsection" style={{color:"white",backgroundColor:Secondrycolor }} >
       <section className="tittlecontact">
         <img src={callimage} alt=""/>
       </section>
@@ -62,7 +67,6 @@ export default function useContactpart() {
               name="LastName"
               placeholder="Last Name"
               onChange={(e)=>{setLastName(e.target.value)}}
-              style={{ marginLeft: "25px" }}
               
             required/>
           </div>
@@ -72,7 +76,6 @@ export default function useContactpart() {
               type="email"
               name="email"
               placeholder="Email"
-              style={{ marginLeft: "25px" }}
               onChange={(e)=>{setEmail(e.target.value)}}
             required/>
           </div>

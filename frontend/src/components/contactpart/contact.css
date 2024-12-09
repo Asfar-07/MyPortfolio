@@ -55,6 +55,9 @@
     display: flex;
     margin: 10px 0;
 }
+.Forname :last-child , .Fornumber_email :last-child{
+    margin-left: 25px;
+}
 .Forname input , .Fornumber_email input{
     width: 50%;
     /* border-radius: 12px; */
@@ -140,5 +143,41 @@
     }
     .messagearea textarea{
         width: calc(100% - 50PX);
+    }
+    .Forname :last-child , .Fornumber_email :last-child{
+        margin-left: 0px;
+    }
+    .Forname input, .Fornumber_email input {
+        width: calc(100% - 50PX);
+        padding: 0 25px 0 25px;
+    }
+    .Forname, .Fornumber_email {
+        flex-direction: column;
+    }
+}
+@media screen and (width >= 800px) and (width <= 1000px){
+    .maincontactpart {
+        width: 100%;
+        min-width: 0px;
+    }
+    .contactinput {
+        width: 100%;
+        padding-right: 0px;
+        margin-top: 40px;
+        margin-left:0px;
+        align-items: center;
+    }
+    .messagearea textarea{
+        width: calc(100% - 50PX);
+    }
+    .Forname :last-child , .Fornumber_email :last-child{
+        margin-left: 0px;
+    }
+    .Forname input, .Fornumber_email input {
+        width: calc(100% - 50PX);
+        padding: 0 25px 0 25px;
+    }
+    .Forname, .Fornumber_email {
+        flex-direction: column;
     }
 }
