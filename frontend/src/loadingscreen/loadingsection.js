@@ -3,9 +3,8 @@ import './loading.css';
 
 
 // Import images
-import leftImage1 from './1496522.webp';
-import leftImage2 from './1496522.webp';
-import leftImage3 from './1496522.webp';
+import leftImage from './free-server-icon-download-in-svg.png';
+
 import rightImage from './2809963.png';
 
 const LoadingOverlay = (props) => {
@@ -20,9 +19,9 @@ const LoadingOverlay = (props) => {
         </samp>
         <div className="AmoungAnimation">
           <section className="loading-left">
-            <img src={leftImage1} alt="Left1" />
-            <img src={leftImage2} alt="Left2" />
-            <img src={leftImage3} alt="Left3" />
+            <img src={leftImage} alt="Left1" />
+            <img src={leftImage} alt="Left2" />
+            <img src={leftImage} alt="Left3" />
           </section>
           <section className="loading-right">
             <img src={rightImage} alt="Right" />

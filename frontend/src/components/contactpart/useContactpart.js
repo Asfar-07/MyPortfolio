@@ -37,7 +37,6 @@ export default function useContactpart() {
       }, 4000);
      const Allinput= document.querySelectorAll(".contactinput input")
      const Alltextarea= document.querySelector(".contactinput textarea")
-     console.log(Alltextarea)
      Alltextarea.value=""
     for(let i=0;i<Allinput.length;i++){
       Allinput[i].value=""
