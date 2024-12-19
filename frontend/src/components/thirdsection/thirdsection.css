@@ -38,18 +38,21 @@
 .Mydatas section  a{
   text-decoration: none;
   color: aqua;
+  font-family: Arial, sans-serif;
 }
 .Mydatas section h2{
   margin: 10px 0;
   font-size: 36px;
   font-family:heading3;
   font-weight: bold;
+  font-family: Arial, sans-serif;
 }
 .Mydatas section p{
   width: 230px;
   margin: 10px 0;
   text-align: center;
   font-size: 18px;
+  font-family: Arial, sans-serif;
   
 }
 .Mydatas  section > div{

@@ -13,8 +13,8 @@ export default function App() {
   const switchtheme=()=> {
     toggleTheme()
     if(rotate === "rotate(135deg)"){
-      setRotate("rotate(320deg)")
-      localStorage.setItem("angle","rotate(320deg)")
+      setRotate("rotate(315deg)")
+      localStorage.setItem("angle","rotate(315deg)")
     }else{
       setRotate("rotate(135deg)")
       localStorage.setItem("angle","rotate(135deg)")

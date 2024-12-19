@@ -6,7 +6,8 @@
         flex-wrap: wrap;
         /* justify-content: center;
         align-items: center; */
-        margin: 40px 0;
+        /* margin: 40px 0; */
+        padding-bottom: 70px;
       }
       .Mainskills section {
         width: 40%;
@@ -57,3 +58,42 @@
       .fa-star {
         margin: 0 3px;
       }
+      @media screen and (max-width:800px) {
+        .Mainskills section {
+          min-width: 0;
+        width: 95%;
+        height: 450px;
+        border-radius: 5px;
+        }
+        .Mainskills section > header {
+          display: flex;
+          flex-direction: column;
+        }
+        .skillicon {
+          width: 142px;
+          height: 133px;
+          margin: 0;
+        }
+        .Mainskills section > header > :nth-child(1) {
+
+          display: flex;
+          justify-content: center;
+          margin: 10px 0;
+        }
+        .Mainskills section > header > :nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+      }
+      .skillhead > :last-child h2 {
+        margin: 0;
+    }
+    .skillhead > :last-child p {
+      margin: 15px 0;
+    }
+    .aboutskills {
+      margin: 0 15px;
+    }
+  }

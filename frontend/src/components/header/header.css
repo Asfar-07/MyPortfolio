@@ -1,43 +1,81 @@
-.Header{
-    width: 100%;
-    height: 75px;
+.Header {
+  width: 100%;
+  height: 75px;
 }
-.Header header{
+.Header header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#mycheck{
+  display: none;
+}
+header a {
+  text-decoration: none;
+  color: white;
+  font-family: Myfont;
+  font-size: 25.5px;
+  letter-spacing: 0.7px;
+}
+#loco {
+  text-decoration: none;
+  font-family: Myfont;
+  font-size: 40px;
+  margin: 0 55px;
+  border: 2px solid white;
+  padding: 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Links {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@font-face {
+  font-family: Myfont;
+  src: url(/src/fonts/interbureaubold.ttf);
+}
+@media screen and (max-width: 800px) {
+  .Header {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header a{
-    text-decoration: none;
-    color:  white;
-    font-family:Myfont;
-    font-size: 25.5px;
-    letter-spacing: .7px;
-}
-#loco{
-    text-decoration: none;
-    font-family:Myfont;
-    font-size: 40px;
-    margin: 0 55px;
-    border: 2px solid white;
-    padding: 4px 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.Links{
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-}
-@font-face {
-    font-family: Myfont;
-    src: url(/src/fonts/interbureaubold.ttf);
-}
-@media screen and (max-width:800px) {
-    .Header{
+    position: fixed;
+    background-color: black;
+    z-index: 20;
     display: none;
-    }
+  }
+  #mycheck {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;
+    background-color: transparent;
+    font-size: 25px;
+    margin: 10px;
+    z-index: 21;
+  }
+  #cancel:checked ~ .Header {
+    display: block;
+  }
+  .Header header {
+    margin-top: 50px;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .Links {
+    width: 50%;
+    flex-direction: column;
+    padding: 50px;
+  }
+  header a {
+    margin-bottom: 70px;
+  }
 }

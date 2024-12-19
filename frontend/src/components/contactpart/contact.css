@@ -104,7 +104,7 @@
 .contactsubmit{
     width: 90%;
     display: flex;
-    justify-content: end;
+    justify-content: start;
 }
 .contactsubmit button{
     background-color: black;
@@ -153,6 +153,9 @@
     }
     .Forname, .Fornumber_email {
         flex-direction: column;
+    }
+    .contactsubmit{
+        justify-content: center;
     }
 }
 @media screen and (width >= 800px) and (width <= 1000px){

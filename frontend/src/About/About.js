@@ -7,16 +7,16 @@ export default function About() {
   return (
     <div className="Aboutme">
       <Header />
-      <div className="Top-red">
+      {/* <div className="Top-red">
         <p>
           {" "}
           "Here, you can explore all the details of my projects and skills. You can find even more on my GitHub. This portfolio website showcases the projects I’ve created using my skills. I’d love to hear your thoughts, so feel free to provide feedback using the contact page. Your input is greatly appreciated!"
         </p>
-      </div>
+      </div> */}
 
       <main>
         <section>
-          <h1 style={{marginBottom:"150px"}}>My Masterpiece Collection</h1>
+          <h1 style={{marginBottom:"120px"}}>My Masterpiece Collection</h1>
           <div className="projects">
             <div>
               <section className="right-s-project">
@@ -47,7 +47,7 @@ export default function About() {
                 </article>
               </section>
             </div>
-            <div style={{marginBottom:"180px"}}>
+            <div style={{marginBottom:"150px"}}>
               <section className="left-s-project" style={{margin:"0", marginRight:"100px"}}>
                 <article>
                   <h2>Southern Tourism</h2>

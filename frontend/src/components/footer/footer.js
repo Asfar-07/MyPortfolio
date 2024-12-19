@@ -9,11 +9,10 @@ export default function Footer() {
       <footer>
         <div>
           {/* <h3>hi</h3> */}
-          <p style={{textAlign:"center"}}>coding and gaming are same <br></br>
-          but different 😁</p>
+          <p style={{textAlign:"center", width:"400px"}}>"Creating and coding have deepened my passion for crafting exceptional digital experiences."</p>
         </div>
      
-            <span></span>
+            {/* <span></span> */}
      
         <div>
           <div>
@@ -27,6 +26,7 @@ export default function Footer() {
             <a href="/">Direct contact</a>
             </div>
         </div>
+        <span>© 2024 Asfar Muhammed. All Rights Reserved.</span>
       </footer>
     </div>
   );

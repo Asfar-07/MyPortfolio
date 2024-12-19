@@ -25,9 +25,8 @@
     font-size: 17px;
     padding: 0 30px;
 }
-.Aboutme main{
-/* padding: 0 70px; */
-margin-top: 40px;
+.Aboutme> main{
+padding-top:40px;
 }
 .Aboutme > section{
     padding: 30px 0;
@@ -182,7 +181,7 @@ margin-top: 40px;
 .gitbutton{
     display: flex;
     justify-content: center;
-    margin-bottom: 150px;
+    margin-bottom: 80px;
     
 }
 .gitbutton a{
