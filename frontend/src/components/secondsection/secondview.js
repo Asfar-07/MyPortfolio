@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import "../secondsection/secondsection.css";
 import iconimage from "../secondsection/programmer-working-isometric-style.png";
-import cvdocument from "./CV.pdf";
+import cvdocument from "./resume.pdf";
 
 export default function SecondView() {
   useEffect(() => {
