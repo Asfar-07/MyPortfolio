@@ -3,7 +3,7 @@ import "../frontview/mainfront.css";
 import Header from "../header/header";
 import loffyhat from "./pngtree-straw-hat-cartoon-illustration-png-image_6562738.png";
 import { useTheme } from "../../ThemeContext";
-// import Myimage from "../frontview/photo_2024-10-13_19-29-13.jpg";
+// import Xmas from "./XmasHat.png";
 
 export default function useMainpage() {
   const { listcolor } = useTheme();
@@ -17,7 +17,7 @@ export default function useMainpage() {
               <div>
                 <h2>It’s me</h2>
                 <h2 id="Myname">
-                  Asfar <img src={loffyhat} alt="luffyhat" />
+                  Asfar <img src={loffyhat} alt="luffyhat" className="luffyhat"/>
                 </h2>
                 <p>
                   Welcome to my personal website. I shared all details about
@@ -45,6 +45,7 @@ export default function useMainpage() {
           </section>
           <section className="rightfront">
             <div className="container">
+              {/* <div className="xmashat"><img src={Xmas} width="100%" height="100%" alt="xmashat" /></div> */}
               <div className="first-div"></div>
               <div className="second-div" style={{backgroundColor:containercolor}}></div>
             </div>

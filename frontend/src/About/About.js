@@ -16,7 +16,8 @@ export default function About() {
 
       <main>
         <section>
-          <h1 style={{marginBottom:"120px"}}>My Masterpiece Collection</h1>
+          <h1 className="Mainhadingskill">My Portfolio of Creative Web<br></br> Development Projects</h1>
+          <p className="subhadingskill">Showcasing innovative projects built with cutting-edge technologies, blending<br></br> creativity with functionality and performance.</p>
           <div className="projects">
             <div>
               <section className="right-s-project">

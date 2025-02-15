@@ -6,10 +6,10 @@ export default function Footer() {
   let containercolor=listcolor.frontcontainer
   return (
     <div>
-      <footer>
+      <footer className={`Footer-${listcolor.settheme}`} >
         <div>
           {/* <h3>hi</h3> */}
-          <p style={{textAlign:"center", width:"400px"}}>"Creating and coding have deepened my passion for crafting exceptional digital experiences."</p>
+          <p style={{textAlign:"center", width:"400px", font:"normal normal normal 18px / 1.2em madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif"}}>"Creating and coding have deepened my passion for crafting exceptional digital experiences."</p>
         </div>
      
             {/* <span></span> */}

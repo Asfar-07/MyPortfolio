@@ -2,14 +2,13 @@
 import React, { useEffect } from "react";
 import "../secondsection/secondsection.css";
 import iconimage from "../secondsection/programmer-working-isometric-style.png";
-import cvdocument from "./cv.pdf";
+import cvdocument from "./CV.pdf";
 
 export default function SecondView() {
   useEffect(() => {
     const startCounterAnimation = () => {
       const counter = document.querySelector(".counter");
       if (counter) {
-        console.log("ok");
         counter.classList.remove(".counter");
         counter.classList.add("animate-counter");
       }
@@ -66,7 +65,7 @@ export default function SecondView() {
           <samp className="Counter-section">
             <div>
               <div className="counter" id="counter">
-                0 <br />1 <br /> 2 <br />3 <br /> 4 <br /> 5 <br />
+                0 <br />1 <br /> 2 <br />3 <br /> 4 <br /> 5 <br /> 6 <br /> 7 <br /> 8 <br /> 9 <br /> 10 <br />
               </div>
             </div>{" "}
             <samp style={{position:"relative",top:"4px"}}>+</samp>  &nbsp;project done

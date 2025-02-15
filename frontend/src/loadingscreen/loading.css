@@ -106,7 +106,7 @@
   .AmoungUS{
     width: 100px;
     height: 100px;
-    background: url(Frame_1-removebg-preview.png);
+    background: url(../assets/image/Frame_1-removebg-preview.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     animation: Amoungrun 200ms linear infinite ,
@@ -131,14 +131,14 @@
     }
   @keyframes Amoungrun{
     0% 
-    { background-image: url(Frame_1-removebg-preview.png); }
+    { background-image: url(../assets/image/Frame_1-removebg-preview.png); }
 
   33.33%
-   { background-image: url(Frame_2-removebg-preview.png); }
+   { background-image: url(../assets/image/Frame_2-removebg-preview.png); }
   66.66% 
-  { background-image: url(Frame_3-removebg-preview.png); }
+  { background-image: url(../assets/image/Frame_3-removebg-preview.png); }
   100% 
-  { background-image: url(Frame_1-removebg-preview.png); }
+  { background-image: url(../assets/image/Frame_1-removebg-preview.png); }
   }
   @keyframes AmoungUSmove {
     from{

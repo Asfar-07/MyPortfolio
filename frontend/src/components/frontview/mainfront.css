@@ -1,10 +1,10 @@
 @font-face {
   font-family: Myname;
-  src: url(/src/fonts/Versa-Versa.otf);
+  src: url(../../../public/fonts/Versa-Versa.otf);
 }
 @font-face {
   font-family: myabout;
-  src: url(/src/fonts/AceSans-FREE.otf);
+  src: url(../../../public/fonts/AceSans-FREE.otf);
 }
 .frontmain {
   width: 100%;
@@ -50,6 +50,15 @@
   top: 0;
   left: 0;
   z-index: 2;
+}
+.xmashat{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -184px;
+  right: 105px;
+  z-index: 5;
+  transform: rotate(-14deg);
 }
 .first-div::before {
   content: "";
@@ -109,14 +118,46 @@
   margin: 0px 0;
   font-family: Myname;
 }
-.maincontact h2 > img {
+.luffyhat{
   width: 55.96px;
   height: 44.23px;
-  transform: rotateY(180deg);
+  /* transform: rotateY(180deg); */
   position: relative;
   right: 56px;
-  bottom: 14px;
+  bottom: 240px;
+  animation: fall 5s linear forwards , fall2 30s 6s linear forwards;
 }
+@keyframes fall {
+  0% {
+    transform: translate(0px, 0px) rotate(32deg);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-10px, 50px) rotate(15deg);
+  }
+  40% {
+    transform: translate(10px, 100px) rotate(-10deg);
+  }
+  60% {
+    transform: translate(-15px, 150px) rotate(45deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(5px, 200px) rotate(-20deg);
+  }
+  100% {
+    transform: translate(0px, 230px) rotate(38deg);
+  }
+}
+@keyframes fall2 {
+  from{
+    transform: translate(0px, 230px) rotate(38deg);
+  }
+  to{
+    transform: translate(2px, 230px) rotate(70deg);
+  }
+}
+
 .maincontact p {
   font-size: 16px;
   letter-spacing: 1px;

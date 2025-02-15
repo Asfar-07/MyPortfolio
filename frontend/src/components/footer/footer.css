@@ -7,6 +7,16 @@ footer {
   align-items: center;
   border-top: 1px solid white;
 }
+.Footer-light{
+  background:url(./xmas-footer.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 110%;
+}
+.Footer-dark{
+  background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)), url(./xmas-footer.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 110%;
+}
 footer span {
   position: absolute;
   top:100%;
@@ -53,6 +63,7 @@ footer > :nth-child(2) > :last-child a{
     text-decoration: none;
     font-size: 18px;
     letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 @media screen and (max-width:800px) {
   footer{

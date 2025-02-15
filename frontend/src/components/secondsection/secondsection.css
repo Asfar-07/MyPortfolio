@@ -1,18 +1,18 @@
 @font-face {
     font-family: boldfont;
-    src: url(/src/fonts/Bluffolk.otf)
+    src: url(../../../public/fonts/Bluffolk.otf)
 }
 @font-face {
     font-family: paragaph;
-    src: url(/src/fonts/Sanchezregular.otf)
+    src: url(../../../public/fonts/Sanchezregular.otf)
 }
 @font-face {
     font-family: santo;
-    src: url(/src/fonts/SANTO.ttf);
+    src: url(../../../public/fonts/SANTO.ttf);
 }
 @font-face {
     font-family: Danson;
-    src: url(/src/fonts/DansonBold-ovB2o.ttf);
+    src: url(../../../public/fonts/DansonBold-ovB2o.ttf);
 }
 .secondsection{
     height:750px;
@@ -93,7 +93,7 @@
     transform: translateY(0);
   }
   100%{
-    transform: translateY(-200px);
+    transform: translateY(-400px);
   }
 }
 .CV{

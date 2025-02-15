@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Loading Animation</title>
+  <style>
+    body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 5px solid #f3f3f3; /* Light gray border */
+  border-top: 5px solid #3498db; /* Blue border */
+  border-radius: 50%; /* Make it circular */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="loading-spinner"></div>
+</body>
+</html>
