@@ -7,13 +7,6 @@ export default function About() {
   return (
     <div className="Aboutme">
       <Header />
-      {/* <div className="Top-red">
-        <p>
-          {" "}
-          "Here, you can explore all the details of my projects and skills. You can find even more on my GitHub. This portfolio website showcases the projects I’ve created using my skills. I’d love to hear your thoughts, so feel free to provide feedback using the contact page. Your input is greatly appreciated!"
-        </p>
-      </div> */}
-
       <main>
         <section>
           <h1 className="Mainhadingskill">My Portfolio of Creative Web<br></br> Development Projects</h1>
@@ -41,7 +34,7 @@ export default function About() {
                   </p>
                   <div>
                     <a href="https://github.com/Asfar-07" target="_black">
-                      Learn more<i class="fa-solid fa-arrow-down-long"></i>
+                      Learn more<i className="fa-solid fa-arrow-down-long"></i>
                     </a>
                     <samp></samp>
                   </div>
@@ -60,7 +53,7 @@ export default function About() {
                   </p>
                   <div>
                     <a href="https://github.com/Asfar-07" target="_black">
-                      Learn more<i class="fa-solid fa-arrow-down-long"></i>
+                      Learn more<i className="fa-solid fa-arrow-down-long"></i>
                     </a>
                     <samp></samp>
                   </div>

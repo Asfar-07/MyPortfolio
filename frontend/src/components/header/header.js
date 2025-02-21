@@ -12,8 +12,8 @@ export default function Header() {
     <>
       <input type="checkbox" id="cancel" style={{ display: "none" }} />
       <label htmlFor="cancel" id="mycheck">
-        {/* <i class="fa-solid fa-xmark"></i> */}
-        <i class="fa-solid fa-bars"></i>
+        {/* <i className="fa-solid fa-xmark"></i> */}
+        <i className="fa-solid fa-bars"></i>
       </label>
       <div className="Header" style={{ color: listcolor.fontcolor , backgroundColor: backgroundColor}}>
         <header>

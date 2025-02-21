@@ -4,6 +4,7 @@ require("dotenv").config()
 const cors=require("cors")
 const nodemailer = require('nodemailer');
 app.use(express.json())
+app.use("/jarvis/cdn/1.0.0/css",express.static("jarvis"))
 app.use(cors({
     origin:"https://my-portfolio-frontend-07.vercel.app",
     methods:"GET,POST",
@@ -12,9 +13,9 @@ app.use(cors({
 }));
 const PORT=process.env.PORT ;
 
-app.get("/",(req,res)=>{
-    res.send("my profile server")
-})
+// app.get("/",(req,res)=>{
+//     res.send("my profile server")
+// })
 app.post("/Data",async(req,res)=>{
     console.log(req.body)
     try {
