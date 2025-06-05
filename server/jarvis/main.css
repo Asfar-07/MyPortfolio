@@ -515,3 +515,9 @@
 }
 
 /*# sourceMappingURL=main.css.map */
+button{
+  background-color: rgba(0, 164, 189, 1);
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 8px;
+}

@@ -2,35 +2,36 @@ import React from "react";
 import Header from "../components/header/header";
 import "./About.css";
 import Skills from "./MySkills";
-import Footer from "../components/footer/footer"
+import Footer from "../components/footer/footer";
 export default function About() {
   return (
     <div className="Aboutme">
       <Header />
       <main>
         <section>
-          <h1 className="Mainhadingskill">My Portfolio of Creative Web<br></br> Development Projects</h1>
-          <p className="subhadingskill">Showcasing innovative projects built with cutting-edge technologies, blending<br></br> creativity with functionality and performance.</p>
+          <h1 className="Mainhadingskill">
+            My Portfolio of Creative Web<br></br> Development Projects
+          </h1>
+          <p className="subhadingskill">
+            Showcasing innovative projects built with cutting-edge technologies,
+            blending<br></br> creativity with functionality and performance.
+          </p>
           <div className="projects">
             <div>
-              <section className="right-s-project">
-                <div className="view-project-c">
-                  <div className="first-p-img"></div>
-                  <div className="bottom-p">
-                    <h2>ALWAYS BEST</h2>
-                    <button>SEE WEB</button>
-                  </div>
-                </div>
+              <section className="View-project">
+                <video autoPlay muted loop playsInline width="100%">
+                  <source src="/project1.mp4" type="video/mp4" />
+                </video>
               </section>
               <section className="left-s-project">
                 <article>
-                  <h2>Social Link</h2>
-                  <h3>
-                  This is my first college project. It’s always best
-                  </h3>
+                  <h2>Bit Lyv</h2>
+                  <h3>This is my first big python(flask) project</h3>
                   <p>
-                  The social link is a simple social media website. The social link provides entertainment activities, chat facility like features. It is simple
-                  to use, and anyone can easily understand it.
+                    A full-stack platform enabling developers to create, version, 
+                    and share modular CSS/JS libraries with unique CDN-style URLs.
+                    Built an interactive frontend with React.js, Three.js (3D visualizations), and GSAP
+                     for smooth animations, offering a modern UI/UX.
                   </p>
                   <div>
                     <a href="https://github.com/Asfar-07" target="_black">
@@ -39,39 +40,13 @@ export default function About() {
                     <samp></samp>
                   </div>
                 </article>
-              </section>
-            </div>
-            <div style={{marginBottom:"150px"}}>
-              <section className="left-s-project" style={{margin:"0", marginRight:"100px"}}>
-                <article>
-                  <h2>Southern Tourism</h2>
-                  <h3>
-                  This is my another big Node Js project, For tourism
-                  </h3>
-                  <p>
-                  The Southern Tours Web-Based Project focuses on developing a comprehensive online platform that promotes tourism in the Southern region. Visitors can easily navigate through the website to explore tourist destinations, accommodations, activities, and more
-                  </p>
-                  <div>
-                    <a href="https://github.com/Asfar-07" target="_black">
-                      Learn more<i className="fa-solid fa-arrow-down-long"></i>
-                    </a>
-                    <samp></samp>
-                  </div>
-                </article>
-              </section>
-              <section className="right-s-project">
-                <div className="view-project-c-2">
-                  <div className="first-p-img"></div>
-                  <div className="bottom-p">
-                    <h2>ANOTHER ONE</h2>
-                    <button>SEE WEB</button>
-                  </div>
-                </div>
               </section>
             </div>
           </div>
           <div className="gitbutton">
-            <a href="https://github.com/Asfar-07" target="_black">more GitHub</a>
+            <a href="https://github.com/Asfar-07" target="_black">
+              more GitHub
+            </a>
           </div>
         </section>
         {/* <section>
