@@ -7,7 +7,7 @@ import Footer from './components/footer/footer';
 
 export default function viewport() {
   return (
-    <div>
+    <div style={{zIndex:2}}>
        <Frontview />
     <Secondview />
     <Thirdsection />

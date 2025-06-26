@@ -6,6 +6,10 @@ import Footer from "../components/footer/footer";
 export default function About() {
   return (
     <div className="Aboutme">
+      {/* <div className="space_animation">
+        <div className="space_man"></div>
+        <div className="spacedoor"></div>
+      </div> */}
       <Header />
       <main>
         <section>
@@ -28,10 +32,11 @@ export default function About() {
                   <h2>Bit Lyv</h2>
                   <h3>This is my first big python(flask) project</h3>
                   <p>
-                    A full-stack platform enabling developers to create, version, 
-                    and share modular CSS/JS libraries with unique CDN-style URLs.
-                    Built an interactive frontend with React.js, Three.js (3D visualizations), and GSAP
-                     for smooth animations, offering a modern UI/UX.
+                    A full-stack platform enabling developers to create,
+                    version, and share modular CSS/JS libraries with unique
+                    CDN-style URLs. Built an interactive frontend with React.js,
+                    Three.js (3D visualizations), and GSAP for smooth
+                    animations, offering a modern UI/UX.
                   </p>
                   <div>
                     <a href="https://github.com/Asfar-07" target="_black">
