@@ -1,40 +1,204 @@
+
 footer {
   position: relative;
+  bottom: 0;
+  width: 100%;
+}
+footer > main{
+      display: flex;
+  flex-direction: column;
+  width: calc(100% + 500);
   height: 300px;
-  display: flex;
+  /* background-color: black; */
+}
+.ManageGame{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    position: absolute;
+     display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid white;
-  padding:0 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height:100%;
+    z-index: 6;
 }
-.Footer-light{
-  background:url(./xmas-footer.jpeg);
-  background-repeat: no-repeat;
-  background-size: 100% 110%;
+.gameovar{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(217, 217, 217, 0.35);
+    backdrop-filter: blur(45px);
+    width: 350px;
+    height: 200px;
+    border-radius: 15px;
+    border: 5px solid white;
+     font-family: Danson;
+
+    /* display: none; */
 }
-.Footer-dark{
-  background: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.9)), url(./xmas-footer.jpeg);
-  background-repeat: no-repeat;
-  background-size: 100% 110%;
+.gameovar h2{ 
+    color: rgb(255, 0, 0);
+    font-size: 50px;
 }
-footer span {
+.startbutton{
+    position: absolute;
+    /* display: none; */
+    outline: none;
+    top: 0;
+    right: 0px;
+    color: rgba(18, 255, 10, 1);
+    font-size: 28px;
+    margin: 20px 50px;
+    width: 216px;
+    height: 50px;
+    background-color: transparent;
+    border: 5px solid rgba(18, 255, 10, 1);
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: Danson;
+}
+.Stopbutton{
+      position: absolute;
+      top: 0;
+    right: 0px;
+    color:rgb(253, 22, 22);
+    font-size: 28px;
+    margin: 20px 50px;
+    width: 216px;
+    height: 50px;
+    background-color: transparent;
+    border: 5px solid rgba(240, 12, 12, 1);
+    border-radius: 10px;
+    cursor: pointer;
+     font-family: Danson;
+}
+.spacegroup {
+    position: relative;
+    width: 100%;
+    height: 90%;
+      /* overflow: hidden; */
+      word-wrap: break-word;
+}
+.basebuild{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    /* background-color: rgb(80, 22, 57); */
+    display: flex;
+    justify-content:end;
+    align-items: end;
+        /* overflow: hidden; */
+}
+.alienship{
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    width: 30px;
+    height: 30px;
+    /* background: url(AlienShip.png); */
+    background-color: rgb(86, 122, 0);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.enemyship{
+    position: absolute;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    background-color: chocolate;
+    /* background: url(AlienShip.png); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.base{
+     width: 100%;
+    height: 10%;
+    background-color:rgba(181, 75, 0, 1);
+    z-index: 4;
+}
+.building1 ,.building2,.building3,.building4,.building5 {
+  position: relative;
+  bottom: -10px;
+   flex-shrink: 0;
+  /* width: 100px;
+  height: 200px;
+  margin: 0 20px; */
+  /* animation: move 8s linear forwards; */
+  /* animation: ZoomView 2s linear forwards; */
+  transition: 1s ease-in;
+}
+.building1 {
+  /* background: url(building1.png); */
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: rgb(0, 69, 69);
+}
+.building2 {
+  /* background: url(building2.png); */
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: rgb(0, 92, 11);
+}
+.building3{
+  /* background: url(building3.png); */
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-color: rgb(49, 0, 96);
+}
+.building4{
+  /* background: url(building4.png); */
+  background-color: rgb(0, 75, 3);
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.building5{
+  /* background: url(building5.png); */
+  background-color: darkgrey;
+  background-color: rgb(0, 19, 140);
+    background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.startcount{
+   position: absolute;
+ left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+  /* animation: showcount 1s ease-out ; */
+}
+
+
+.ManageGame span {
   position: absolute;
   top:100%;
   left: 50%;
-  transform: translate(-50%, -150%);
+  transform: translate(-50%, -100%);
   color: rgba(56, 53, 53, 0.747);
 }
-footer > :nth-child(1) p {
+.ManageGame > .footerContent {
   font-size: 18px;
   letter-spacing: 1px;
   font-family: sans-serif;
+  margin: 0px 50px;
 }
-footer > :nth-child(2) > :first-child {
-  width: 216px;
+.ManageGame > .footerLink{
+  margin: 0px 50px;
+}
+.ManageGame > .footerLink :first-child {
+  /* width: 216px; */
   display: flex;
   justify-content: space-between;
 }
-footer > :nth-child(2) > :first-child a {
+.ManageGame > .footerLink :first-child a {
   width: 38px;
   height: 38px;
   background-color: rgba(231, 27, 81, 1);
@@ -45,7 +209,7 @@ footer > :nth-child(2) > :first-child a {
   text-decoration: none;
   font-size: 20px;
 }
-footer > :nth-child(2) > :last-child{
+.ManageGame > .footerLink > :last-child{
     width: 216px;
     color: white;
     background-color: rgba(231, 27, 81, 1);
@@ -55,7 +219,7 @@ footer > :nth-child(2) > :last-child{
     justify-content: space-around;
     align-items: center;
 }
-footer > :nth-child(2) > :last-child a{
+.ManageGame > .footerLink > :last-child a{
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -67,3 +231,23 @@ footer > :nth-child(2) > :last-child a{
     display: none;
   }
 }
+
+
+
+@keyframes move {
+   0%{
+    transform: translateX(0);
+   } 
+   100%{
+    transform: translateX(-1600px);
+   }
+}
+/* @keyframes ZoomView {
+    0%{
+       width: 100%;
+    }
+    100%
+    {
+        width: calc(100% * 2);;
+    }
+} */

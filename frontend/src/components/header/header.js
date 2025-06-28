@@ -15,7 +15,7 @@ export default function Header() {
         {/* <i className="fa-solid fa-xmark"></i> */}
         <i className="fa-solid fa-bars"></i>
       </label>
-      <div className="Header" style={{ color: listcolor.fontcolor , backgroundColor: backgroundColor}}>
+      <div className="Header" style={{ color: listcolor.fontcolor}}>
         <header>
           <a href="/" id="loco" style={{ color: listcolor.fontcolor }}>
             A

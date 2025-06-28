@@ -10,6 +10,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 40px;
+     position: relative;
 }
 /* .Thirdsection main header h1 {
   text-align: center;

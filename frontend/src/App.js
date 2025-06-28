@@ -1,15 +1,16 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import viewport from "./viewport";
 import About from "./About/About";
 import { useTheme } from "./ThemeContext";
 export default function App() {
   const { listcolor, toggleTheme } = useTheme();
-
+  const WebSpace=useRef()
   useEffect(() => {
+    console.log(WebSpace.current)
     function createsmallstar() {
-      const numStars = 100;
+      const numStars = 150;
 
       for (let i = 0; i < numStars; i++) {
         const star = document.createElement("div");
@@ -33,7 +34,7 @@ export default function App() {
         star.style.animationDuration = `${duration}s`;
         star.style.animationDelay = `${delay}s`;
 
-        document.body.appendChild(star);
+        WebSpace.current.appendChild(star);
       }
     }
     createsmallstar()
@@ -45,10 +46,10 @@ export default function App() {
       star.style.left = startX + "px";
       star.style.setProperty("--angle", `${angleStar}deg`);
       star.style.setProperty("--endX", `-${document.body.scrollHeight}px`);
-      document.body.appendChild(star);
+      WebSpace.current.appendChild(star);
       setTimeout(() => star.remove(), 1500);
     }
-    const interval = setInterval(createShootingStar, 8000);
+    const interval = setInterval(createShootingStar, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -66,8 +67,9 @@ export default function App() {
     }
   };
   return (
-    <div className={`App-${listcolor.settheme}`}>
+    <div className={`App-${listcolor.settheme}` } >
       {/* <div className="smallstar"></div> */}
+      <div className="spacearound" ref={WebSpace}></div>
       <section className="mainswitchmod">
         <div
           className="switchmod"
