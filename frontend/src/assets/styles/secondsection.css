@@ -25,7 +25,7 @@
 }
 .rightcontent{
     max-width: 600px;
-    min-width: 500px;
+    min-width: 400px;
     height: 100%;
   
 }
@@ -214,7 +214,7 @@
   }
 @media screen and (max-width:800px) {
     .secondsection{
-        height:800px;
+        height:750px;
         display: flex;
        
     }
@@ -225,10 +225,15 @@
         width: 100%;
         height: 100%;
         display: flex;
+        min-width: 300px;
     }
-    .rightcontent h2 ,.rightcontent samp ,.rightcontent p{
-        margin-left: 30px;
+    .rightcontent main{
+      margin: 0;
+      padding: 0;
     }
+  .rightcontent p{
+    font-size: 15px;
+  }
     .CV{
       width: 100%;
         display: flex;

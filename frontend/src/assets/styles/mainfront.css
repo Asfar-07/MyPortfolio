@@ -178,7 +178,7 @@ max-width: 60ch;
 .contactiocn a {
   color: white;
   text-decoration: none;
-}
+padding: 0 10px;}
 .contactiocn span {
   width: 50px;
   height: 50px;
@@ -193,19 +193,21 @@ max-width: 60ch;
 
  @media screen and (width <= 800px) {
   .frontmain {
-    height: 100vh;
     overflow: hidden;
   }
-  .frontmain main {
+
+  .frontmain> main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
-    width: 100%;
-    height: 100%;
+    padding: 0 20px;
+  }
+  .homeView {
+    height: 800px;
   }
   .leftfront {
+    margin-top: 25px;
     width: 100%;
-    height: 65vh;
   }
   .maincontact {
     height: 75%;
@@ -213,9 +215,6 @@ max-width: 60ch;
   }
   .maincontact div br {
     display: none;
-  }
-  #Myname {
-    margin-left: 50px;
   }
   .maincontact p {
     font-size: 18px;
@@ -230,7 +229,6 @@ max-width: 60ch;
   }
   .maincontact div {
     margin-left: 0px;
-    padding: 0 35px;
   }
 }
 
