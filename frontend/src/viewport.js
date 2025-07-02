@@ -1,15 +1,15 @@
 import React from 'react'
-import Frontview from "./components/frontview/mainfront"
-import Secondview from './components/secondsection/secondview';
+import Frontview from "./pages/home/mainfront"
+import Secondview from './pages/home/secondview';
 import Thirdsection from './components/thirdsection/thirdsection';
 import Contactpart from './components/contactpart/useContactpart';
-import Footer from './components/footer/footer';
+import Footer from './pages/footer/footer';
 
 export default function viewport() {
   return (
     <div style={{zIndex:2}}>
        <Frontview />
-    <Secondview />
+    {/* <Secondview /> */}
     <Thirdsection />
     <Contactpart />
     <Footer /> 

@@ -1,8 +1,9 @@
 import React  from "react";
-import "../frontview/mainfront.css";
-import Header from "../header/header";
-import loffyhat from "./pngtree-straw-hat-cartoon-illustration-png-image_6562738.png";
+import "../../assets/styles/mainfront.css";
+import Header from "../../components/header/header";
+// import loffyhat from "../../assets/image/LuffyHat.png";
 import { useTheme } from "../../ThemeContext";
+import SecondView from "./secondview";
 // import Xmas from "./XmasHat.png";
 
 export default function useMainpage() {
@@ -10,18 +11,23 @@ export default function useMainpage() {
   let containercolor=listcolor.frontcontainer
     return (
       <div className="frontmain">
-        <main>
-          <section className="leftfront">
             <Header />
+        <main>
+            <div className="homeView">
+          <section className="leftfront">
             <div className="maincontact">
               <div>
-                <h2>It’s me</h2>
+                <h4>
+                  hello, It's Me
+                </h4>
                 <h2 id="Myname">
-                  Asfar <img src={loffyhat} alt="luffyhat" className="luffyhat"/>
+                  Asfar Muhammed
+                  {/* <img src={loffyhat} alt="luffyhat" className="luffyhat"/> */}
                 </h2>
+                <h4>I'm a FullStack Developer</h4>
                 <p>
-                  Welcome to my personal website. I shared all details about
-                  <br></br> me with my works
+                 I create sleek, responsive websites from front to back.
+Explore my projects and see what I’m building
                 </p>
               </div>
               <div className="contactiocn">
@@ -50,6 +56,8 @@ export default function useMainpage() {
               <div className="second-div" style={{backgroundColor:containercolor}}></div>
             </div>
           </section>
+          </div>
+          <SecondView />
         </main>
       </div>
     );

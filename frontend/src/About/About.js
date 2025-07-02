@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/header/header";
 import "./About.css";
 import Skills from "./MySkills";
-import Footer from "../components/footer/footer";
+import Footer from "../pages/footer/footer";
 export default function About() {
   return (
     <div className="Aboutme">

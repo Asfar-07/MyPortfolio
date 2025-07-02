@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import "../footer/footer.css";
+import "../../assets/styles/footer.css";
 import { useTheme } from "../../ThemeContext";
 const typebuilding = ['building1', 'building2', 'building3', 'building4', 'building5'];
 export default function Footer() {
@@ -23,7 +23,7 @@ export default function Footer() {
     if (!spaceground) return;
     spaceground.innerHTML = '';
 
-    for (let i = 0; i < 25; i++) {
+    for (let i = 0; i < 30; i++) {
       const randomB = Math.floor(Math.random() * 5);
       const newBuilding = document.createElement('div');
       newBuilding.className = typebuilding[randomB];
@@ -71,7 +71,7 @@ export default function Footer() {
           const twin = newBuilding.cloneNode();
           twin.style.right = `-${(structure + 2) * j}px`;
           twin.style.animation = 'move 10s linear forwards';
-          setTimeout(() => twin.remove(), 10000);
+          setTimeout(() => twin.remove(), 15000);
           spacegroundRef.current.appendChild(twin);
         }
       }
@@ -87,7 +87,7 @@ export default function Footer() {
         newShip.id = 'build';
         newShip.style.right = '0px';
         newShip.style.animation = 'move 10s linear forwards';
-        setTimeout(() => newShip.remove(), 10000);
+        setTimeout(() => newShip.remove(), 15000);
         spacegroundRef.current.appendChild(newShip);
       }
     }

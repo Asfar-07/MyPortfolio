@@ -1,15 +1,17 @@
 import "./App.css";
+import "./Fonts.css"
 import React, { useState, useEffect,useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import viewport from "./viewport";
 import About from "./About/About";
 import { useTheme } from "./ThemeContext";
+import FrondLoader from "./loadingscreen/FrondLoading";
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const { listcolor, toggleTheme } = useTheme();
   const WebSpace=useRef()
   useEffect(() => {
-    console.log(WebSpace.current)
-    function createsmallstar() {
+     function createsmallstar() {
       const numStars = 150;
 
       for (let i = 0; i < numStars; i++) {
@@ -37,7 +39,13 @@ export default function App() {
         WebSpace.current.appendChild(star);
       }
     }
-    createsmallstar()
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 3000);
+      createsmallstar()
+  }, []);
+
+  useEffect(() => {
     function createShootingStar() {
       const star = document.createElement("div");
       star.classList.add("motionstar");
@@ -82,12 +90,14 @@ export default function App() {
           </div>
         </div>
       </section>
+      {isLoading && <FrondLoader /> }
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={viewport} />
           <Route path="/About" Component={About} />
         </Routes>
       </BrowserRouter>
+  
     </div>
   );
 }

@@ -1,8 +1,8 @@
 // src/hooks/useCustomHook.js
 import React, { useEffect } from "react";
-import "../secondsection/secondsection.css";
-import iconimage from "../secondsection/programmer-working-isometric-style.png";
-import cvdocument from "./resume.pdf";
+import "../../assets/styles/secondsection.css";
+import iconimage from "../../assets/image/programmerimg.png";
+import cvdocument from "../../assets/pdf/resume.pdf";
 
 export default function SecondView() {
   useEffect(() => {
@@ -60,15 +60,25 @@ export default function SecondView() {
             managing projects from start to finish. With expertise in front-end,
             back-end, and database management, I deliver high-quality, robust
             applications. I am eager to contribute to a dynamic team and develop
-            cutting-edge software solutions.""
+            cutting-edge software solutions."
           </p>
           <samp className="Counter-section">
             <div>
               <div className="counter" id="counter">
-                0 <br />1 <br /> 2 <br />3 <br /> 4 <br /> 5 <br /> 6 <br /> 7 <br /> 8 <br /> 9 <br /> 10 <br />
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <div>10</div>
               </div>
             </div>{" "}
-            <samp style={{position:"relative",top:"4px"}}>+</samp>  &nbsp;project done
+            <samp style={{ position: "relative", top: "4px" }}>+</samp>{" "}
+            &nbsp;project done
           </samp>
           <div className="CV">
             <a href={cvdocument} download>
