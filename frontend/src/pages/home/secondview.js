@@ -3,8 +3,14 @@ import React, { useEffect } from "react";
 import "../../assets/styles/secondsection.css";
 import iconimage from "../../assets/image/programmerimg.png";
 import cvdocument from "../../assets/pdf/resume.pdf";
+import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 
 export default function SecondView() {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
   useEffect(() => {
     const startCounterAnimation = () => {
       const counter = document.querySelector(".counter");
@@ -24,7 +30,7 @@ export default function SecondView() {
         });
       },
       {
-        threshold: 0.5, // Trigger when 50% of the last section is visible
+        threshold: 0.5, 
       }
     );
 
@@ -40,28 +46,40 @@ export default function SecondView() {
     };
   }, []);
   return (
-    <div className="secondsection">
-      <section className="leftimage">
+    <div className="secondsection" ref={ref}>
+      {/* Left image */}
+      <motion.section
+        className="leftimage"
+        initial={{ y: 100, opacity: 0 }}
+        animate={inView ? { y: 0, opacity: 1 } : {}}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <img src={iconimage} alt="iconimage" />
-      </section>
-      <section className="rightcontent">
+      </motion.section>
+
+      {/* Right content */}
+      <motion.section
+        className="rightcontent"
+        initial={{ x: 100, opacity: 0 }}
+        animate={inView ? { x: 0, opacity: 1 } : {}}
+        transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+      >
         <main>
           <h2>
-            let’s <br /> introduce about <br />{" "}
+            let <br />
+            me introduce <br />
             <div>
               <h2>myself</h2>
             </div>
           </h2>
           <p>
-            {" "}
-            " I am a Full-Stack Developer skilled in the MERN stack (MongoDB,
-            Express.js, React, Node.js). Passionate about building innovative
-            web applications, I specialize in creating scalable solutions and
-            managing projects from start to finish. With expertise in front-end,
-            back-end, and database management, I deliver high-quality, robust
-            applications. I am eager to contribute to a dynamic team and develop
-            cutting-edge software solutions."
+            I’m a Full-Stack Developer skilled in the MERN stack (MongoDB,
+            Express.js, React, Node.js). I specialize in building scalable web
+            applications, managing both front-end and back-end systems from
+            start to finish. I'm passionate about creating clean, robust, and
+            efficient digital solutions.
           </p>
+
           <samp className="Counter-section">
             <div>
               <div className="counter" id="counter">
@@ -76,10 +94,11 @@ export default function SecondView() {
                 <div>9</div>
                 <div>10</div>
               </div>
-            </div>{" "}
-            <samp style={{ position: "relative", top: "4px" }}>+</samp>{" "}
-            &nbsp;project done
+            </div>
+            <samp style={{ position: "relative", top: "4px" }}>+</samp>
+            &nbsp;Projects Completed
           </samp>
+
           <div className="CV">
             <a href={cvdocument} download>
               <span></span>
@@ -90,7 +109,7 @@ export default function SecondView() {
             </a>
           </div>
         </main>
-      </section>
+      </motion.section>
     </div>
   );
 }

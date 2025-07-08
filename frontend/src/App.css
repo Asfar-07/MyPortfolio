@@ -9,14 +9,7 @@ body, html{
 *{
   z-index: 5;
 }
-.spacearound{
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 1;
-}
+
 .App-dark{
     background-color: #000000;
     color: #ffffff;
@@ -80,52 +73,7 @@ body, html{
     position: relative;
     left: 16px;
   }
-  .motionstar {
-  position: absolute;
 
-  top: 0px;
-  transform: rotate(-45deg) translateX(0%);
-  z-index: 0;
-  /* opacity: .5; */
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(
-    to right,
-    rgb(252, 232, 9),
-    rgba(252, 232, 9, 0.382)
-  );
-  animation: movestar 2.5s  forwards;
-}
-.smallstar {
-      position: absolute;
-      z-index: 0;
-      /* width: 3px;
-      height: 3px;
-      top: 300px;
-      left: 500px; */
-      border-radius: 50%;
-      background: white;
-      box-shadow: 0 0 6px rgba(255, 243, 130, 0.8);
-      opacity: 0.7;
-      animation: twinkle  linear infinite;
-    }
-
-    @keyframes twinkle {
-      0%, 100% { opacity: 0.2; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.4); }
-    }
-@keyframes movestar {
-  0% {
-    /* right: 0%; */
-    /* top: 0%; */
-    transform: rotate(var(--angle)) translateX(0%)
-  }
-  100% {
-     /* right: 100%; */
-    /* top: 100%; */
-    transform: rotate(var(--angle)) translateX(var(--endX))
-  }
-}
   @media screen and (max-width:800px) {
     .mainswitchmod{
       right: -90px;

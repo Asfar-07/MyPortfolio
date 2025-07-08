@@ -81,7 +81,7 @@ export default function Footer() {
       newBuilding.style.height = `${structure}px`;
 
       const buildEnemyShip = Math.floor(Math.random() * 10);
-      if (buildEnemyShip === 5) {
+      if (buildEnemyShip === 5 || buildEnemyShip === 3 || buildEnemyShip === 8) {
         const newShip = document.createElement('div');
         newShip.className = 'enemyship';
         newShip.id = 'build';

@@ -6,61 +6,16 @@ import viewport from "./viewport";
 import About from "./About/About";
 import { useTheme } from "./ThemeContext";
 import FrondLoader from "./loadingscreen/FrondLoading";
+import Backspace from "./components/backspace";
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const { listcolor, toggleTheme } = useTheme();
-  const WebSpace=useRef()
-  useEffect(() => {
-     function createsmallstar() {
-      const numStars = 150;
-
-      for (let i = 0; i < numStars; i++) {
-        const star = document.createElement("div");
-        star.className = "smallstar";
-
-        // Random size and position
-        const size = Math.random() * 2.5 + 1; // 1px - 3.5px
-        const top = Math.random() * document.body.scrollHeight; // vertical space
-        const left = Math.random() * window.innerWidth;
-
-        // Apply styles
-        star.style.width = `${size}px`;
-        star.style.height = `${size}px`;
-        star.style.top = `${top}px`;
-        star.style.left = `${left}px`;
-
-        // Random twinkle duration and delay
-        const duration = 2 + Math.random() * 3; // 2s - 5s
-        const delay = Math.random() * 3;
-
-        star.style.animationDuration = `${duration}s`;
-        star.style.animationDelay = `${delay}s`;
-
-        WebSpace.current.appendChild(star);
-      }
-    }
-      setTimeout(() => {
+  useEffect(()=>{
+     setTimeout(() => {
         setIsLoading(false)
       }, 3000);
-      createsmallstar()
-  }, []);
-
-  useEffect(() => {
-    function createShootingStar() {
-      const star = document.createElement("div");
-      star.classList.add("motionstar");
-      const startX = Math.random() * window.innerWidth;
-      const angleStar = Math.floor(Math.random() * (330 - 230 + 1)) + 230;
-      star.style.left = startX + "px";
-      star.style.setProperty("--angle", `${angleStar}deg`);
-      star.style.setProperty("--endX", `-${document.body.scrollHeight}px`);
-      WebSpace.current.appendChild(star);
-      setTimeout(() => star.remove(), 1500);
-    }
-    const interval = setInterval(createShootingStar, 5000);
-    return () => clearInterval(interval);
-  }, []);
-
+  },[])
+ 
   const [rotate, setRotate] = useState(() => {
     return localStorage.getItem("angle") || "rotate(135deg)";
   });
@@ -77,7 +32,8 @@ export default function App() {
   return (
     <div className={`App-${listcolor.settheme}` } >
       {/* <div className="smallstar"></div> */}
-      <div className="spacearound" ref={WebSpace}></div>
+      {/* <div className="spacearound" ref={WebSpace}></div> */}
+      <Backspace />
       <section className="mainswitchmod">
         <div
           className="switchmod"

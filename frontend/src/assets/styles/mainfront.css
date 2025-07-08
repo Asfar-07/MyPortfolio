@@ -101,8 +101,8 @@
 }
 .maincontact h2 {
   margin: 0;
- font-size: 55px; /* Responsive: min 40px, max 64px */
-font-weight: 900;                    /* Very bold */
+ font-size: 55px; 
+font-weight: 900;
 letter-spacing: 1px;
 line-height: 1.2;
 text-transform: uppercase; 
@@ -110,12 +110,15 @@ text-transform: uppercase;
 }
 .maincontact h4 {
   margin: 0;
-font-size:28px; /* 20px–32px range */
+font-size:28px;
 font-weight: 600;
 letter-spacing: 0.5px;
 line-height: 1.4;
-text-transform: uppercase; /* Optional */
+text-transform: uppercase;
   font-family:versa-versa;
+  width: 400px;
+  display: flex;
+    white-space: nowrap;
 }
 .luffyhat{
   width: 55.96px;
