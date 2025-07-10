@@ -3,6 +3,7 @@ import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import asteroid1 from "../3Dobject/asteroid1.glb";
 import ufo from "../3Dobject/spinning_ufo.glb"
 import earth from "../3Dobject/earth.glb"
+import moon from "../3Dobject/moon.glb"
 
 const asteroidData=[{
   objectItem:asteroid1,
@@ -103,14 +104,14 @@ function DispalyEarth_3D(dispalydiv) {
   renderer.setClearColor(0x000000, 0);
   // renderer.setAnimationLoop(animate);
   dispalydiv.appendChild(renderer.domElement);
-  const light = new THREE.DirectionalLight(0xffffff, .4);
+  const light = new THREE.DirectionalLight(0xffffff,1);
   light.position.set(100, 0, 1);
   scene.add(light);
   const loader = new GLTFLoader();
-  camera.position.z = 2.3;
+  camera.position.z = 2;
 
   loader.load(
-    earth,
+    moon,
     function (gltf) {
       const model = gltf.scene;
       scene.add(model);
