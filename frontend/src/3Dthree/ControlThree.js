@@ -1,8 +1,8 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
-import asteroid1 from "../assets/3Dobject/asteroid1.glb";
-import ufo from "../assets/3Dobject/spinning_ufo.glb"
-import earth from "../assets/3Dobject/earth.glb"
+import asteroid1 from "../3Dobject/asteroid1.glb";
+import ufo from "../3Dobject/spinning_ufo.glb"
+import earth from "../3Dobject/earth.glb"
 
 const asteroidData=[{
   objectItem:asteroid1,
