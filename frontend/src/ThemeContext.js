@@ -11,7 +11,7 @@ export const ThemeProvider = ({ children }) => {
    return localStorage.getItem("fontcolor")||"white"
 })
   const [secondrycolor,setSecondrycolor]=useState(()=>{
-   return localStorage.getItem("secondrycolor")||"#0f0e0f"
+   return localStorage.getItem("secondrycolor")||"transparent"
   })
   const [theme, setTheme] = useState(()=>{
    return localStorage.getItem("theme")|| "dark"
@@ -32,7 +32,7 @@ export const ThemeProvider = ({ children }) => {
       NewThem ="dark"
       ContainerColor="#e71b51"
       FontColor="white"
-      SecondryColor="#0f0e0f"
+      SecondryColor="transparent"
     } else {
       NewThem ="light"
       ContainerColor="#1976d2"

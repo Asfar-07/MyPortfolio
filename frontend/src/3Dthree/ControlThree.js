@@ -2,6 +2,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import asteroid1 from "../assets/3Dobject/asteroid1.glb";
 import ufo from "../assets/3Dobject/spinning_ufo.glb"
+import earth from "../assets/3Dobject/earth.glb"
 
 const asteroidData=[{
   objectItem:asteroid1,
@@ -88,4 +89,43 @@ function DispalyAsteroid_3D(dispalydiv) {
     }
   );
 }
-export { DispalyAlienship_3D,DispalyAsteroid_3D };
+function DispalyEarth_3D(dispalydiv) {
+   const scene = new THREE.Scene();
+
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    dispalydiv.clientWidth / dispalydiv.clientHeight,
+    0.1,
+    1000
+  );
+  const renderer = new THREE.WebGLRenderer();
+  renderer.setSize(dispalydiv.clientWidth, dispalydiv.clientHeight);
+  renderer.setClearColor(0x000000, 0);
+  // renderer.setAnimationLoop(animate);
+  dispalydiv.appendChild(renderer.domElement);
+  const light = new THREE.DirectionalLight(0xffffff, .4);
+  light.position.set(100, 0, 1);
+  scene.add(light);
+  const loader = new GLTFLoader();
+  camera.position.z = 2.3;
+
+  loader.load(
+    earth,
+    function (gltf) {
+      const model = gltf.scene;
+      scene.add(model);
+      function animate() {
+        requestAnimationFrame(animate);
+          //  model.rotation.x += .0005;
+           model.rotation.y += .0005;
+        renderer.render(scene, camera);
+      }
+      animate();
+    },
+    undefined,
+    function (error) {
+      console.error(error);
+    }
+  );
+}
+export { DispalyAlienship_3D,DispalyAsteroid_3D,DispalyEarth_3D };

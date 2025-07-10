@@ -16,8 +16,8 @@ export default function Thirdsection() {
   const { listcolor } = useTheme();
   let Secondrycolor=listcolor.secondrycolor
   return (
-    <div className="Thirdsection" style={{ color: "white"}}>
-      <main style={{backgroundColor:Secondrycolor }}>
+    <div className="Thirdsection" style={{ color: "white", backgroundColor:Secondrycolor}}>
+      <main >
         <header>
         <h1 className="Mainhadingskill">My Portfolio of Creative Web<br></br> Development Projects</h1>
         <p className="subhadingskill">Showcasing innovative projects built with cutting-edge technologies, blending<br></br> creativity with functionality and performance.</p>

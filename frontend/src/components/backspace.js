@@ -61,8 +61,7 @@ export default function Backspace() {
       isFirstRender.current = false;
       return;
     }
-    DispalyAlienship_3D(sceneAlienShip3D.current);
-    // DispalyAsteroid_3D(sceneAsteroid.current);
+    // DispalyAlienship_3D(sceneAlienShip3D.current);
   }, []);
   useEffect(() => {
     function MakeRandomAsteroid() {

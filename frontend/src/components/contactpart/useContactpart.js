@@ -1,13 +1,15 @@
-import React ,{useState} from "react";
+import React ,{useState,useRef,useEffect} from "react";
 import "../contactpart/contact.css";
 import callimage from "../contactpart/pngimg.com - telephone_booth_PNG1.png"
 import LoadingOverlay from '../../loadingscreen/loadingsection';
 import { useTheme } from "../../ThemeContext";
+import { DispalyEarth_3D } from "../../3Dthree/ControlThree";
 export default function useContactpart() {
   const { listcolor } = useTheme();
   let Secondrycolor=listcolor.secondrycolor
   // console.log(Secondrycolor)
-
+  const sceneEarth=useRef()
+   const isFirstRender = useRef(true);
   const [email,setEmail]=useState()
   const [firstname,setFirstName]=useState()
   const [secondname,setLastName]=useState()
@@ -15,6 +17,15 @@ export default function useContactpart() {
   const [Message,setMessage]=useState()
   const [loading,setLoading]=useState(false)
   const [loadingfinal,setLoadingFinal]=useState(false)
+
+  useEffect(()=>{
+     if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    DispalyEarth_3D(sceneEarth.current)
+  },[])
+
   async function handlesubmit(e){
     e.preventDefault()
     console.log(Message,email,firstname,secondname,phonenumber)
@@ -54,7 +65,10 @@ export default function useContactpart() {
     <LoadingOverlay loadingaction={loading}  loadingend={loadingfinal} />
     <div className="contactsection" id="contactsection" style={{color:"white",backgroundColor:Secondrycolor }} >
       <section className="tittlecontact">
-        <img src={callimage} alt=""/>
+        <div className="Earth3D" ref={sceneEarth}>
+
+        </div>
+        {/* <img src={callimage} alt=""/> */}
       </section>
       <section className="maincontactpart">
         <h2 className="contacttittle">Say hello.... to contact</h2>
