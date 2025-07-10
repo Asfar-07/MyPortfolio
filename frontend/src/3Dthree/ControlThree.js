@@ -91,6 +91,7 @@ function DispalyAsteroid_3D(dispalydiv) {
   );
 }
 function DispalyEarth_3D(dispalydiv) {
+  console.log("done")
    const scene = new THREE.Scene();
 
   const camera = new THREE.PerspectiveCamera(
