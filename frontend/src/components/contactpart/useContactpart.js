@@ -26,7 +26,7 @@ export default function useContactpart() {
     setTimeout(() => {
       const place3Dscene=document.getElementById('Earth3DScene')
       DispalyEarth_3D(place3Dscene);
-    }, 50000);
+    }, 3000);
   }, []);
 
   async function handlesubmit(e) {
