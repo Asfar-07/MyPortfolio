@@ -23,12 +23,10 @@ export default function useContactpart() {
       isFirstRender.current = false;
       return;
     }
-    console.log(sceneEarth.current)
-    if(sceneEarth.current){
     setTimeout(() => {
-      DispalyEarth_3D(sceneEarth.current);
+      const place3Dscene=document.getElementById('Earth3DScene')
+      DispalyEarth_3D(place3Dscene);
     }, 5000);
-  }
   }, []);
 
   async function handlesubmit(e) {
@@ -82,7 +80,7 @@ export default function useContactpart() {
         style={{ color: "white", backgroundColor: Secondrycolor }}
       >
         <section className="tittlecontact">
-          <div className="Earth3D" ref={sceneEarth}></div>
+          <div className="Earth3D" ref={sceneEarth} id="Earth3DScene"></div>
           {/* <img src={callimage} alt=""/> */}
         </section>
         <section className="maincontactpart">
