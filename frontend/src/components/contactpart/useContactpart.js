@@ -25,8 +25,8 @@ export default function useContactpart() {
     }
     setTimeout(() => {
       const place3Dscene=document.getElementById('Earth3DScene')
-      DispalyEarth_3D(place3Dscene);
-    }, 5000);
+      // DispalyEarth_3D(place3Dscene);
+    }, 20000);
   }, []);
 
   async function handlesubmit(e) {

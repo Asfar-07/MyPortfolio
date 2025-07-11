@@ -72,7 +72,7 @@ function DispalyAsteroid_3D(dispalydiv) {
   camera.position.z = 1.9;
 
   loader.load(
-    asteroid1,
+    earth,
     function (gltf) {
       const model = gltf.scene;
       scene.add(model);
