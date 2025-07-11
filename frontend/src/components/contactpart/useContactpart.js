@@ -9,7 +9,6 @@ export default function useContactpart() {
   let Secondrycolor = listcolor.secondrycolor;
   // console.log(Secondrycolor)
   const sceneEarth = useRef();
-  const isFirstRender = useRef(true);
   const [email, setEmail] = useState();
   const [firstname, setFirstName] = useState();
   const [secondname, setLastName] = useState();
@@ -19,12 +18,7 @@ export default function useContactpart() {
   const [loadingfinal, setLoadingFinal] = useState(false);
 
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
       DispalyEarth_3D(sceneEarth.current);
-
   }, [sceneEarth]);
 
   async function handlesubmit(e) {
