@@ -19,17 +19,13 @@ export default function useContactpart() {
   const [loadingfinal, setLoadingFinal] = useState(false);
 
   useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
     setTimeout(() => {
       const Earth = document.createElement("div");
       Earth.classList.add("Earth3D");
       sceneEarth.current.appendChild(Earth);
       DispalyEarth_3D(Earth);
     }, 10000);
-  }, []);
+  }, [sceneEarth]);
 
   async function handlesubmit(e) {
     e.preventDefault();
