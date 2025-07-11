@@ -23,6 +23,7 @@ export default function useContactpart() {
       isFirstRender.current = false;
       return;
     }
+    console.log(sceneEarth.current)
     if(sceneEarth.current){
     setTimeout(() => {
       DispalyEarth_3D(sceneEarth.current);

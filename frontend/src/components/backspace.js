@@ -78,8 +78,8 @@ export default function Backspace() {
       DispalyAsteroid_3D(asteroid);
       setTimeout(() => asteroid.remove(), 30000);
     }
-    const interval = setInterval(MakeRandomAsteroid, 20000);
-    return () => clearInterval(interval);
+    // const interval = setInterval(MakeRandomAsteroid, 20000);
+    // return () => clearInterval(interval);
   });
   return (
     <div className="spacearound" ref={WebSpace}>
