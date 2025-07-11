@@ -2,7 +2,6 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import asteroid1 from "../3Dobject/asteroid1.glb";
 import ufo from "../3Dobject/spinning_ufo.glb"
-import earth from "../3Dobject/earth.glb"
 import moon from "../3Dobject/moon.glb"
 
 const asteroidData=[{
@@ -14,7 +13,6 @@ const asteroidData=[{
 function DispalyAlienship_3D(dispalydiv) {
   let animate;
   const scene = new THREE.Scene();
-  console.log(dispalydiv.clientHeight);
   const camera = new THREE.PerspectiveCamera(
     75,
     dispalydiv.clientWidth / dispalydiv.clientHeight,
@@ -65,7 +63,7 @@ function DispalyAsteroid_3D(dispalydiv) {
   renderer.setClearColor(0x000000, 0);
   // renderer.setAnimationLoop(animate);
   dispalydiv.appendChild(renderer.domElement);
-  const light = new THREE.DirectionalLight(0xffffff, 5);
+  const light = new THREE.DirectionalLight(0xffffff, 3.5);
   light.position.set(10, 10, 100);
   scene.add(light);
   const loader = new GLTFLoader();
@@ -105,14 +103,14 @@ function DispalyEarth_3D(dispalydiv) {
   renderer.setClearColor(0x000000, 0);
   // renderer.setAnimationLoop(animate);
   dispalydiv.appendChild(renderer.domElement);
-  const light = new THREE.DirectionalLight(0xffffff,1);
-  light.position.set(100, 0, 1);
+  const light = new THREE.DirectionalLight(0xffffff,200);
+  light.position.set(1, 0, -100);
   scene.add(light);
   const loader = new GLTFLoader();
   camera.position.z = 2;
 
   loader.load(
-    asteroid1,
+    moon,
     function (gltf) {
       const model = gltf.scene;
       scene.add(model);

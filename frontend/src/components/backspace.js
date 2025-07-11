@@ -57,10 +57,10 @@ export default function Backspace() {
     return () => clearInterval(interval);
   }, []);
   useEffect(() => {
-    // if (isFirstRender.current) {
-    //   isFirstRender.current = false;
-    //   return;
-    // }
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
     DispalyAlienship_3D(sceneAlienShip3D.current);
   }, [sceneAlienShip3D]);
   useEffect(() => {
