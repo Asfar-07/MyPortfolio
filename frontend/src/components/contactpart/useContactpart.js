@@ -24,9 +24,11 @@ export default function useContactpart() {
       return;
     }
     setTimeout(() => {
-      const place3Dscene=document.getElementById('Earth3DScene')
-      DispalyEarth_3D(place3Dscene);
-    }, 3000);
+      const Earth = document.createElement("div");
+      Earth.classList.add("Earth3D");
+      sceneEarth.current.appendChild(Earth);
+      DispalyEarth_3D(Earth);
+    }, 10000);
   }, []);
 
   async function handlesubmit(e) {
@@ -79,8 +81,7 @@ export default function useContactpart() {
         id="contactsection"
         style={{ color: "white", backgroundColor: Secondrycolor }}
       >
-        <section className="tittlecontact">
-          <div className="Earth3D" ref={sceneEarth} id="Earth3DScene"></div>
+        <section className="tittlecontact" ref={sceneEarth}>
           {/* <img src={callimage} alt=""/> */}
         </section>
         <section className="maincontactpart">
