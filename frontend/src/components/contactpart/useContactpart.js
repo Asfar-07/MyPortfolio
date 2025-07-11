@@ -23,9 +23,8 @@ export default function useContactpart() {
       isFirstRender.current = false;
       return;
     }
-    setTimeout(() => {
       DispalyEarth_3D(sceneEarth.current);
-    }, 5000);
+
   }, [sceneEarth]);
 
   async function handlesubmit(e) {
