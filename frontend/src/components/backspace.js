@@ -57,7 +57,9 @@ export default function Backspace() {
     return () => clearInterval(interval);
   }, []);
   useEffect(() => {
-    DispalyAlienship_3D(sceneAlienShip3D.current);
+    setTimeout(() => {
+      DispalyAlienship_3D(sceneAlienShip3D.current);
+    }, 2000);
   }, [sceneAlienShip3D]);
   useEffect(() => {
     function MakeRandomAsteroid() {

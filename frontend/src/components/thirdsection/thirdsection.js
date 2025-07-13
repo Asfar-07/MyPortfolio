@@ -25,14 +25,14 @@ export default function Thirdsection() {
         <div className="Mydatas">
           <section className="Toolinfo">
             <div>
-              <img src={vscode} alt="vscodeicon" />
-              <img src={figma} alt="figmaicon" />
-              <img src={mongodb} alt="mongodbicon" />
-              <img src={javaimage} alt="javaicon" />
-              <img src={htmlimg} alt="htmlicon" />
-              <img src={reacticon} alt="reacticon" />
+              <img src={vscode} alt="vscodeicon" loading="lazy"/>
+              <img src={figma} alt="figmaicon" loading="lazy"/>
+              <img src={mongodb} alt="mongodbicon" loading="lazy"/>
+              <img src={javaimage} alt="javaicon" loading="lazy"/>
+              <img src={htmlimg} alt="htmlicon" loading="lazy"/>
+              <img src={reacticon} alt="reacticon" loading="lazy"/>
             </div>
-            <h2>Tool</h2>
+            <h2>tool</h2>
             <p>My skillset is rooted in web development</p>
             <a href="/About">see more</a>
           </section>
@@ -41,10 +41,10 @@ export default function Thirdsection() {
 
           <section className="Experience">
             <div>
-              <img src={socialicon} alt="socialicon" />
-              <img src={wifi_icon} alt="wifi-icon" />
+              <img src={socialicon} alt="socialicon" loading="lazy"/>
+              <img src={wifi_icon} alt="wifi-icon" loading="lazy"/>
             </div>
-            <h2>Experience</h2>
+            <h2>experience</h2>
             <p> I've worked on many web projects</p>
             <a href="/About#AboutExperience">see more</a>
           </section>
@@ -53,11 +53,11 @@ export default function Thirdsection() {
 
           <section className="work">
             <div>
-              <img src={codeicon} alt="codeicon" />
-              <img src={wwwicon} alt="wwwicon" />
-              <img src={applicationicon} alt="applicationicon" />
+              <img src={codeicon} alt="codeicon" loading="lazy"/>
+              <img src={wwwicon} alt="wwwicon" loading="lazy"/>
+              <img src={applicationicon} alt="applicationicon" loading="lazy"/>
             </div>
-            <h2>My Art</h2>
+            <h2>my art</h2>
             <p>I maked some web projects and application</p>
             <a href="/About">see more</a>
           </section>

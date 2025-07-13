@@ -50,16 +50,10 @@ export default function About() {
           </div>
           <div className="gitbutton">
             <a href="https://github.com/Asfar-07" target="_black">
-              more GitHub
+              more github
             </a>
           </div>
         </section>
-        {/* <section>
-          <h1>My Tools</h1>
-        </section>
-        <section id="AboutExperience">
-          <h1>Experience</h1>
-        </section> */}
       </main>
       <Skills />
       <Footer />

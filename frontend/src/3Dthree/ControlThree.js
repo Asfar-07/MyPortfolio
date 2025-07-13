@@ -1,15 +1,17 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import asteroid1 from "../3Dobject/asteroid1.glb";
-import ufo from "../3Dobject/spinning_ufo.glb"
-import moon from "../3Dobject/moon.glb"
+import ufo from "../3Dobject/spinning_ufo.glb";
+import moon from "../3Dobject/moon.glb";
 
-const asteroidData=[{
-  objectItem:asteroid1,
-  zDirection:1.9,
-  xRotation:0.003,
-  yRotation:0.003,
-}]
+const asteroidData = [
+  {
+    objectItem: asteroid1,
+    zDirection: 1.9,
+    xRotation: 0.003,
+    yRotation: 0.003,
+  },
+];
 function DispalyAlienship_3D(dispalydiv) {
   let animate;
   const scene = new THREE.Scene();
@@ -36,8 +38,8 @@ function DispalyAlienship_3D(dispalydiv) {
       scene.add(model);
       function animate() {
         requestAnimationFrame(animate);
-          //  model.rotation.x += 0.015;
-           model.rotation.y += 0.015;
+        //  model.rotation.x += 0.015;
+        model.rotation.y += 0.015;
         renderer.render(scene, camera);
       }
       animate();
@@ -47,9 +49,9 @@ function DispalyAlienship_3D(dispalydiv) {
       console.error(error);
     }
   );
-
 }
 function DispalyAsteroid_3D(dispalydiv) {
+  let model;
   const scene = new THREE.Scene();
 
   const camera = new THREE.PerspectiveCamera(
@@ -72,12 +74,12 @@ function DispalyAsteroid_3D(dispalydiv) {
   loader.load(
     asteroid1,
     function (gltf) {
-      const model = gltf.scene;
+      model = gltf.scene;
       scene.add(model);
       function animate() {
-        requestAnimationFrame(animate);
-           model.rotation.x += 0.003;
-           model.rotation.y += 0.003;
+      requestAnimationFrame(animate);
+        model.rotation.x += 0.003;
+        model.rotation.y += 0.003;
         renderer.render(scene, camera);
       }
       animate();
@@ -89,8 +91,7 @@ function DispalyAsteroid_3D(dispalydiv) {
   );
 }
 function DispalyEarth_3D(dispalydiv) {
-  console.log("done")
-   const scene = new THREE.Scene();
+  const scene = new THREE.Scene();
 
   const camera = new THREE.PerspectiveCamera(
     75,
@@ -103,7 +104,7 @@ function DispalyEarth_3D(dispalydiv) {
   renderer.setClearColor(0x000000, 0);
   // renderer.setAnimationLoop(animate);
   dispalydiv.appendChild(renderer.domElement);
-  const light = new THREE.DirectionalLight(0xffffff,200);
+  const light = new THREE.DirectionalLight(0xffffff, 200);
   light.position.set(1, 0, -100);
   scene.add(light);
   const loader = new GLTFLoader();
@@ -116,8 +117,8 @@ function DispalyEarth_3D(dispalydiv) {
       scene.add(model);
       function animate() {
         requestAnimationFrame(animate);
-          //  model.rotation.x += .0005;
-           model.rotation.y += .0005;
+        //  model.rotation.x += .0005;
+        model.rotation.y += 0.0005;
         renderer.render(scene, camera);
       }
       animate();
@@ -128,4 +129,4 @@ function DispalyEarth_3D(dispalydiv) {
     }
   );
 }
-export { DispalyAlienship_3D,DispalyAsteroid_3D,DispalyEarth_3D };
+export { DispalyAlienship_3D, DispalyAsteroid_3D, DispalyEarth_3D };

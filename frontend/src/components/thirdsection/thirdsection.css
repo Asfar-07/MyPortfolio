@@ -1,6 +1,6 @@
-@font-face {
-  font-family: heading3;
-  src: url(../../../public/fonts/POSTERABLE.ttf);
+.Thirdsection{
+  display: flex;
+  justify-content: center;
 }
 .Thirdsection main {
   width: 100%;
@@ -14,8 +14,10 @@
 }
 .Mydatas {
   display: flex;
-  justify-content: space-evenly;
-  width: 90%;
+  justify-content: space-between;
+  width:100%;
+  max-width: 1300px;
+  min-width:500px;
   height: 80%;
   align-items: center;
 }
@@ -34,9 +36,9 @@
 }
 .Mydatas section h2{
   margin: 6px 0;
-  font-size: 36px;
-  font-weight: bold;
-  font-family: Arial, sans-serif;
+  font-size: 40px;
+  font-weight: 100;
+  font-family: boldfont;
 }
 .Mydatas section p{
   width: 230px;

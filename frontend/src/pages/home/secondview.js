@@ -54,7 +54,7 @@ export default function SecondView() {
         animate={inView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <img src={iconimage} alt="iconimage" />
+        <img src={iconimage} alt="iconimage" loading="lazy"/>
       </motion.section>
 
       {/* Right content */}
@@ -105,7 +105,7 @@ export default function SecondView() {
               <span></span>
               <span></span>
               <span></span>
-              Download CV
+              download cv
             </a>
           </div>
         </main>

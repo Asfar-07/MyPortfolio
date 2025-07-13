@@ -4,17 +4,13 @@
 }
 @font-face {
   font-family: Poppins-Thin;
-  src: url(../public/fonts/Poppins-Thin.ttf);
+  src: url(../public/fonts/Poppins-Thin.ttf) format('opentype');
 }
 @font-face {
   font-family: Poppins-Regular;
-  src: url(../public/fonts/Poppins-Regular.ttf);
+  src: url(../public/fonts/Poppins-Regular.ttf) format('opentype');
 }
 @font-face {
     font-family: boldfont;
-    src: url(../public/fonts/Bluffolk.otf)
-}
-@font-face {
-    font-family: Danson;
-    src: url(../public/fonts/DansonBold-ovB2o.ttf);
+    src: url(../public/fonts/Bluffolk.otf) format('opentype');
 }

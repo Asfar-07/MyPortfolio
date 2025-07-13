@@ -2,11 +2,11 @@ import "./App.css";
 import "./Fonts.css"
 import React, { useState, useEffect,useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import viewport from "./viewport";
 import About from "./About/About";
 import { useTheme } from "./ThemeContext";
 import FrondLoader from "./loadingscreen/FrondLoading";
 import Backspace from "./components/backspace";
+import useMainpage from "./pages/home/mainfront";
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const { listcolor, toggleTheme } = useTheme();
@@ -49,7 +49,7 @@ export default function App() {
       {isLoading && <FrondLoader /> }
       <BrowserRouter>
         <Routes>
-          <Route path="/" Component={viewport} />
+          <Route path="/" Component={useMainpage} />
           <Route path="/About" Component={About} />
         </Routes>
       </BrowserRouter>

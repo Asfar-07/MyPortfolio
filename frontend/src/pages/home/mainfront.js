@@ -1,10 +1,12 @@
-import React,{useEffect,useState,useRef} from "react";
+// import React,{useEffect,useState,useRef} from "react";
 import "../../assets/styles/mainfront.css";
 import Header from "../../components/header/header";
 // import loffyhat from "../../assets/image/LuffyHat.png";
 import { useTheme } from "../../ThemeContext";
 import SecondView from "./secondview";
-// import Xmas from "./XmasHat.png";
+import Contact from "../contact/useContactpart"
+import Thirdsection from "../../components/thirdsection/thirdsection";
+import Footer from "../footer/footer";
 
 export default function useMainpage() {
   const { listcolor } = useTheme();
@@ -60,7 +62,10 @@ export default function useMainpage() {
           </section>
         </div>
         <SecondView />
+        <Thirdsection />
+        <Contact />
       </main>
+       <Footer /> 
     </div>
   );
 }

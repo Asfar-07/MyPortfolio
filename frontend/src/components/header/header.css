@@ -18,14 +18,13 @@
 }
 header a {
   text-decoration: none;
-  color: white;
-  font-family: Myfont;
-  font-size: 25.5px;
+  font-family: 'versa-versa';
+  font-size: 16.5px;
   letter-spacing: 0.7px;
 }
 #loco {
   text-decoration: none;
-  font-family: Myfont;
+  font-family:'versa-versa';
   font-size: 40px;
   margin: 0 55px;
   border: 2px solid white;
@@ -38,11 +37,6 @@ header a {
   width: 50%;
   display: flex;
   justify-content: space-evenly;
-}
-
-@font-face {
-  font-family: Myfont;
-  src: url(../../../public/fonts/interbureaubold.ttf);
 }
 @media screen and (max-width: 800px) {
   .Header {

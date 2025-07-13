@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
-import "../contactpart/contact.css";
-import callimage from "../contactpart/pngimg.com - telephone_booth_PNG1.png";
+import "../../assets/styles/contact.css";
+// import callimage from "../contactpart/pngimg.com - telephone_booth_PNG1.png";
 import LoadingOverlay from "../../loadingscreen/loadingsection";
 import { useTheme } from "../../ThemeContext";
 import { DispalyEarth_3D } from "../../3Dthree/ControlThree";
@@ -18,7 +18,9 @@ export default function useContactpart() {
   const [loadingfinal, setLoadingFinal] = useState(false);
 
   useEffect(() => {
+    setTimeout(() => {
       DispalyEarth_3D(sceneEarth.current);
+    }, 3500);
   }, [sceneEarth]);
 
   async function handlesubmit(e) {
