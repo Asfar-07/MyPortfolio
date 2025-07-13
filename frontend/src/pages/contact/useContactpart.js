@@ -20,7 +20,7 @@ export default function useContactpart() {
   useEffect(() => {
     setTimeout(() => {
       DispalyEarth_3D(sceneEarth.current);
-    }, 3500);
+    }, 4500);
   }, [sceneEarth]);
 
   async function handlesubmit(e) {

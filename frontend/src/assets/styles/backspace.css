@@ -1,7 +1,6 @@
 .spacearound {
   position: fixed;
   inset: 0;
-
   z-index: 1;
 }
 .motionstar {
@@ -79,9 +78,9 @@
 .randomAsteroid {
   /* background-color: blue; */
   position: absolute;
-  left: -50px;
+  /* left: -50px; */
   /* transform: translate(0%, -50%); */
-  animation:moveAsteroid 30s linear forwards ;
+  /* background-color: brown; */
 }
 @keyframes moveAsteroid {
   0% {

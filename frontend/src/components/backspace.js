@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import "../assets/styles/backspace.css";
 import {
   DispalyAlienship_3D,
@@ -9,10 +8,9 @@ export default function Backspace() {
   const WebSpace = useRef();
   const isFirstRender = useRef(true);
   const sceneAlienShip3D = useRef();
-  const sceneAsteroid = useRef();
   useEffect(() => {
     function createsmallstar() {
-      const numStars = 40;
+      const numStars = 80;
       if (WebSpace.current) {
         for (let i = 0; i < numStars; i++) {
           const star = document.createElement("div");
@@ -56,27 +54,57 @@ export default function Backspace() {
     const interval = setInterval(createShootingStar, 5000);
     return () => clearInterval(interval);
   }, []);
-  useEffect(() => {
-    setTimeout(() => {
-      DispalyAlienship_3D(sceneAlienShip3D.current);
-    }, 2000);
-  }, [sceneAlienShip3D]);
-  useEffect(() => {
-    function MakeRandomAsteroid() {
-      const asteroid = document.createElement("div");
+  useEffect(()=>{
+    function makeFirstAsteroid(){
+      for (let i = 0; i < 4; i++) {
+        const asteroid = document.createElement("div");
       asteroid.classList.add("randomAsteroid");
-      WebSpace.current.appendChild(asteroid);
       const startY = Math.random() * WebSpace.current.clientHeight;
       const sizeAsteroid= Math.floor(Math.random() * (50-20)+20);
-       const angleAsteroid = Math.floor(Math.random() * 20) ;
-       asteroid.style.width=sizeAsteroid+"px"
-       asteroid.style.height=sizeAsteroid+"px"
-       asteroid.style.setProperty("--asteroidAngle", `${angleAsteroid}deg`);
+      const angleAsteroid = Math.floor(Math.random() * 20) ;
+      asteroid.style.width=sizeAsteroid+"px"
+      asteroid.style.height=sizeAsteroid+"px"
       asteroid.style.top=startY+"px"
+      asteroid.style.left="-100px"
+      WebSpace.current.appendChild(asteroid);
       DispalyAsteroid_3D(asteroid);
-      setTimeout(() => asteroid.remove(), 30000);
+      }
     }
-    const interval = setInterval(MakeRandomAsteroid, 20000);
+    setTimeout(() => {
+      makeFirstAsteroid()
+    }, 10000);
+  },[])
+  useEffect(() => {
+    let num=0;
+    function MOVEasteroid() {
+      const listrandomAsteroid=document.querySelectorAll(".randomAsteroid");
+      
+      // console.log(listrandomAsteroid[0])
+      const pickside= Math.floor(Math.random() * 2)+1;
+      const asteroid=listrandomAsteroid[num]
+      const startY = Math.random() * WebSpace.current.clientHeight;
+      const angleAsteroid = Math.floor(Math.random() * 20) ;
+      const animeduration= Math.floor(Math.random() * (20-15)+15)
+      console.log(animeduration)
+      if(pickside==1){
+        asteroid.style.top=startY+"px"
+        asteroid.style.left="-100px"
+      }else{
+        asteroid.style.left=startY+"px"
+        asteroid.style.top="-100px"
+      }
+      asteroid.style.animation=`moveAsteroid ${animeduration}s linear`;
+      asteroid.style.setProperty("--asteroidAngle", `${angleAsteroid}deg`);
+      if(num>=3){
+        num=0
+      }else{
+        num +=1
+      }
+      setTimeout(() => {
+      asteroid.style.animation="none";
+    }, ((animeduration*1000)-1000));
+    }
+    const interval = setInterval(MOVEasteroid, 15000);
     return () => clearInterval(interval);
   });
   return (
