@@ -4,6 +4,7 @@ import "../../assets/styles/contact.css";
 import LoadingOverlay from "../../loadingscreen/loadingsection";
 import { useTheme } from "../../ThemeContext";
 import { DispalyEarth_3D } from "../../3Dthree/ControlThree";
+import FrondLoader from "../../loadingscreen/FrondLoading";
 export default function useContactpart() {
   const { listcolor } = useTheme();
   let Secondrycolor = listcolor.secondrycolor;
@@ -16,10 +17,10 @@ export default function useContactpart() {
   const [Message, setMessage] = useState();
   const [loading, setLoading] = useState(false);
   const [loadingfinal, setLoadingFinal] = useState(false);
-
+  const [isloading, setISLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
-      DispalyEarth_3D(sceneEarth.current);
+      DispalyEarth_3D(sceneEarth.current,setISLoading);
     }, 2000);
   }, [sceneEarth]);
 
@@ -67,6 +68,7 @@ export default function useContactpart() {
   }
   return (
     <>
+    <FrondLoader loading={isloading}/>
       <LoadingOverlay loadingaction={loading} loadingend={loadingfinal} />
       <div
         className="contactsection"

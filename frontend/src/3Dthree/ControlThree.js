@@ -3,7 +3,6 @@ import { GLTFLoader } from "three/examples/jsm/Addons.js";
 import asteroid1 from "../3Dobject/asteroid1.glb";
 import ufo from "../3Dobject/spinning_ufo.glb";
 import moon from "../3Dobject/the_moon.glb";
-
 // const asteroidData = [
 //   {
 //     objectItem: asteroid1,
@@ -12,6 +11,8 @@ import moon from "../3Dobject/the_moon.glb";
 //     yRotation: 0.003,
 //   },
 // ];
+
+
 function DispalyAlienship_3D(dispalydiv) {
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(
@@ -76,7 +77,7 @@ function DispalyAsteroid_3D(dispalydiv) {
       model = gltf.scene;
       scene.add(model);
       function animate() {
-      requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
         model.rotation.x += 0.003;
         model.rotation.y += 0.003;
         renderer.render(scene, camera);
@@ -89,7 +90,7 @@ function DispalyAsteroid_3D(dispalydiv) {
     }
   );
 }
-function DispalyEarth_3D(dispalydiv) {
+function DispalyEarth_3D(dispalydiv,setLoading) {
   const scene = new THREE.Scene();
 
   const camera = new THREE.PerspectiveCamera(
@@ -106,9 +107,20 @@ function DispalyEarth_3D(dispalydiv) {
   const light = new THREE.DirectionalLight(0xffffff, 1.5);
   light.position.set(50, 0, -5);
   scene.add(light);
-  const loader = new GLTFLoader();
-  camera.position.z =2.2;
+  camera.position.z = 2.2;
 
+  const manager = new THREE.LoadingManager();
+
+  manager.onLoad = () => {
+    console.log("All resources loaded.");
+    setLoading(false)
+  };
+
+  manager.onError = (url) => {
+    console.error("Error loading: " + url);
+  };
+
+  const loader = new GLTFLoader(manager);
   loader.load(
     moon,
     function (gltf) {
@@ -128,4 +140,4 @@ function DispalyEarth_3D(dispalydiv) {
     }
   );
 }
-export { DispalyAlienship_3D, DispalyAsteroid_3D, DispalyEarth_3D };
+export { DispalyAlienship_3D, DispalyAsteroid_3D, DispalyEarth_3D};
