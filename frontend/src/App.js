@@ -12,19 +12,17 @@ export default function App() {
   const { listcolor, toggleTheme } = useTheme();
   const [slownet,setSlowNet]=useState(false);
   useEffect(()=>{
-    setTimeout(()=>{
-        setSlowNet(true)
-      },6000)
     function handleLoad(){
+      console.log("loaded")
       setIsLoading(false)
     }
-     window.addEventListener("load", handleLoad);
-    //  setTimeout(() => {
-    //     setIsLoading(false)
-    //   }, 3000);
+    if (document.readyState === "complete") {
+      setIsLoading(false)
+    } else {
+      window.addEventListener("load", handleLoad);
+    }
       return () => {
       window.removeEventListener("load", handleLoad);
-      setSlowNet(false)
     };
   },[])
  
