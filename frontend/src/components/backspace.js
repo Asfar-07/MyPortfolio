@@ -85,7 +85,7 @@ export default function Backspace() {
       const startY = Math.random() * WebSpace.current.clientHeight;
       const angleAsteroid = Math.floor(Math.random() * 20) ;
       const animeduration= Math.floor(Math.random() * (20-15)+15)
-      console.log(animeduration)
+      // console.log(animeduration)
       if(pickside==1){
         asteroid.style.top=startY+"px"
         asteroid.style.left="-100px"

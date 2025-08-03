@@ -20,12 +20,12 @@ export default function useContactpart() {
   useEffect(() => {
     setTimeout(() => {
       DispalyEarth_3D(sceneEarth.current);
-    }, 4500);
+    }, 2000);
   }, [sceneEarth]);
 
   async function handlesubmit(e) {
     e.preventDefault();
-    console.log(Message, email, firstname, secondname, phonenumber);
+    // console.log(Message, email, firstname, secondname, phonenumber);
     try {
       setLoading(true);
       setLoadingFinal(false);
@@ -71,8 +71,9 @@ export default function useContactpart() {
       <div
         className="contactsection"
         id="contactsection"
-        style={{ color: "white", backgroundColor: Secondrycolor }}
+        style={{ color: "white"}}
       >
+        <div className="fakebody" style={{backgroundColor:Secondrycolor}}></div>
         <section className="tittlecontact">
           <div className="Earth3D" ref={sceneEarth} id="Earth3DScene"></div>
           {/* <img src={callimage} alt=""/> */}

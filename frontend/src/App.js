@@ -10,10 +10,22 @@ import useMainpage from "./pages/home/mainfront";
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const { listcolor, toggleTheme } = useTheme();
+  const [slownet,setSlowNet]=useState(false);
   useEffect(()=>{
-     setTimeout(() => {
-        setIsLoading(false)
-      }, 3000);
+    setTimeout(()=>{
+        setSlowNet(true)
+      },6000)
+    function handleLoad(){
+      setIsLoading(false)
+    }
+     window.addEventListener("load", handleLoad);
+    //  setTimeout(() => {
+    //     setIsLoading(false)
+    //   }, 3000);
+      return () => {
+      window.removeEventListener("load", handleLoad);
+      setSlowNet(false)
+    };
   },[])
  
   const [rotate, setRotate] = useState(() => {
@@ -46,7 +58,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      {isLoading && <FrondLoader /> }
+      {isLoading && <FrondLoader resnet={slownet}/> }
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={useMainpage} />
