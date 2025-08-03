@@ -7,20 +7,19 @@ import { useTheme } from "./ThemeContext";
 import FrondLoader from "./loadingscreen/FrondLoading";
 import Backspace from "./components/backspace";
 import useMainpage from "./pages/home/mainfront";
+
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const { listcolor, toggleTheme } = useTheme();
   const [slownet,setSlowNet]=useState(false);
+
+
   useEffect(()=>{
     function handleLoad(){
       console.log("loaded")
-      setIsLoading(false)
+      setIsLoading(true)
     }
-    if (document.readyState === "complete") {
-      setIsLoading(false)
-    } else {
       window.addEventListener("load", handleLoad);
-    }
       return () => {
       window.removeEventListener("load", handleLoad);
     };
@@ -56,7 +55,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      {isLoading && <FrondLoader resnet={slownet}/> }
+      {!isLoading && <FrondLoader resnet={slownet}/> }
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={useMainpage} />
