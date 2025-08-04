@@ -11,23 +11,13 @@ import SmallSpinner from "../loadingscreen/SmallLoading"
 const Skills = () => {
   const { listcolor } = useTheme();
   let bordercolor;
-  let backgroundImageStyle;
+  let setClassStyle;
   if (listcolor.settheme === "dark") {
     bordercolor = "var(--dark-border-color)";
-    backgroundImageStyle = {
-      borderColor: bordercolor,
-      backgroundImage: `url(${backimage})`,
-      backgroundSize: "100% 90%",
-      backgroundRepeat: "no-repeat",
-    };
+    setClassStyle="section-skillB"
   } else {
     bordercolor = "var(--light-border-color)";
-    backgroundImageStyle = {
-      borderColor: bordercolor,
-      backgroundImage: `url(${backimage2})`,
-      backgroundSize: "100% 90%",
-      backgroundRepeat: "no-repeat",
-    };
+    setClassStyle="section-skillW"
   }
   return (
     <main className="Mainskills">
@@ -47,21 +37,13 @@ const Skills = () => {
         <span className="luckynumber">95</span>
       </article>
       <h2 className="skillheading">What i know?</h2>
-      <div style={backgroundImageStyle}>
+      <div className={setClassStyle} >
         <section
           style={{
             borderColor: bordercolor,
-            background: "url(./FrameDark.png)",
           }}
         >
           <header className="skillhead">
-            <div>
-              <img
-                className="skillicon"
-                src="https://cdn3d.iconscout.com/3d/free/thumb/free-react-3d-icon-download-in-png-blend-fbx-gltf-file-formats--facebook-logo-native-javascript-library-user-interfaces-coding-lang-pack-logos-icons-7578010.png?f=webp"
-                alt="React.js Icon"
-              />
-            </div>
             <div>
               <h2>REACT.js</h2>
             </div>
@@ -84,13 +66,6 @@ const Skills = () => {
         <section style={{ borderColor: bordercolor }}>
           <header className="skillhead">
             <div>
-              <img
-                className="skillicon"
-                src="https://cdn3d.iconscout.com/3d/free/thumb/free-nodejs-3d-icon-download-in-png-blend-fbx-gltf-file-formats--javascript-runtime-backend-node-js-logo-coding-lang-pack-logos-icons-7578002.png"
-                alt="Node.js Icon"
-              />
-            </div>
-            <div>
               <h2>NODE.js</h2>
             </div>
           </header>
@@ -112,13 +87,6 @@ const Skills = () => {
         <section style={{ borderColor: bordercolor }}>
           <header className="skillhead">
             <div>
-              <img
-                className="skillicon"
-                src="https://cdn3d.iconscout.com/3d/free/thumb/free-mongo-db-3d-icon-download-in-png-blend-fbx-gltf-file-formats--mongodb-database-document-oriented-nosql-coding-lang-pack-logos-icons-7577996.png"
-                alt="MongoDB Icon"
-              />
-            </div>
-            <div>
               <h2>MongoDB</h2>
             </div>
           </header>
@@ -138,13 +106,6 @@ const Skills = () => {
         </section>
         <section style={{ borderColor: bordercolor }}>
           <header className="skillhead">
-            <div>
-              <img
-                className="skillicon"
-                src="https://cdn3d.iconscout.com/3d/free/thumb/free-java-3d-icon-download-in-png-blend-fbx-gltf-file-formats--object-oriented-jvm-logo-applications-coding-lang-pack-logos-icons-7578017.png?f=webp"
-                alt="Java Icon"
-              />
-            </div>
             <div>
               <h2>Java</h2>
             </div>
@@ -168,13 +129,6 @@ const Skills = () => {
         </section>
         <section style={{ borderColor: bordercolor }}>
           <header className="skillhead">
-            <div>
-              <img
-                className="skillicon"
-                src="https://cdn3d.iconscout.com/3d/free/thumb/free-react-3d-icon-download-in-png-blend-fbx-gltf-file-formats--facebook-logo-native-javascript-library-user-interfaces-coding-lang-pack-logos-icons-7578010.png?f=webp"
-                alt="React.js Icon"
-              />
-            </div>
             <div>
               <h2>PYTHON</h2>
             </div>

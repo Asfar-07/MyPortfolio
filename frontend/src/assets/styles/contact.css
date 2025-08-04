@@ -144,6 +144,9 @@
         width: 100%;
         min-width: 0px;
     }
+    .maincontactpart {
+        padding: 0;
+    }
     .contactinput {
         width: 100%;
         padding-right: 0px;

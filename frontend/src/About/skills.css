@@ -36,6 +36,18 @@
         bottom: 0;
         font: normal normal bold 30px / 1.6em madefor-text, helveticaneuew01-45ligh, helveticaneuew02-45ligh, helveticaneuew10-45ligh, sans-serif ;
       }
+      .section-skillB{
+        border-bottom: 1px solid white;
+        background: url(./FrameDark.png);
+        background-size: 100% 90%;
+        background-repeat: no-repeat;
+      }
+      .section-skillW{
+        border-bottom: 1px solid rgb(0, 0, 0);
+        background: url(./FrameLight.png);
+        background-size: 100% 90%;
+        background-repeat: no-repeat;
+      }
       .Mainskills article> div{
         display: flex;
         flex-direction: column;
@@ -59,10 +71,6 @@
         justify-content: center;
         flex-wrap: wrap;
         padding-bottom: 150px;
-        border-bottom: 1px solid white;
-        /* background: url(./FrameDark.png); */
-        background-size: 100% 90%;
-        background-repeat: no-repeat;
       }
       .Mainskills section {
         display: flex;
@@ -128,9 +136,16 @@
         height: 450px;
         border-radius: 5px;
         }
+        .Mainskills > div{
+          background-image: none;
+        }
         .Mainskills section > header {
           display: flex;
           flex-direction: column;
+        }
+        .Mainskills article{
+          overflow: auto;
+          width: 800px;
         }
         .skillicon {
           width: 142px;
@@ -150,13 +165,15 @@
           justify-content: center;
 
       }
-      /* .skillhead > :last-child h2 {
-        margin: 0;
-    } */
+      .skillhead > :last-child h2 {
+    margin: 0 10px 10px;
+      }
     .aboutskills {
+      text-align: justify;
+      font-size: 16px;
       margin: 0 30px;
     }
     .Mainskills section > p{
-      margin: 30px  30px;
+      margin: 10px  30px;
     }
   }

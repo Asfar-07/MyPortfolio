@@ -199,7 +199,7 @@ max-width: 60ch;
   .frontmain {
     overflow: hidden;
   }
-
+  
   .frontmain> main {
     display: flex;
     justify-content: center;
@@ -207,7 +207,7 @@ max-width: 60ch;
     padding: 0 20px;
   }
   .homeView {
-    height: 800px;
+    height: 650px;
   }
   .leftfront {
     margin-top: 25px;
@@ -217,13 +217,19 @@ max-width: 60ch;
     height: 75%;
     margin-top: 100px;
   }
-  .maincontact div br {
-    display: none;
+  .maincontact h2 {
+    font-size: 50px;
+    line-height: 1;
+  }
+   .maincontact h4 {
+    font-size: 25px;
+    margin: 20px 0;
   }
   .maincontact p {
     font-size: 18px;
     letter-spacing: 1px;
     font-weight: 300;
+    width: fit-content;
   }
   .rightfront {
     display: none;
@@ -231,8 +237,11 @@ max-width: 60ch;
   .container {
     display: none;
   }
-  .maincontact div {
-    margin-left: 0px;
+  .maincontact> div {
+    width: 100%;
+  }
+  .contactiocn{
+    margin-top: 20px;
   }
 }
 

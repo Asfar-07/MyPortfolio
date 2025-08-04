@@ -161,12 +161,12 @@ align-items: center;
   top: -30px;
 }
 @media screen and (max-width: 800px) {
-  .Thirdsection main {
-    height: 1600px;
+  .Thirdsection {
+    height: fit-content;
   }
   .Mydatas {
     flex-direction: column;
-    height: 90%;
+    height: 70%;
   }
   .Mydatas section {
     width: 310px;

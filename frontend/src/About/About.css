@@ -294,55 +294,13 @@
     height: 200px;
   }
 }
-/* @keyframes changeimage {
-    0%    { background-image: url(./Document\ -\ Google\ Chrome\ 22-06-2024\ 19_04_40\ \(2\).png); }
-    20%   { background-image: url(./Document\ -\ Google\ Chrome\ 22-06-2024\ 19_04_40\ \(2\).png); }
-    21%   { background-image: url(./photo_2024-11-06_20-35-56.jpg); }
-    40%   { background-image: url(./photo_2024-11-06_20-35-56.jpg); }
-    41%   { background-image: url(./photo_2_2024-11-06_20-38-31.jpg); }
-    60%   { background-image: url(./photo_2_2024-11-06_20-38-31.jpg); }
-    61%   { background-image: url(./photo_5_2024-11-06_20-38-31.jpg); }
-    80%   { background-image: url(./photo_5_2024-11-06_20-38-31.jpg); }
-    81%   { background-image: url(./photo_3_2024-11-06_20-38-31.jpg); }
-    100%  { background-image: url(./photo_3_2024-11-06_20-38-31.jpg); }
-}
-@keyframes changecolor {
-    0%    { background-color: rgba(113, 102, 199, 1)}
-    20%   {background-color: rgba(113, 102, 199, 1) }
-    21%   {background-color: rgba(71, 70, 242, 1) }
-    40%   { background-color:rgba(71, 70, 242, 1)}
-    41%   { }
-    60%   { }
-    61%   { }
-    80%   { }
-    81%   { }
-    100%  { }
-}
-@keyframes changecolorbefore {
-    0%    { background-color: rgba(91, 101, 203, 1)}
-    20%   {background-color: rgba(91, 101, 203, 1) }
-    21%   {background-color: rgba(139, 140, 255, 1)}
-    40%   { background-color:rgba(139, 140, 255, 1)}
-    41%   { }
-    60%   { }
-    61%   { }
-    80%   { }
-    81%   { }
-    100%  { }
-} */
-/* @media screen and (max-width:1000px) {
-    .view-project-c, .view-project-c-2 {
-        width: 300px;
-        height: 400px;
-    }
-} */
 @media screen and (max-width: 1000px) {
   .projects {
     display: flex;
     flex-direction: row;
     height: 100%;
     width: 100%;
-    padding: 0px 30px;
+    padding: 0px 0px;
     overflow: hidden;
   }
   .view-project-c,

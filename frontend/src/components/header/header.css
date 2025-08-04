@@ -45,6 +45,7 @@ header a {
     position: fixed;
     z-index: 20;
     display: none;
+    background-color: black;
   }
   #mycheck {
     display: block;
