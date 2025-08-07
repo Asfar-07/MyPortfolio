@@ -1,19 +1,56 @@
 // import React,{useEffect,useState,useRef} from "react";
 import "../../assets/styles/mainfront.css";
 import Header from "../../components/header/header";
+import { useState ,useEffect } from "react";
 // import loffyhat from "../../assets/image/LuffyHat.png";
 import { useTheme } from "../../ThemeContext";
 import SecondView from "./secondview";
 import Contact from "../contact/useContactpart"
 import Thirdsection from "../../components/thirdsection/thirdsection";
 import Footer from "../footer/footer";
+import FrondLoader from "../../loadingscreen/FrondLoading";
+import Backspace from "../../components/backspace";
 
 export default function useMainpage() {
   const { listcolor } = useTheme();
   let containercolor = listcolor.frontcontainer;
+
+ const [loading, setLoading] = useState(true);
  
+   useEffect(() => {
+     let isCancelled = false;
+ 
+     async function waitForResources() {
+       const images = Array.from(document.images);
+       await Promise.all(
+         images.map((img) => {
+           if (img.complete) return Promise.resolve();
+           return new Promise((resolve) => {
+             img.onload = img.onerror = resolve;
+           });
+         })
+       );
+ 
+       if (document.fonts && document.fonts.ready) {
+         await document.fonts.ready;
+       }
+ 
+       await new Promise((res) => setTimeout(res, 300)); // optional delay
+ 
+       if (!isCancelled) setLoading(false);
+     }
+ 
+     waitForResources();
+ 
+     return () => {
+       isCancelled = true;
+     };
+   }, []);
+
   return (
     <div className="frontmain">
+      <FrondLoader loading={loading}/>
+      <Backspace loading={loading}/>
       <Header />
       <main>
         <div className="homeView">
@@ -63,7 +100,7 @@ export default function useMainpage() {
         </div>
         <SecondView />
         <Thirdsection />
-        <Contact />
+        <Contact loading={loading}/>
       </main>
        <Footer /> 
     </div>

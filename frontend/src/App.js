@@ -4,7 +4,6 @@ import React, { useState} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./About/About";
 import { useTheme } from "./ThemeContext";
-import Backspace from "./components/backspace";
 import useMainpage from "./pages/home/mainfront";
 
 export default function App() {
@@ -27,7 +26,6 @@ export default function App() {
     <div className={`App-${listcolor.settheme}`}>
       {/* <div className="smallstar"></div> */}
       {/* <div className="spacearound" ref={WebSpace}></div> */}
-      <Backspace />
       <section className="mainswitchmod">
         <div
           className="switchmod"

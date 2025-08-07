@@ -112,8 +112,8 @@ function DispalyEarth_3D(dispalydiv,setLoading) {
   const manager = new THREE.LoadingManager();
 
   manager.onLoad = () => {
-    console.log("All resources loaded.");
-    setLoading(false)
+    console.log("3D resources loaded.");
+    // setLoading(false)
   };
 
   manager.onError = (url) => {

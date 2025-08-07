@@ -5,7 +5,7 @@ import LoadingOverlay from "../../loadingscreen/loadingsection";
 import { useTheme } from "../../ThemeContext";
 import { DispalyEarth_3D } from "../../3Dthree/ControlThree";
 import FrondLoader from "../../loadingscreen/FrondLoading";
-export default function useContactpart() {
+export default function useContactpart({loading}) {
   const { listcolor } = useTheme();
   let Secondrycolor = listcolor.secondrycolor;
   // console.log(Secondrycolor)
@@ -15,20 +15,20 @@ export default function useContactpart() {
   const [secondname, setLastName] = useState();
   const [phonenumber, setPhoneName] = useState();
   const [Message, setMessage] = useState();
-  const [loading, setLoading] = useState(false);
+  const [sendloading, setSendLoading] = useState(false);
   const [loadingfinal, setLoadingFinal] = useState(false);
   const [isloading, setISLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => {
+    if(! loading){
       DispalyEarth_3D(sceneEarth.current,setISLoading);
-    }, 2000);
-  }, [sceneEarth]);
+    }
+  }, [sceneEarth,loading]);
 
   async function handlesubmit(e) {
     e.preventDefault();
     // console.log(Message, email, firstname, secondname, phonenumber);
     try {
-      setLoading(true);
+      setSendLoading(true);
       setLoadingFinal(false);
       const response = await fetch(
         "https://myportfolio-1tuj.onrender.com/Data",
@@ -48,7 +48,7 @@ export default function useContactpart() {
         }
       );
       if (response.ok) {
-        setLoading(false);
+        setSendLoading(false);
         setLoadingFinal(true);
         setTimeout(() => {
           setLoadingFinal(false);
@@ -68,8 +68,8 @@ export default function useContactpart() {
   }
   return (
     <>
-    <FrondLoader loading={isloading}/>
-      <LoadingOverlay loadingaction={loading} loadingend={loadingfinal} />
+    {/* <FrondLoader loading={isloading}/> */}
+      <LoadingOverlay loadingaction={sendloading} loadingend={loadingfinal} />
       <div
         className="contactsection"
         id="contactsection"

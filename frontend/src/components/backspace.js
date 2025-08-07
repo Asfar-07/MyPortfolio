@@ -4,7 +4,7 @@ import {
   DispalyAlienship_3D,
   DispalyAsteroid_3D,
 } from "../3Dthree/ControlThree";
-export default function Backspace() {
+export default function Backspace({ loading }) {
   const WebSpace = useRef();
   const isFirstRender = useRef(true);
   const sceneAlienShip3D = useRef();
@@ -54,59 +54,63 @@ export default function Backspace() {
     const interval = setInterval(createShootingStar, 5000);
     return () => clearInterval(interval);
   }, []);
-  useEffect(()=>{
-    function makeFirstAsteroid(){
+  useEffect(() => {
+    function makeFirstAsteroid() {
       for (let i = 0; i < 4; i++) {
         const asteroid = document.createElement("div");
-      asteroid.classList.add("randomAsteroid");
-      const startY = Math.random() * WebSpace.current.clientHeight;
-      const sizeAsteroid= Math.floor(Math.random() * (50-20)+20);
-      const angleAsteroid = Math.floor(Math.random() * 20) ;
-      asteroid.style.width=sizeAsteroid+"px"
-      asteroid.style.height=sizeAsteroid+"px"
-      asteroid.style.top=startY+"px"
-      asteroid.style.left="-100px"
-      WebSpace.current.appendChild(asteroid);
-      DispalyAsteroid_3D(asteroid);
+        asteroid.classList.add("randomAsteroid");
+        const startY = Math.random() * WebSpace.current.clientHeight;
+        const sizeAsteroid = Math.floor(Math.random() * (50 - 20) + 20);
+        const angleAsteroid = Math.floor(Math.random() * 20);
+        asteroid.style.width = sizeAsteroid + "px";
+        asteroid.style.height = sizeAsteroid + "px";
+        asteroid.style.top = startY + "px";
+        asteroid.style.left = "-100px";
+        WebSpace.current.appendChild(asteroid);
+        DispalyAsteroid_3D(asteroid);
       }
     }
-    setTimeout(() => {
-      makeFirstAsteroid()
-    }, 10000);
-  },[])
+    if (!loading) {
+      setTimeout(() => {
+        makeFirstAsteroid();
+      }, 5000);
+    }
+  }, [loading]);
   useEffect(() => {
-    let num=0;
+    let num = 0;
     function MOVEasteroid() {
-      const listrandomAsteroid=document.querySelectorAll(".randomAsteroid");
-      
+      const listrandomAsteroid = document.querySelectorAll(".randomAsteroid");
+
       // console.log(listrandomAsteroid[0])
-      const pickside= Math.floor(Math.random() * 2)+1;
-      const asteroid=listrandomAsteroid[num]
+      const pickside = Math.floor(Math.random() * 2) + 1;
+      const asteroid = listrandomAsteroid[num];
       const startY = Math.random() * WebSpace.current.clientHeight;
-      const angleAsteroid = Math.floor(Math.random() * 20) ;
-      const animeduration= Math.floor(Math.random() * (20-15)+15)
+      const angleAsteroid = Math.floor(Math.random() * 20);
+      const animeduration = Math.floor(Math.random() * (20 - 15) + 15);
       // console.log(animeduration)
-      if(pickside==1){
-        asteroid.style.top=startY+"px"
-        asteroid.style.left="-100px"
-      }else{
-        asteroid.style.left=startY+"px"
-        asteroid.style.top="-100px"
+      if (pickside == 1) {
+        asteroid.style.top = startY + "px";
+        asteroid.style.left = "-100px";
+      } else {
+        asteroid.style.left = startY + "px";
+        asteroid.style.top = "-100px";
       }
-      asteroid.style.animation=`moveAsteroid ${animeduration}s linear`;
+      asteroid.style.animation = `moveAsteroid ${animeduration}s linear`;
       asteroid.style.setProperty("--asteroidAngle", `${angleAsteroid}deg`);
-      if(num>=3){
-        num=0
-      }else{
-        num +=1
+      if (num >= 3) {
+        num = 0;
+      } else {
+        num += 1;
       }
       setTimeout(() => {
-      asteroid.style.animation="none";
-    }, ((animeduration*1000)-1000));
+        asteroid.style.animation = "none";
+      }, animeduration * 1000 - 1000);
     }
-    const interval = setInterval(MOVEasteroid, 15000);
-    return () => clearInterval(interval);
-  });
+    if (!loading) {
+      const interval = setInterval(MOVEasteroid, 15000);
+      return () => clearInterval(interval);
+    }
+  }, [loading]);
   return (
     <div className="spacearound" ref={WebSpace}>
       {/* <div className="randomAsteroid" ref={sceneAsteroid}></div> */}
