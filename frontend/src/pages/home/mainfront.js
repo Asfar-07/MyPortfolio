@@ -16,11 +16,12 @@ export default function useMainpage() {
   let containercolor = listcolor.frontcontainer;
 
  const [loading, setLoading] = useState(true);
- 
+ const widthBody=document.body
    useEffect(() => {
      let isCancelled = false;
- 
+
      async function waitForResources() {
+      if(widthBody.clientWidth>800){
        const images = Array.from(document.images);
        await Promise.all(
          images.map((img) => {
@@ -30,7 +31,7 @@ export default function useMainpage() {
            });
          })
        );
- 
+         }
        if (document.fonts && document.fonts.ready) {
          await document.fonts.ready;
        }
@@ -45,7 +46,7 @@ export default function useMainpage() {
      return () => {
        isCancelled = true;
      };
-   }, []);
+   }, [widthBody]);
 
   return (
     <div className="frontmain">
