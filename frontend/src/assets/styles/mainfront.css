@@ -218,7 +218,7 @@ max-width: 60ch;
     margin-top: 100px;
   }
   .maincontact h2 {
-    font-size: 50px;
+    font-size: 45px;
     line-height: 1;
   }
    .maincontact h4 {
@@ -232,10 +232,20 @@ max-width: 60ch;
     width: fit-content;
   }
   .rightfront {
-    display: none;
+   position: absolute;
+   z-index: 0;
+   margin: 0;
+   padding: 0;
+   justify-content: center;
+   width: 100px;
+   height: 100px;
+   opacity: 0;
   }
   .container {
-    display: none;
+    padding: 0;
+    margin: 0;
+   width: 100px;
+   height: 100px;
   }
   .maincontact> div {
     width: 100%;

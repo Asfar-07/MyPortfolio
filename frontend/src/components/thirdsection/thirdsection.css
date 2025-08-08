@@ -24,7 +24,7 @@
   justify-content: space-between;
   width:100%;
   max-width: 1300px;
-  min-width:500px;
+  min-width:250px;
   height: 80%;
   align-items: center;
 }
@@ -164,14 +164,22 @@ align-items: center;
   .Thirdsection {
     height: fit-content;
   }
+  .Thirdsection main{
+    height: 100%;
+  }
   .Mydatas {
     flex-direction: column;
-    height: 70%;
+    margin-top: 80px;
+  }
+  .Mainhadingskill {
+  font-size: 26px;
+  }
+  .subhadingskill {
+    text-align: justify;
   }
   .Mydatas section {
-    width: 310px;
-        height: 385px;
-        box-shadow: none;
+    height: fit-content;
+    box-shadow: none;
   }
   .moretry {
     position: relative;
@@ -179,6 +187,10 @@ align-items: center;
   }
   .sectionabout{
     margin-top: 6px;
+  }
+  .Mydatas samp {
+    top: 0;
+    margin: 20px 0;
   }
   .Mydatas section header div i {
     font-size: 55px;

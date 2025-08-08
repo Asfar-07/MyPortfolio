@@ -138,7 +138,10 @@
   }
 @media screen and (max-width:800px) {
     .tittlecontact{
-        display: none;
+        position: absolute;
+    }
+    .Earth3D {
+    position: absolute;
     }
     .maincontactpart {
         width: 100%;
@@ -171,29 +174,4 @@
         justify-content: center;
     }
 }
-@media screen and (width >= 800px) and (width <= 1000px){
-    .maincontactpart {
-        width: 100%;
-        min-width: 0px;
-    }
-    .contactinput {
-        width: 100%;
-        padding-right: 0px;
-        margin-top: 40px;
-        margin-left:0px;
-        align-items: center;
-    }
-    .messagearea textarea{
-        width: calc(100% - 50PX);
-    }
-    .Forname :last-child , .Fornumber_email :last-child{
-        margin-left: 0px;
-    }
-    .Forname input, .Fornumber_email input {
-        width: calc(100% - 50PX);
-        padding: 0 25px 0 25px;
-    }
-    .Forname, .Fornumber_email {
-        flex-direction: column;
-    }
-}
+
