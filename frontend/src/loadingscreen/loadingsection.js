@@ -11,7 +11,7 @@ const LoadingOverlay = (props) => {
     // console.log(props.loadingaction)
   return (
     <>
-     {props.loadingaction&& (
+     {props.loadingaction && (
     <div className="loading-overlay" id="loadingOverlay">
       <div className="main-loading">
         <samp>

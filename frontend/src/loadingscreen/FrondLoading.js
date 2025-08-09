@@ -4,7 +4,8 @@ export default function FrondLoader({loading}) {
   return (
     ( loading &&
     <div className="loader-screen">
-      <h1 className="fade-in">🚀 Loading Portfolio...</h1>
+      {/* <h1 className="fade-in">🚀 Loading Portfolio...</h1> */}
+      <div className="front-loader-spin"></div>
     </div>
     )
   );
