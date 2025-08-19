@@ -1,57 +1,44 @@
 // import React,{useEffect,useState,useRef} from "react";
 import "../../assets/styles/mainfront.css";
 import Header from "../../components/header/header";
-import { useState ,useEffect } from "react";
+import { useState ,useEffect, useRef } from "react";
 // import loffyhat from "../../assets/image/LuffyHat.png";
 import { useTheme } from "../../ThemeContext";
 import SecondView from "./secondview";
 import Contact from "../contact/useContactpart"
 import Thirdsection from "../../components/thirdsection/thirdsection";
 import Footer from "../footer/footer";
-import FrondLoader from "../../loadingscreen/FrondLoading";
-import Backspace from "../../components/backspace";
 
 export default function useMainpage() {
-  const { listcolor } = useTheme();
+  const { listcolor,frondloading } = useTheme();
+  const [changeWords,setChangeWords]=useState(true)
+
   let containercolor = listcolor.frontcontainer;
-
- const [loading, setLoading] = useState(true);
- const widthBody=document.body
-   useEffect(() => {
-     let isCancelled = false;
-
-     async function waitForResources() {
-      if(widthBody.clientWidth>800){
-       const images = Array.from(document.images);
-       await Promise.all(
-         images.map((img) => {
-           if (img.complete) return Promise.resolve();
-           return new Promise((resolve) => {
-             img.onload = img.onerror = resolve;
-           });
-         })
-       );
-         }
-       if (document.fonts && document.fonts.ready) {
-         await document.fonts.ready;
-       }
- 
-       await new Promise((res) => setTimeout(res, 300)); // optional delay
- 
-       if (!isCancelled) setLoading(false);
-     }
- 
-     waitForResources();
- 
-     return () => {
-       isCancelled = true;
-     };
-   }, [widthBody]);
+  const typing_Style=useRef()
+  useEffect(()=>{
+    // document.body.style.animation
+    function MakeTypeEffect() {
+      console.log(typing_Style.current.clientWidth)
+      const widthofContent=typing_Style.current.clientWidth;
+       typing_Style.current.style.animation="changeWidth 5s linear";
+       typing_Style.current.style.setProperty("--widthoftypingContent", `${widthofContent}px`);
+       setTimeout(()=>{
+        if(changeWords===true){
+          setChangeWords(false)
+        }else{
+          setChangeWords(true)
+        }
+      },[2500])
+      setTimeout(()=>{
+        typing_Style.current.style.animation="none";
+      },[5000])
+    }
+    const interval=setInterval(MakeTypeEffect,[8000])
+     return () => clearInterval(interval);
+  },[changeWords,typing_Style])
 
   return (
     <div className="frontmain">
-      <FrondLoader loading={loading}/>
-      <Backspace loading={loading}/>
       <Header />
       <main>
         <div className="homeView">
@@ -63,7 +50,10 @@ export default function useMainpage() {
                   Asfar Muhammed
                   {/* <img src={loffyhat} alt="luffyhat" className="luffyhat"/> */}
                 </h2>
-                <h4 >I'm a Mern Stack Developer</h4>
+                <div className="typing_effect" ref={typing_Style}>
+                  {changeWords ? <h4 >I'm a Mern Stack Developer</h4>: <h4 >I'm a Full Stack Developer</h4>}
+                   <samp style={{backgroundColor:listcolor.fontcolor}}></samp>
+                </div>
                 <p>
                   I create sleek, responsive websites from front to back.
                   Explore my projects and see what I’m building
@@ -101,7 +91,7 @@ export default function useMainpage() {
         </div>
         <SecondView />
         <Thirdsection />
-        <Contact loading={loading}/>
+        <Contact loading={frondloading}/>
       </main>
        <Footer /> 
     </div>

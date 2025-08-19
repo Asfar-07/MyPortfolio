@@ -36,9 +36,10 @@
     /* background-color: blueviolet; */
 }
 .maincontactpart{
+    position: absolute;
+    right: 0px;
     width: 70%;
     min-width: 600px;
-    padding-left: 50px;
 }
 .contacttittle{
     margin: 10px 0;

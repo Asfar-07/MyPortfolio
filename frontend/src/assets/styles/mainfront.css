@@ -116,7 +116,6 @@ letter-spacing: 0.5px;
 line-height: 1.4;
 text-transform: uppercase;
   font-family:versa-versa;
-  width: 400px;
   display: flex;
     white-space: nowrap;
 }
@@ -129,36 +128,7 @@ text-transform: uppercase;
   bottom: 240px;
   animation: fall 5s 2s linear forwards , fall2 30s 8s linear forwards;
 }
-@keyframes fall {
-  0% {
-    transform: translate(0px, 0px) rotate(32deg);
-    opacity: 0;
-  }
-  20% {
-    transform: translate(-10px, 50px) rotate(15deg);
-  }
-  40% {
-    transform: translate(10px, 100px) rotate(-10deg);
-  }
-  60% {
-    transform: translate(-15px, 150px) rotate(45deg);
-    opacity: 1;
-  }
-  80% {
-    transform: translate(5px, 200px) rotate(-20deg);
-  }
-  100% {
-    transform: translate(0px, 230px) rotate(38deg);
-  }
-}
-@keyframes fall2 {
-  from{
-    transform: translate(0px, 230px) rotate(38deg);
-  }
-  to{
-    transform: translate(2px, 230px) rotate(70deg);
-  }
-}
+
 
 .maincontact p {
  font-size: 16px;
@@ -193,6 +163,72 @@ max-width: 60ch;
   justify-content: center;
   align-items: center;
   font-size: 30px;
+}
+.typing_effect{
+  position: relative;
+  /* background-color: aqua; */
+  width:fit-content;
+  overflow: hidden;
+
+}
+.typing_effect samp{
+  position: absolute;
+  top: 0;
+  /* right: -5px; */
+  right: 0;
+  height: 100%;
+  width: 2px;
+  background-color: rgb(227, 227, 227);
+  animation: typingflashing 1s linear infinite;
+}
+@keyframes changeWidth{
+  0%{
+    width:var(--widthoftypingContent);
+  }
+  50%{
+    width: 0px;
+  }
+  100%{
+    width:var(--widthoftypingContent);
+  }
+}
+@keyframes typingflashing {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+@keyframes fall {
+  0% {
+    transform: translate(0px, 0px) rotate(32deg);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-10px, 50px) rotate(15deg);
+  }
+  40% {
+    transform: translate(10px, 100px) rotate(-10deg);
+  }
+  60% {
+    transform: translate(-15px, 150px) rotate(45deg);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(5px, 200px) rotate(-20deg);
+  }
+  100% {
+    transform: translate(0px, 230px) rotate(38deg);
+  }
+}
+@keyframes fall2 {
+  from{
+    transform: translate(0px, 230px) rotate(38deg);
+  }
+  to{
+    transform: translate(2px, 230px) rotate(70deg);
+  }
 }
 
  @media screen and (width <= 800px) {

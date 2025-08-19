@@ -16,6 +16,7 @@ export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(()=>{
    return localStorage.getItem("theme")|| "dark"
   });
+  const [frondloading,setFrondLoading]=useState(true);
   const listcolor={
     frontcontainer:themecontainer,
     settheme:theme,
@@ -27,7 +28,7 @@ export const ThemeProvider = ({ children }) => {
     let ContainerColor;
     let FontColor;
     let SecondryColor;
-
+    console.log(theme)
     if (theme === "light") {
       NewThem ="dark"
       ContainerColor="#e71b51"
@@ -56,7 +57,7 @@ export const ThemeProvider = ({ children }) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ listcolor, toggleTheme }}>
+    <ThemeContext.Provider value={{ listcolor, toggleTheme,frondloading,setFrondLoading }}>
     {children}
   </ThemeContext.Provider>
   );
