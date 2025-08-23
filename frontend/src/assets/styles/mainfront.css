@@ -171,7 +171,7 @@ max-width: 60ch;
   overflow: hidden;
 
 }
-.typing_effect samp{
+.typing_effect span{
   position: absolute;
   top: 0;
   /* right: -5px; */
@@ -259,7 +259,7 @@ max-width: 60ch;
   }
    .maincontact h4 {
     font-size: 25px;
-    margin: 20px 0;
+    padding: 20px 0;
   }
   .maincontact p {
     font-size: 18px;

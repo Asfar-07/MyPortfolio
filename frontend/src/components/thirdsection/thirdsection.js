@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect, useRef} from "react";
 import "../thirdsection/thirdsection.css";
 import vscode from "./free-visual-studio-code-3d-icon-download-in-png-blend-fbx-gltf-file-formats--microsoft-logo-python-java-c-coding-lang-pack-logos-icons-7578027.webp";
 import figma from "./figmaimg.webp";
@@ -14,6 +14,63 @@ import applicationicon from "./application.webp";
 import { useTheme } from "../../ThemeContext";
 export default function Thirdsection() {
   const { listcolor } = useTheme();
+  const targetTool=useRef();
+  const targetExperience=useRef();
+  const targetWork=useRef();
+
+  useEffect(()=>{
+    const Tool=targetTool.current;
+    const Experience=targetExperience.current;
+    const Work=targetWork.current;
+
+    function ManageAnimation(pointer) {
+      if(pointer.className==="Toolinfo"){
+        pointer.firstElementChild.classList.add("toolAnimation");
+      }
+      if(pointer.className==="Experience"){
+        pointer.firstElementChild.classList.add("experienceAnimation");
+      }
+      if(pointer.className==="work"){
+        pointer.firstElementChild.classList.add("workAnimation");
+      }
+    }
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            ManageAnimation(entry.target);
+            observer.unobserve(entry.target); // Stop observing after the counter is triggered
+          }
+        });
+      },
+      {
+        threshold: 0.5, 
+      }
+    );
+
+    if (Tool) {
+      observer.observe(Tool);
+    }
+    if (Experience) {
+      observer.observe(Experience);
+    }
+    if (Work){
+       observer.observe(Work);
+    }
+    return () => {
+      if (Tool) {
+        observer.unobserve(Tool);
+      }
+       if (Experience) {
+        observer.unobserve(Experience);
+      }
+       if (Work) {
+        observer.unobserve(Experience);
+      }
+    };
+
+  },[])
   let Secondrycolor=listcolor.secondrycolor
   return (
     <div className="Thirdsection" style={{ color: "white"}}>
@@ -24,8 +81,8 @@ export default function Thirdsection() {
         <p className="subhadingskill">Showcasing innovative projects built with cutting-edge technologies, blending<br></br> creativity with functionality and performance.</p>
         </header>
         <div className="Mydatas">
-          <section className="Toolinfo">
-            <div>
+          <section className="Toolinfo" ref={targetTool}>
+            <div >
               <img src={vscode} alt="vscodeicon" loading="lazy"/>
               <img src={figma} alt="figmaicon" loading="lazy"/>
               <img src={mongodb} alt="mongodbicon" loading="lazy"/>
@@ -40,8 +97,8 @@ export default function Thirdsection() {
 
           <samp></samp>
 
-          <section className="Experience">
-            <div>
+          <section className="Experience" ref={targetExperience}>
+            <div >
               <img src={socialicon} alt="socialicon" loading="lazy"/>
               <img src={wifi_icon} alt="wifi-icon" loading="lazy"/>
             </div>
@@ -52,7 +109,7 @@ export default function Thirdsection() {
 
           <samp style={{ backgroundColor: "rgba(0, 229, 255, 1)" }}></samp>
 
-          <section className="work">
+          <section className="work" ref={targetWork}>
             <div>
               <img src={codeicon} alt="codeicon" loading="lazy"/>
               <img src={wwwicon} alt="wwwicon" loading="lazy"/>

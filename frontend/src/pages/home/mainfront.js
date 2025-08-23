@@ -18,7 +18,7 @@ export default function useMainpage() {
   useEffect(()=>{
     // document.body.style.animation
     function MakeTypeEffect() {
-      console.log(typing_Style.current.clientWidth)
+      // console.log(typing_Style.current.clientWidth)
       const widthofContent=typing_Style.current.clientWidth;
        typing_Style.current.style.animation="changeWidth 5s linear";
        typing_Style.current.style.setProperty("--widthoftypingContent", `${widthofContent}px`);
@@ -51,8 +51,7 @@ export default function useMainpage() {
                   {/* <img src={loffyhat} alt="luffyhat" className="luffyhat"/> */}
                 </h2>
                 <div className="typing_effect" ref={typing_Style}>
-                  {changeWords ? <h4 >I'm a Mern Stack Developer</h4>: <h4 >I'm a Full Stack Developer</h4>}
-                   <samp style={{backgroundColor:listcolor.fontcolor}}></samp>
+                  {changeWords ? <h4 >I'm a Mern Stack Developer <span style={{backgroundColor:listcolor.fontcolor}}></span></h4>: <h4 >I'm a Full Stack Developer <span style={{backgroundColor:listcolor.fontcolor}}></span></h4>}
                 </div>
                 <p>
                   I create sleek, responsive websites from front to back.
