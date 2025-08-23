@@ -1,6 +1,6 @@
 import "./App.css";
 import "./Fonts.css";
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./About/About";
 import { useTheme } from "./ThemeContext";
@@ -9,43 +9,44 @@ import Backspace from "./components/backspace";
 import FrondLoader from "./loadingscreen/FrondLoading";
 
 export default function App() {
-  const { listcolor, toggleTheme,frondloading,setFrondLoading } = useTheme();
+  const { listcolor, toggleTheme, frondloading, setFrondLoading } = useTheme();
 
   const [rotate, setRotate] = useState(() => {
     return localStorage.getItem("angle") || "rotate(135deg)";
   });
- const widthBody=document.body
-   useEffect(() => {
-     let isCancelled = false;
-     setFrondLoading(true)
-     async function waitForResources() {
-      if(widthBody.clientWidth>800){
-       const images = Array.from(document.images);
-       await Promise.all(
-         images.map((img) => {
-           if (img.complete) return Promise.resolve();
-           return new Promise((resolve) => {
-             img.onload = img.onerror = resolve;
-           });
-         })
-       );
-         }
-       if (document.fonts && document.fonts.ready) {
-         await document.fonts.ready;
-       }
- 
-       await new Promise((res) => setTimeout(res, 300)); // optional delay
- 
-       if (!isCancelled) setFrondLoading(false);
-     }
- 
-     waitForResources();
- 
-     return () => {
-       isCancelled = true;
-     };
-   }, [widthBody]);
+  const widthBody = document.body;
+  useEffect(() => {
+    let isCancelled = false;
+    setFrondLoading(true);
+    async function waitForResources() {
+      // if(widthBody.clientWidth>800){
+      const images = Array.from(document.images).filter(
+        (img) => img.loading !== "lazy"
+      );
+      await Promise.all(
+        images.map((img) => {
+          if (img.complete) return Promise.resolve();
+          return new Promise((resolve) => {
+            img.onload = img.onerror = resolve;
+          });
+        })
+      );
+      //  }
+      if (document.fonts && document.fonts.ready) {
+        await document.fonts.ready;
+      }
 
+      await new Promise((res) => setTimeout(res, 300)); // optional delay
+
+      if (!isCancelled) setFrondLoading(false);
+    }
+
+    waitForResources();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [widthBody]);
 
   const switchtheme = () => {
     toggleTheme();
@@ -59,8 +60,8 @@ export default function App() {
   };
   return (
     <div className={`App-${listcolor.settheme}`}>
-       <FrondLoader loading={frondloading}/>
-      <Backspace loading={frondloading}/>
+      <FrondLoader loading={frondloading} />
+      <Backspace loading={frondloading} />
       {/* <div className="smallstar"></div> */}
       {/* <div className="spacearound" ref={WebSpace}></div> */}
       <section className="mainswitchmod">

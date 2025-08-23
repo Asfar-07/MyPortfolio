@@ -54,7 +54,7 @@ export default function SecondView() {
         animate={inView ? { y: 0, opacity: 1 } : {}}
         transition={{ duration: 1, ease: "easeOut" }}
       >
-        <img src={iconimage} alt="iconimage" loading="lazy"/>
+        <img src={iconimage} alt="iconimage" />
       </motion.section>
 
       {/* Right content */}
