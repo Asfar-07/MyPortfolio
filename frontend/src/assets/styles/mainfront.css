@@ -100,7 +100,7 @@
   align-items: start;
 }
 .maincontact h2 {
-  margin: 0;
+  margin: 8px 0;
  font-size: 60px; 
 font-weight: 900;
 letter-spacing: 1px;
@@ -257,9 +257,16 @@ max-width: 60ch;
     font-size: 45px;
     line-height: 1;
   }
+
    .maincontact h4 {
     font-size: 25px;
-    padding: 20px 0;
+    margin: 20px 0;
+  }
+  .typing_effect{
+    margin: 20px 0;
+  }
+   .typing_effect h4{
+    margin: 0;
   }
   .maincontact p {
     font-size: 18px;

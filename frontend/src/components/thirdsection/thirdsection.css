@@ -181,7 +181,7 @@
   z-index: 2;
 }
 .workAnimation :nth-child(3) {
-  animation: changeOpacity 1.5s ease-out forwards;
+  animation: changeOpacity 2s ease-out forwards;
 }
 .Mydatas samp {
   width: 70px;

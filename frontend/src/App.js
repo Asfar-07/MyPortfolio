@@ -19,7 +19,6 @@ export default function App() {
     let isCancelled = false;
     setFrondLoading(true);
     async function waitForResources() {
-      // if(widthBody.clientWidth>800){
       const images = Array.from(document.images).filter(
         (img) => img.loading !== "lazy"
       );
@@ -31,7 +30,6 @@ export default function App() {
           });
         })
       );
-      //  }
       if (document.fonts && document.fonts.ready) {
         await document.fonts.ready;
       }
