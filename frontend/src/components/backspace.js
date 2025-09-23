@@ -8,37 +8,7 @@ export default function Backspace({ loading }) {
   const WebSpace = useRef();
   const isFirstRender = useRef(true);
   const sceneAlienShip3D = useRef();
-  useEffect(() => {
-    function createsmallstar() {
-      const numStars = 80;
-      if (WebSpace.current) {
-        for (let i = 0; i < numStars; i++) {
-          const star = document.createElement("div");
-          star.className = "smallstar";
-
-          const size = Math.random() * 2.5 + 1;
-          const top = Math.random() * WebSpace.current.clientHeight;
-          const left = Math.random() * window.innerWidth;
-
-          star.style.width = `${size}px`;
-          star.style.height = `${size}px`;
-          star.style.top = `${top}px`;
-          star.style.left = `${left}px`;
-
-          const duration = 2 + Math.random() * 3;
-          const delay = Math.random() * 3;
-
-          star.style.animationDuration = `${duration}s`;
-          star.style.animationDelay = `${delay}s`;
-
-          WebSpace.current.appendChild(star);
-        }
-      }
-    }
-
-    createsmallstar();
-  }, []);
-
+  
   useEffect(() => {
     function createShootingStar() {
       const star = document.createElement("div");
@@ -73,7 +43,7 @@ export default function Backspace({ loading }) {
     if (!loading) {
       setTimeout(() => {
         makeFirstAsteroid();
-      }, 5000);
+      }, 500);
     }
   }, [loading]);
   useEffect(() => {

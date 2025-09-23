@@ -16,7 +16,6 @@ export default function useMainpage() {
   let containercolor = listcolor.frontcontainer;
   const typing_Style=useRef()
   useEffect(()=>{
-    // document.body.style.animation
     function MakeTypeEffect() {
       // console.log(typing_Style.current.clientWidth)
       const widthofContent=typing_Style.current.clientWidth;

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import "../../assets/styles/footer.css";
 import { useTheme } from "../../ThemeContext";
+import FooterHeader from './footerHeader';
 const typebuilding = ['building1', 'building2', 'building3', 'building4', 'building5'];
 export default function Footer() {
   const [count, setCount] = useState(null);
@@ -215,6 +216,7 @@ export default function Footer() {
 
   return (
     <footer>
+      <FooterHeader />
       <div className="ManageGame" >
         {count !== null && <div className="startcount">{count}</div>}
         {gameOver && (
@@ -235,20 +237,6 @@ export default function Footer() {
           </p>
         </div>
        )}
-      {!true && (
-        <div className='footerLink'>
-          <div>
-          <a href="/" style={{backgroundColor:containercolor}}><i className="fa-brands fa-instagram"></i></a>
-          <a href="/" style={{backgroundColor:containercolor}}><i className="fa-brands fa-facebook-f"></i></a>
-          <a href="/" style={{backgroundColor:containercolor}}><i className="fa-brands fa-twitter"></i></a>
-          <a href="/" style={{backgroundColor:containercolor}}><i className="fa-brands fa-linkedin-in"></i></a>
-          </div>
-          <div style={{backgroundColor:containercolor}}>
-            <i className="fa-solid fa-phone"></i>
-            <a href="/">Direct contact</a>
-            </div>
-        </div>
-        )}
         <span>© 2024 Asfar Muhammed. All Rights Reserved.</span>
       </div>
       <main>
