@@ -17,6 +17,12 @@ export const ThemeProvider = ({ children }) => {
    return localStorage.getItem("theme")|| "dark"
   });
   const [frondloading,setFrondLoading]=useState(true);
+   if(fontcolor==="black"){
+         document.body.style.backgroundColor="#e7e9eb";
+    }else{
+         document.body.style.backgroundColor="black";
+    }
+  // document.body.style.backgroundColor=fontcolor
   const listcolor={
     frontcontainer:themecontainer,
     settheme:theme,
@@ -34,11 +40,13 @@ export const ThemeProvider = ({ children }) => {
       ContainerColor="#e71b51"
       FontColor="white"
       SecondryColor="transparent"
+    
     } else {
       NewThem ="light"
       ContainerColor="#1976d2"
       FontColor="black"
       SecondryColor="#2d3748"
+
     }
     setThemecontainer(ContainerColor)
     setFontcolor(FontColor)

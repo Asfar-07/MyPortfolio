@@ -14,3 +14,11 @@
     font-family: boldfont;
     src: url(../public/fonts/Bluffolk.otf) format('opentype');
 }
+@font-face {
+  font-family: MonoItalic;
+  src: url(../public/fonts/RobotoMono-Italic.ttf);
+}
+@font-face {
+  font-family: interHead;
+  src: url(../public/fonts/InterHead.ttf);
+}

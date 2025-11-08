@@ -216,7 +216,7 @@ export default function Footer() {
 
   return (
     <footer>
-      <FooterHeader />
+      {/* <FooterHeader /> */}
       <div className="ManageGame" >
         {count !== null && <div className="startcount">{count}</div>}
         {gameOver && (

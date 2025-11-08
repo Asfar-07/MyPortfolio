@@ -2,11 +2,11 @@ import "./App.css";
 import "./Fonts.css";
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./About/About";
 import { useTheme } from "./ThemeContext";
 import useMainpage from "./pages/home/mainfront";
 import Backspace from "./components/backspace";
 import FrondLoader from "./loadingscreen/FrondLoading";
+import Skills from "./About/MySkills";
 
 export default function App() {
   const { listcolor, toggleTheme, frondloading, setFrondLoading } = useTheme();
@@ -47,6 +47,7 @@ export default function App() {
   }, [widthBody]);
 
   const switchtheme = () => {
+
     toggleTheme();
     if (rotate === "rotate(135deg)") {
       setRotate("rotate(315deg)");
@@ -77,7 +78,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={useMainpage} />
-          <Route path="/About" Component={About} />
+          <Route path="/About" Component={Skills} />
         </Routes>
       </BrowserRouter>
     </div>

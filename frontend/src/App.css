@@ -8,6 +8,9 @@ body, html{
 }
 *{
   z-index: 5;
+  box-sizing:border-box ;
+  margin: 0;
+  position: relative;
 }
 
 .App-dark{

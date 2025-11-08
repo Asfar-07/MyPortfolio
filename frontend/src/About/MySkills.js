@@ -1,12 +1,12 @@
-import React from "react";
 import "./skills.css";
 import workicon from "./Projecticon.png";
 import Skillicon from "./Skillicon.png";
 import Achievement from "./Achievement.png";
 import { useTheme } from "../ThemeContext";
-import backimage from "./FrameDark.png";
-import backimage2 from "./FrameLight.png";
 import SmallSpinner from "../loadingscreen/SmallLoading"
+import Footer from "../pages/footer/footer";
+import Header from "../components/header/header";
+import Projectwork from "../pages/home/projectwork";
 
 const Skills = () => {
   const { listcolor } = useTheme();
@@ -20,6 +20,9 @@ const Skills = () => {
     setClassStyle="section-skillW"
   }
   return (
+    <div>
+      <Header />
+      <Projectwork />
     <main className="Mainskills">
       <article style={{ borderColor: bordercolor }}>
         <div>
@@ -161,6 +164,8 @@ const Skills = () => {
         </span>
       </div>
     </main>
+        <Footer />
+    </div>
   );
 };
 
