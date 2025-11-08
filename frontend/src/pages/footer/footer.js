@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import "../../assets/styles/footer.css";
-import { useTheme } from "../../ThemeContext";
-import FooterHeader from './footerHeader';
 const typebuilding = ['building1', 'building2', 'building3', 'building4', 'building5'];
 export default function Footer() {
   const [count, setCount] = useState(null);
@@ -9,7 +7,6 @@ export default function Footer() {
   const [started, setStarted] = useState(false);
   const spacegroundRef = useRef(null);
   const shipRef = useRef(null);
-  const countRef = useRef(null);
 
   const collisionIntervalRef = useRef(null);
   const buildobsRef = useRef(null);
@@ -17,8 +14,6 @@ export default function Footer() {
 
   const move = useRef({ up: false, down: false });
   const playerTop = useRef(20);
-  const { listcolor } = useTheme();
-  let containercolor=listcolor.frontcontainer
   const FirstRandomView = () => {
     const spaceground = spacegroundRef.current;
     if (!spaceground) return;

@@ -6,7 +6,6 @@ import { useTheme } from "../../ThemeContext";
 import cvdocument from "../../assets/pdf/resume.pdf";
 import Contact from "../contact/useContactpart";
 import Footer from "../footer/footer";
-import sideImage from "../../assets/image/programmerimg.png";
 import Projectwork from "./projectwork";
 import aboutframe_1 from "../../assets/image/aboutframe_1.jpg";
 import aboutframe_2 from "../../assets/image/aboutframe_2.jpg";
@@ -17,7 +16,7 @@ export default function useMainpage() {
 
   let containercolor = listcolor.frontcontainer;
   let fontColor;
-  if (listcolor.settheme == "dark") {
+  if (listcolor.settheme === "dark") {
     fontColor = "black";
   } else {
     fontColor = "white";

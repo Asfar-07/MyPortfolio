@@ -1,12 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import "../assets/styles/backspace.css";
 import {
-  DispalyAlienship_3D,
   DispalyAsteroid_3D,
 } from "../3Dthree/ControlThree";
 export default function Backspace({ loading }) {
   const WebSpace = useRef();
-  const isFirstRender = useRef(true);
   const sceneAlienShip3D = useRef();
   
   useEffect(() => {
@@ -31,7 +29,7 @@ export default function Backspace({ loading }) {
         asteroid.classList.add("randomAsteroid");
         const startY = Math.random() * WebSpace.current.clientHeight;
         const sizeAsteroid = Math.floor(Math.random() * (50 - 20) + 20);
-        const angleAsteroid = Math.floor(Math.random() * 20);
+        // const angleAsteroid = Math.floor(Math.random() * 20);
         asteroid.style.width = sizeAsteroid + "px";
         asteroid.style.height = sizeAsteroid + "px";
         asteroid.style.top = startY + "px";
@@ -58,7 +56,7 @@ export default function Backspace({ loading }) {
       const angleAsteroid = Math.floor(Math.random() * 20);
       const animeduration = Math.floor(Math.random() * (20 - 15) + 15);
       // console.log(animeduration)
-      if (pickside == 1) {
+      if (pickside === 1) {
         asteroid.style.top = startY + "px";
         asteroid.style.left = "-100px";
       } else {

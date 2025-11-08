@@ -44,7 +44,7 @@ export default function App() {
     return () => {
       isCancelled = true;
     };
-  }, [widthBody]);
+  }, [widthBody,setFrondLoading]);
 
   const switchtheme = () => {
 

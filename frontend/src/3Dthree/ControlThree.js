@@ -90,7 +90,7 @@ function DispalyAsteroid_3D(dispalydiv) {
     }
   );
 }
-function DispalyEarth_3D(dispalydiv,setLoading) {
+function DispalyEarth_3D(dispalydiv) {
   const scene = new THREE.Scene();
 
   const camera = new THREE.PerspectiveCamera(

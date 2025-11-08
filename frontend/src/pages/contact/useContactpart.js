@@ -7,7 +7,6 @@ import { DispalyEarth_3D } from "../../3Dthree/ControlThree";
 
 export default function useContactpart({ loading }) {
   const { listcolor } = useTheme();
-  let Secondrycolor = listcolor.secondrycolor;
   // console.log(Secondrycolor)
   const sceneEarth = useRef();
   const [email, setEmail] = useState();
@@ -17,10 +16,9 @@ export default function useContactpart({ loading }) {
   const [Message, setMessage] = useState();
   const [sendloading, setSendLoading] = useState(false);
   const [loadingfinal, setLoadingFinal] = useState(false);
-  const [isloading, setISLoading] = useState(true);
   useEffect(() => {
     if (!loading) {
-      DispalyEarth_3D(sceneEarth.current, setISLoading);
+      DispalyEarth_3D(sceneEarth.current);
     }
   }, [sceneEarth, loading]);
 
