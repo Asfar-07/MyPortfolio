@@ -2,12 +2,6 @@ import "../header/header.css";
 import { useTheme } from "../../ThemeContext";
 export default function Header() {
   const { listcolor } = useTheme();
-  var backgroundColor=""
-  if(listcolor.settheme==="light"){
-    backgroundColor="#e7e9eb"
-  }else{
-    backgroundColor="black"
-  }
   return (
     <>
       <input type="checkbox" id="cancel" style={{ display: "none" }} />
