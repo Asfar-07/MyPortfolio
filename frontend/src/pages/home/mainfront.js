@@ -5,6 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import { useTheme } from "../../ThemeContext";
 import cvdocument from "../../assets/pdf/resume.pdf";
 import Contact from "../contact/useContactpart";
+import Service from "./Service";
 import Footer from "../footer/footer";
 import Projectwork from "./projectwork";
 import aboutframe_1 from "../../assets/image/aboutframe_1.jpg";
@@ -291,6 +292,7 @@ export default function useMainpage() {
           </div>
         </section>
         <Projectwork />
+        <Service />
         <Contact loading={frondloading} />
       </main>
       <Footer />
