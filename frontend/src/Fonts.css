@@ -1,24 +1,20 @@
 @font-face {
   font-family: versa-versa;
-  src: url(../public/fonts/Versa-Versa.otf) format('opentype'); ;
+  src: url(../public/fonts/Versa-Versa.woff2) format('woff2');
 }
 @font-face {
   font-family: Poppins-Thin;
-  src: url(../public/fonts/Poppins-Thin.ttf) format('opentype');
+  src: url(../public/fonts/Poppins-Thin.woff2) format('woff2');
 }
 @font-face {
   font-family: Poppins-Regular;
-  src: url(../public/fonts/Poppins-Regular.ttf) format('opentype');
-}
-@font-face {
-    font-family: boldfont;
-    src: url(../public/fonts/Bluffolk.otf) format('opentype');
+  src: url(../public/fonts/Poppins-Regular.woff2) format('woff2');
 }
 @font-face {
   font-family: MonoItalic;
-  src: url(../public/fonts/RobotoMono-Italic.ttf);
+  src: url(../public/fonts/RobotoMono-Italic.woff2) format('woff2');
 }
 @font-face {
   font-family: interHead;
-  src: url(../public/fonts/InterHead.ttf);
+  src: url(../public/fonts/InterHead.woff2) format('woff2');
 }

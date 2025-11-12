@@ -1,8 +1,8 @@
 import React from 'react'
 import "../../assets/styles/projectworks.css"
-import Project_3 from "../../assets/image/Project_3.png";
-import Project_2 from "../../assets/image/Project_2.png";
-import Project_1 from "../../assets/image/Project_1.png";
+import Project_3 from "../../assets/image/Project_3.jpg";
+import Project_2 from "../../assets/image/Project_2.jpg";
+import Project_1 from "../../assets/image/Project_1.jpg";
 import { useTheme } from "../../ThemeContext";
 export default function Projectwork() {
     
