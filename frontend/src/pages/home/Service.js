@@ -49,10 +49,11 @@ export default function Service() {
       },
     });
     cardsIn.to(headText.current, { opacity: 1, duration: 0.1 });
+    cardsIn.fromTo([leftInner.current, rightInner.current], {opacity:0},{ opacity: 1, duration: 0.1 });
     cardsIn.fromTo(
       leftCard.current,
-      { x: "-500px" },
-      { x: "0", duration: 0.5 }
+      { x: "-500px"},
+      { x: "0" , duration: 0.5 }
     );
     
     cardsIn.fromTo(
@@ -72,6 +73,7 @@ export default function Service() {
       duration: 0.5,
     });
     cardsIn.to(rightCard.current, { x: "500px", duration: 0.5 }, "<");
+    cardsIn.to([leftInner.current, rightInner.current], { opacity: 0, duration: 0.1 });
     cardsIn.to(headText.current, { opacity: 0, duration: 0.1 });
   }, []);
 

@@ -22,7 +22,7 @@ export default function Projectwork() {
           <img src={Project_1} alt="E-Commerce Website" />
           <h3>E-Learning Website</h3>
           <p>
-           Web for education industry and include strong user authentication.
+          Built for the education sector with strong user authentication.
           </p>
           <div className="tech-tags">
             <span>HTML</span>
@@ -64,7 +64,7 @@ export default function Projectwork() {
           <img src={Project_3} alt="Weather App" />
           <h3>Coding Platform </h3>
           <p>
-            Modern online coding platform with virtual coding, and big repository
+           Modern web app with virtual coding and a large code repository.
           </p>
           <div className="tech-tags">
             <span>React</span>

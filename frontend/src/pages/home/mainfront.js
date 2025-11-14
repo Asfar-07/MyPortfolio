@@ -158,11 +158,15 @@ export default function useMainpage() {
             <h3>About Me</h3>
             <h2>Building Meaningful Digital Experiences</h2>
             <p>
-              I’m a Full-Stack Developer skilled in the MERN stack (MongoDB,
-              Express.js, React, Node.js). I specialize in building scalable web
-              applications, managing both front-end and back-end systems from
-              start to finish. I'm passionate about creating clean, robust, and
-              efficient digital solutions.
+              I am a passionate full-stack developer who enjoys creating new,
+              responsive, and performant web apps. My curiosity in how software
+              works evolved into a strong desire to write clean code with a
+              purpose to find real-world solutions. Outside the coding realm,
+              you can find me learning new technologies, sharpening my skills,
+              and exploring more efficient ways to leverage reliability and
+              performance. I am a proponent of continual learning and of
+              presetting an effective coding style with an eye for detail and
+              code should be simple, maintainable and effective.
             </p>
 
             <div className="drive-title">What i know?</div>
@@ -181,9 +185,7 @@ export default function useMainpage() {
                     <span className="skillcolor">GSAP </span>/
                     <span className="skillcolor">JavaScript </span>/
                     <span className="skillcolor">TypeScript </span>/
-                    <span className="skillcolor">React Native </span>/
-                    <span className="skillcolor">Puppeteer </span>/
-                    <span className="skillcolor">Enzyme </span>
+                    <span className="skillcolor">React Native </span>
                   </p>
                 </div>
               </div>
@@ -212,16 +214,24 @@ export default function useMainpage() {
                     <span className="skillcolor">CSS </span>/
                     <span className="skillcolor">SASS </span>/
                     <span className="skillcolor">Bootstrap </span>/
-                    <span className="skillcolor">Figma </span>/
-                    <span className="skillcolor">MUI </span>/
-                    <span className="skillcolor">Material UI </span>
+                    <span className="skillcolor">Tailwind </span>/
+                    <span className="skillcolor">MUI </span>
                   </p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="about-img">
+          <div
+            className="about-img"
+            style={{ flexDirection: "column-reverse" }}
+          >
+            <aside>
+              <p>
+                'Some of my favorite technologies, topics, or tools that I
+                worked with'
+              </p>
+            </aside>
             <img src={aboutframe_1} alt="Profile Illustration" />
           </div>
         </section>
@@ -264,7 +274,7 @@ export default function useMainpage() {
                     <span className="skillcolor">Canva </span>/
                     <span className="skillcolor">PS </span>/
                     <span className="skillcolor">Word </span>/
-                    <span className="skillcolor">PostMan </span>
+                    <span className="skillcolor">Figma </span>
                   </p>
                 </div>
                 <aside className={`link-card-${listcolor.settheme}`}>
@@ -285,9 +295,48 @@ export default function useMainpage() {
                 </aside>
               </div>
             </div>
+            <div className="education-SE">
+              <h4>Education & Experience</h4>
+              <div>
+                <div className="details-E">
+                  <h5>Java Internship</h5>
+                  <p>
+                    Completed a Java Full Stack internship at K-IDE, where I
+                    collaborated on 2+ dynamic, real-world applications.{" "}
+                  </p>
+                </div>
+                <aside className="duration-work">2024-2025</aside>
+              </div>
+              <div>
+                <div className="details-E">
+                  <h5>Java Full Stack</h5>
+                  <p>
+                    Gained hands-on experience with Java, Spring Boot, React,
+                    and database integration.
+                  </p>
+                </div>
+                <aside className="duration-work">6 Month</aside>
+              </div>
+              <div>
+                <div className="details-E">
+                  <h5>BSc Computer Sicence</h5>
+                  <p>
+                    Explored core concepts of computing, including Java
+                    programming, web technologies, and data structures.
+                  </p>
+                </div>
+                <aside className="duration-work">2021-2024</aside>
+              </div>
+            </div>
           </div>
 
           <div className="about-img">
+            <aside>
+              <p>
+                'Some of my favorite technologies, topics, or tools that I
+                worked with'
+              </p>
+            </aside>
             <img src={aboutframe_2} alt="Profile Illustration" />
           </div>
         </section>
