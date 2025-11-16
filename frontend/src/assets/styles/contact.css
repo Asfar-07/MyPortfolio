@@ -181,6 +181,9 @@
   .Earth3D {
     position: absolute;
   }
+  .contactsection {
+    flex-direction: column-reverse;
+  }
   .contactinput {
     width: 100%;
     padding-right: 0px;

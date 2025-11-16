@@ -1,9 +1,9 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import "../../assets/styles/contact.css";
 // import callimage from "../contactpart/pngimg.com - telephone_booth_PNG1.png";
 import LoadingOverlay from "../../loadingscreen/loadingsection";
 import { useTheme } from "../../ThemeContext";
-import { DispalyEarth_3D } from "../../3Dthree/ControlThree";
+// import { DispalyEarth_3D } from "../../3Dthree/ControlThree";
 
 export default function useContactpart({ loading }) {
   const { listcolor } = useTheme();
@@ -16,11 +16,11 @@ export default function useContactpart({ loading }) {
   const [Message, setMessage] = useState();
   const [sendloading, setSendLoading] = useState(false);
   const [loadingfinal, setLoadingFinal] = useState(false);
-  useEffect(() => {
-    if (!loading) {
-      DispalyEarth_3D(sceneEarth.current);
-    }
-  }, [sceneEarth, loading]);
+  // useEffect(() => {
+  //   if (!loading) {
+  //     DispalyEarth_3D(sceneEarth.current);
+  //   }
+  // }, [sceneEarth, loading]);
 
   async function handlesubmit(e) {
     e.preventDefault();

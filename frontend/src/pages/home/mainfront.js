@@ -3,17 +3,22 @@ import "../../assets/styles/mainfront.css";
 import Header from "../../components/header/header";
 import { useState, useEffect, useRef } from "react";
 import { useTheme } from "../../ThemeContext";
-import cvdocument from "../../assets/pdf/resume.pdf";
+import cvdocument from "../../assets/pdf/ASFAR_MUHAMMED_N_S_Resume.pdf";
 import Contact from "../contact/useContactpart";
 import Service from "./Service";
 import Footer from "../footer/footer";
 import Projectwork from "./projectwork";
 import aboutframe_1 from "../../assets/image/aboutframe_1.jpg";
 import aboutframe_2 from "../../assets/image/aboutframe_2.jpg";
+import gsap from "gsap";
 
 export default function useMainpage() {
   const { listcolor, frondloading } = useTheme();
   const [changeWords, setChangeWords] = useState(true);
+  const containerMain=useRef();
+  const textHead_About=useRef();
+  const leftabout_1=useRef();
+   const rightabout_1=useRef();
 
   let containercolor = listcolor.frontcontainer;
   let fontColor;
@@ -74,11 +79,74 @@ export default function useMainpage() {
     give_ColorToText();
   }, []);
 
+useEffect(() => {
+  if (!frondloading) {
+  gsap.fromTo(
+    containerMain.current,
+    { opacity: 0, y: 100 },
+    {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power3.out",
+    }
+  )
+
+    gsap.fromTo(
+    textHead_About.current,
+    { opacity: 0 },
+    {
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: textHead_About.current,
+        start: "top 75%",
+        once: true, 
+      },
+    }
+  )
+
+   gsap.fromTo(
+    leftabout_1.current,
+    { opacity: 0,x:150 },
+    {
+      opacity: 1,
+      x:0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: leftabout_1.current,
+        start: "top 85%",
+        once: true, 
+      },
+    }
+  )
+
+   gsap.fromTo(
+    rightabout_1.current,
+    { opacity: 0,x:-150 },
+    {
+      opacity: 1,
+      duration: 1,
+      x:0,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: rightabout_1.current,
+        start: "top 85%",
+        once: true, 
+      },
+    }
+  )
+
+}
+}, [frondloading]);
+
   return (
     <div className="frontmain">
       <Header />
       <main>
-        <div className="homeView">
+        <div className="homeView" ref={containerMain}>
           <section className="leftfront">
             <h1>
               Hi, I'm <span>Asfar</span>
@@ -155,8 +223,11 @@ export default function useMainpage() {
         {/* About Me Section */}
         <section className="about-me" id="about-me">
           <div className="about-text-me">
-            <h3>About Me</h3>
-            <h2>Building Meaningful Digital Experiences</h2>
+            <div ref={textHead_About}>
+               <h3 >About Me</h3>
+            <h2 >Building Meaningful Digital Experiences</h2>
+            </div>
+            <div ref={leftabout_1}>
             <p>
               I am a passionate full-stack developer who enjoys creating new,
               responsive, and performant web apps. My curiosity in how software
@@ -190,7 +261,7 @@ export default function useMainpage() {
                 </div>
               </div>
 
-              {/* Style */}
+             {/* Style */}
               <div className="card-skill">
                 <aside className={`link-card-${listcolor.settheme}`}>
                   <a
@@ -221,7 +292,7 @@ export default function useMainpage() {
               </div>
             </div>
           </div>
-
+          </div>
           <div
             className="about-img"
             style={{ flexDirection: "column-reverse" }}
@@ -242,7 +313,7 @@ export default function useMainpage() {
           id="about-me-back"
           style={{ flexDirection: "row-reverse" }}
         >
-          <div className="about-text-me">
+          <div className="about-text-me" ref={rightabout_1}>
             <div className="cards-skill">
               {/* Back-End */}
               <div className="card-skill">
