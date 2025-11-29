@@ -43,7 +43,7 @@ export default function Projectwork() {
         >
           {/* Project 1 */}
           <div className="project-card">
-            <img src={Project_1} alt="E-Commerce Website" />
+            <img src={Project_1} alt="E-Commerce Website" loading="lazy"/>
             <h3>E-Learning Website</h3>
             <p>
               Built for the education sector with strong user authentication.
@@ -65,7 +65,7 @@ export default function Projectwork() {
 
           {/* Project 2 */}
           <div className="project-card">
-            <img src={Project_2} alt="Portfolio Website" />
+            <img src={Project_2} alt="Portfolio Website" loading="lazy"/>
             <h3>Portfolio Website</h3>
             <p>Personal portfolio to showcase my design and coding projects.</p>
             <div className="tech-tags">
@@ -85,7 +85,7 @@ export default function Projectwork() {
 
           {/* Project 3 */}
           <div className="project-card">
-            <img src={Project_3} alt="Weather App" />
+            <img src={Project_3} alt="Weather App" loading="lazy"/>
             <h3>Coding Platform </h3>
             <p>
               Modern web app with virtual coding and a large code repository.

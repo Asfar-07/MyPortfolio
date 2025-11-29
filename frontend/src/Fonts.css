@@ -18,3 +18,7 @@
   font-family: interHead;
   src: url(../public/fonts/InterHead.woff2) format('woff2');
 }
+@font-face {
+  font-family: Anton;
+  src: url(../public/fonts/Anton-Regular.ttf);
+}

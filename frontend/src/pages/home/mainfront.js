@@ -11,6 +11,7 @@ import Projectwork from "./projectwork";
 import aboutframe_1 from "../../assets/image/aboutframe_1.jpg";
 import aboutframe_2 from "../../assets/image/aboutframe_2.jpg";
 import gsap from "gsap";
+import AfterService from "./afterservice";
 
 export default function useMainpage() {
   const { listcolor, frondloading } = useTheme();
@@ -413,6 +414,7 @@ useEffect(() => {
         </section>
         <Projectwork />
         <Service />
+        <AfterService />
         <Contact loading={frondloading} />
       </main>
       <Footer />

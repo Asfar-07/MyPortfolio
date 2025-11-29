@@ -24,7 +24,7 @@ export default function Service() {
       scrollTrigger: {
         trigger: animationSection.current,
         start: "20% bottom",
-        end: "85% top",
+        end: "87% top",
         scrub: true,
         // markers: true,
         invalidateOnRefresh: true,

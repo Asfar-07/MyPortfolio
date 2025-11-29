@@ -34,7 +34,7 @@ export default function App() {
         await document.fonts.ready;
       }
 
-      await new Promise((res) => setTimeout(res, 300)); // optional delay
+      await new Promise((res) => setTimeout(res, 300));
 
       if (!isCancelled) setFrondLoading(false);
     }

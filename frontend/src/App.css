@@ -13,6 +13,7 @@ body, html{
   position: relative;
 }
 
+
 .App-dark{
     background-color: #000000;
     color: #ffffff;
@@ -48,7 +49,7 @@ body, html{
     transition: .5s ;
   }
   
-  .switchmod :last-child{
+  .switchmod > :last-child{
     margin: 0;
     position: absolute;
     top: 0;
@@ -62,14 +63,14 @@ body, html{
     justify-content: end;
     align-items: center;
   }
-  .fa-sun::before{
+  .fa-sun{
     color: rgb(0, 0, 0);
     font-size: 35px;
     font-weight: 600;
     position: relative;
     left: -13px;
   }
-  .fa-moon::before{
+  .fa-moon{
     color: rgb(255, 255, 255);
     font-size: 35px;
     font-weight: 600;
