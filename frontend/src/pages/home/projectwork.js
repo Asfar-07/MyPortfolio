@@ -13,7 +13,7 @@ export default function Projectwork() {
   useEffect(() => {
     gsap.fromTo(
       containerPorject.current,
-      { opacity: 0 },
+      { opacity: 0, y: 100 },
       {
         opacity: 1,
         y: 0,

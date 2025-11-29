@@ -1,14 +1,14 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import "../../assets/styles/contact.css";
 // import callimage from "../contactpart/pngimg.com - telephone_booth_PNG1.png";
 import LoadingOverlay from "../../loadingscreen/loadingsection";
 import { useTheme } from "../../ThemeContext";
 // import { DispalyEarth_3D } from "../../3Dthree/ControlThree";
 
-export default function useContactpart({ loading }) {
+export default function useContactpart() {
   const { listcolor } = useTheme();
   // console.log(Secondrycolor)
-  const sceneEarth = useRef();
+  // const sceneEarth = useRef();
   const [email, setEmail] = useState();
   const [firstname, setFirstName] = useState();
   const [secondname, setLastName] = useState();
@@ -97,7 +97,7 @@ export default function useContactpart({ loading }) {
               </a>
             </div>
             
-          <div className={`Earth3D-${listcolor.settheme}`} ref={sceneEarth} id="Earth3DScene"></div>
+          {/* <div className={`Earth3D-${listcolor.settheme}`} ref={sceneEarth} id="Earth3DScene"></div> */}
         </section>
         <section className="maincontactpart">
           <h2 className="contacttittle">Say hello.... to contact</h2>
