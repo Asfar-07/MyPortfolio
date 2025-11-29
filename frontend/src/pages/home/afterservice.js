@@ -26,7 +26,6 @@ export default function AfterService() {
           scrollTrigger: {
             trigger: main_Heading.current,
             start: "top 70%",
-            markers: true,
             once: true,
           },
         }
