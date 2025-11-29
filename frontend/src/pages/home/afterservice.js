@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 // import { DispalyAlienship_3D } from "../../3Dthree/ControlThree";
 import "../../assets/styles/afterservice.css";
-// import { gsap } from "gsap/gsap-core";
+import { gsap } from "gsap/gsap-core";
 
 export default function AfterService() {
   const Alien_Ship_3D = useRef();
@@ -13,26 +13,26 @@ export default function AfterService() {
   // useEffect(() => {
   //   DispalyAlienship_3D(Alien_Ship_3D.current);
   // }, []);
-  // useEffect(() => {
-  //   if (main_Heading.current) {
-  //     gsap.fromTo(
-  //       main_Heading.current,
-  //       { opacity: 0, y: 100 },
-  //       {
-  //         opacity: 1,
-  //         y: 0,
-  //         duration: 1.5,
-  //         ease: "power3.out",
-  //         scrollTrigger: {
-  //           trigger: main_Heading.current,
-  //           start: "top 70%",
-  //           markers: true,
-  //           once: true,
-  //         },
-  //       }
-  //     );
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (main_Heading.current) {
+      gsap.fromTo(
+        main_Heading.current,
+        { opacity: 0, y: 100 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: main_Heading.current,
+            start: "top 70%",
+            markers: true,
+            once: true,
+          },
+        }
+      );
+    }
+  }, []);
   // useEffect(() => {
   //   function moveBoxToO() {
   //     const sideRect = Main_alien_Ship_3D.current.getBoundingClientRect();
