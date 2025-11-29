@@ -369,7 +369,7 @@ useEffect(() => {
             </div>
             <div className="education-SE">
               <h4>Education & Experience</h4>
-              <div>
+              {/* <div>
                 <div className="details-E">
                   <h5>Java Internship</h5>
                   <p>
@@ -378,7 +378,7 @@ useEffect(() => {
                   </p>
                 </div>
                 <aside className="duration-work">2024-2025</aside>
-              </div>
+              </div> */}
               <div>
                 <div className="details-E">
                   <h5>Java Full Stack</h5>
