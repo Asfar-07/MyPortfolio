@@ -14,29 +14,62 @@ export default function App() {
   const [rotate, setRotate] = useState(() => {
     return localStorage.getItem("angle") || "rotate(135deg)";
   });
+  const [progress, setProgress] = useState(0);
   const widthBody = document.body;
   useEffect(() => {
     let isCancelled = false;
     setFrondLoading(true);
+
+    const updateProgress = (value) => {
+      setProgress((prev) => {
+        const next = Math.min(100, Math.max(prev, value));
+        return next;
+      });
+    };
+
     async function waitForResources() {
+      let progress = 0;
+      updateProgress(progress);
+
       const images = Array.from(document.images).filter(
         (img) => img.loading !== "lazy"
       );
+
+      const totalSteps = images.length + 1; // +1 for fonts
+      let completedSteps = 0;
+
+      // ---- Image Loading ----
       await Promise.all(
         images.map((img) => {
-          if (img.complete) return Promise.resolve();
+          if (img.complete) {
+            completedSteps++;
+            updateProgress(Math.floor((completedSteps / totalSteps) * 100));
+            return Promise.resolve();
+          }
+
           return new Promise((resolve) => {
-            img.onload = img.onerror = resolve;
+            img.onload = img.onerror = () => {
+              completedSteps++;
+              updateProgress(Math.floor((completedSteps / totalSteps) * 100));
+              resolve();
+            };
           });
         })
       );
+
+      // ---- Fonts Loading ----
       if (document.fonts && document.fonts.ready) {
         await document.fonts.ready;
+        completedSteps++;
+        updateProgress(Math.floor((completedSteps / totalSteps) * 100));
       }
-
+      // Optional smooth delay before complete
       await new Promise((res) => setTimeout(res, 300));
 
-      if (!isCancelled) setFrondLoading(false);
+      if (!isCancelled) {
+        updateProgress(100);
+        setFrondLoading(false);
+      }
     }
 
     waitForResources();
@@ -44,10 +77,9 @@ export default function App() {
     return () => {
       isCancelled = true;
     };
-  }, [widthBody,setFrondLoading]);
+  }, [widthBody, setFrondLoading]);
 
   const switchtheme = () => {
-
     toggleTheme();
     if (rotate === "rotate(135deg)") {
       setRotate("rotate(315deg)");
@@ -59,7 +91,7 @@ export default function App() {
   };
   return (
     <div className={`App-${listcolor.settheme}`}>
-      <FrondLoader loading={frondloading} />
+      <FrondLoader loading={frondloading} valueloading={progress} />
       <Backspace loading={frondloading} />
       {/* <div className="smallstar"></div> */}
       {/* <div className="spacearound" ref={WebSpace}></div> */}

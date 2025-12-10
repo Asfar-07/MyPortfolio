@@ -369,16 +369,16 @@ useEffect(() => {
             </div>
             <div className="education-SE">
               <h4>Education & Experience</h4>
-              {/* <div>
+              <div>
                 <div className="details-E">
                   <h5>Java Internship</h5>
                   <p>
-                    Completed a Java Full Stack internship at K-IDE, where I
+                    Completed a Java Full Stack internship at  OXOPIX BUSINESS SOLUTIONS, where I
                     collaborated on 2+ dynamic, real-world applications.{" "}
                   </p>
                 </div>
                 <aside className="duration-work">2024-2025</aside>
-              </div> */}
+              </div>
               <div>
                 <div className="details-E">
                   <h5>Java Full Stack</h5>

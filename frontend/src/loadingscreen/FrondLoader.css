@@ -8,9 +8,30 @@
   align-items: center;
   justify-content: center;
   z-index: 9999;
+  font-family: sans-serif;
 }
 .fade-in {
   animation: fadeIn 1.5s ease-in-out infinite alternate;
+}
+.loading-Scale{
+  position: relative;
+  width: 28%;
+  height: 15px;
+  background-color: white;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.loader-screen p{
+  margin: 10px 0;
+}
+.loading-Scale> div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #da0054;
+  transition: width 0.3s ease;
 }
 .front-loader-spin{
   width: 50px;
