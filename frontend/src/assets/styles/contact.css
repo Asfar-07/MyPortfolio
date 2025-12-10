@@ -1,5 +1,5 @@
 .contactsection {
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 10px auto 140px auto;
   padding: 2rem;
   display: flex;
@@ -212,4 +212,34 @@
   .contactsubmit {
     justify-content: center;
   }
+}
+@media (min-width: 1600px) {
+  .contactsection {
+    max-width: 1300px;
+  }
+ .tittlecontact p {
+  font-size: 20px;
+ }
+ .tittlecontact ul li {
+  font-size: 20px;
+ }
+}
+@media (min-width: 2000px) {
+  .contactsection {
+    max-width: 1600px;
+  }
+   .tittlecontact p {
+  font-size: 20px;
+ }
+ .tittlecontact ul li {
+  font-size: 20px;
+ }
+
+}
+@media (max-width: 1024px) {
+  .contactsection {
+    max-width: 850px;
+    padding: 1.8rem;
+  }
+  
 }

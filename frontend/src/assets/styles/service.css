@@ -135,3 +135,40 @@
     display: none;
   }
 }
+@media (min-width: 1600px) {
+  .service-card-main {
+    max-width: 1300px;
+  }
+  .service-card p {
+    font-size: 16px;
+}
+.service-card h3 {
+    font-size: 20px;
+}
+.service-card {
+    width: 350px;
+    height: 350px;
+}
+}
+@media (min-width: 2000px) {
+  .service-card-main {
+    max-width: 1600px;
+  }
+   .service-card p {
+    font-size: 16px;
+}
+.service-card h3 {
+    font-size: 20px;
+}
+.service-card {
+    width: 350px;
+    height: 350px;
+}
+}
+@media (max-width: 1024px) {
+  .service-card-main {
+    max-width: 850px;
+    padding: 1.8rem;
+  }
+  
+}
