@@ -5,8 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useTheme } from "./ThemeContext";
 import useMainpage from "./pages/home/mainfront";
 import Backspace from "./components/backspace";
-import FrondLoader from "./loadingscreen/FrondLoading";
-import Skills from "./About/MySkills";
+import FrondLoader from "./components/loadingscreen/FrondLoading";
+import Skills from "./pages/about/MySkills";
 
 export default function App() {
   const { listcolor, toggleTheme, frondloading, setFrondLoading } = useTheme();
@@ -110,7 +110,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" Component={useMainpage} />
-          <Route path="/About" Component={Skills} />
+          <Route path="/Skills" Component={Skills} />
         </Routes>
       </BrowserRouter>
     </div>

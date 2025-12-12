@@ -15,13 +15,16 @@ export default function Header() {
             A
           </a>
           <div className="Links">
-            <a href="/" style={{ color: listcolor.fontcolor }}>
+            <a href="/#home" style={{ color: listcolor.fontcolor }}>
               Home
             </a>
-            <a href="/About" style={{ color: listcolor.fontcolor }}>
+            <a href="#about-me" style={{ color: listcolor.fontcolor }}>
               About
             </a>
-            <a href="/#contactsection" style={{ color: listcolor.fontcolor }}>
+             <a href="#Service" style={{ color: listcolor.fontcolor }}>
+             Service
+            </a>
+            <a href="#contactsection" style={{ color: listcolor.fontcolor }}>
               Contact
             </a>
           </div>

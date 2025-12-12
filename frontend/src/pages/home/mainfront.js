@@ -144,7 +144,7 @@ useEffect(() => {
 }, [frondloading]);
 
   return (
-    <div className="frontmain">
+    <div className="frontmain" id="home">
       <Header />
       <main>
         <div className="homeView" ref={containerMain}>

@@ -78,7 +78,7 @@ export default function Service() {
   }, []);
 
   return (
-    <section className="my-service" ref={animationSection}>
+    <section className="my-service" ref={animationSection} id="Service">
       <div className="spaceship-bg" ref={animationElement}></div>
       <div className="service-container" id="cards">
         <div className="service-card-main">

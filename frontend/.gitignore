@@ -10,6 +10,8 @@
 
 # production
 /build
+.env
+/src/components/testing
 
 # misc
 .DS_Store

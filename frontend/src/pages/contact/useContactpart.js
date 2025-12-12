@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../assets/styles/contact.css";
 // import callimage from "../contactpart/pngimg.com - telephone_booth_PNG1.png";
-import LoadingOverlay from "../../loadingscreen/loadingsection";
+import LoadingOverlay from "../../components/loadingscreen/loadingsection";
 import { useTheme } from "../../ThemeContext";
 // import { DispalyEarth_3D } from "../../3Dthree/ControlThree";
 
