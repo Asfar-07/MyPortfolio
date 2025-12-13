@@ -48,9 +48,9 @@ export default function Projectwork() {
               Built for the education sector with strong user authentication.
             </p>
             <div className="tech-tags">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Java</span>
+              <a href="/Skills"> HTML</a>
+              <a href="/Skills">CSS</a>
+              <a href="/Skills">Java</a>
             </div>
             <div className="project-links">
               <a href="https://github.com/Asfar-07" className="btn-outline">
@@ -68,9 +68,9 @@ export default function Projectwork() {
             <h3>Portfolio Website</h3>
             <p>Personal portfolio to showcase my design and coding projects.</p>
             <div className="tech-tags">
-              <span>React JS</span>
-              <span>Three Js</span>
-              <span>Node</span>
+              <a href="/Skills">React JS</a>
+              <a href="/Skills">Three Js</a>
+              <a href="/Skills">Node</a>
             </div>
             <div className="project-links">
               <a href="https://github.com/Asfar-07" className="btn-outline">
@@ -90,9 +90,9 @@ export default function Projectwork() {
               Modern web app with virtual coding and a large code repository.
             </p>
             <div className="tech-tags">
-              <span>React</span>
-              <span>Flask</span>
-              <span>MSql</span>
+              <a href="/Skills">React</a>
+              <a href="/Skills">Flask</a>
+              <a href="/Skills">MSql</a>
             </div>
             <div className="project-links">
               <a href="https://github.com/Asfar-07" className="btn-outline">
