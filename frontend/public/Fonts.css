@@ -1,24 +1,30 @@
 @font-face {
   font-family: versa-versa;
   src: url(/fonts/Versa-Versa.woff2) format('woff2');
+  font-display: swap;
 }
 @font-face {
   font-family: Poppins-Thin;
   src: url(/fonts/Poppins-Thin.woff2) format('woff2');
+  font-display: swap;
 }
 @font-face {
   font-family: Poppins-Regular;
   src: url(/fonts/Poppins-Regular.woff2) format('woff2');
+  font-display: swap;
 }
 @font-face {
   font-family: MonoItalic;
   src: url(/fonts/RobotoMono-Italic.woff2) format('woff2');
+  font-display: swap;
 }
 @font-face {
   font-family: interHead;
   src: url(/fonts/InterHead.woff2) format('woff2');
+  font-display: swap;
 }
 @font-face {
   font-family: Anton;
   src: url(/fonts/Anton-Regular.ttf);
+  font-display: swap;
 }
