@@ -1,6 +1,5 @@
 import "./App.css";
-import "./Fonts.css";
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState} from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useTheme } from "./ThemeContext";
 import useMainpage from "./pages/home/mainfront";
@@ -14,71 +13,10 @@ export default function App() {
   const [rotate, setRotate] = useState(() => {
     return localStorage.getItem("angle") || "rotate(135deg)";
   });
-  const [progress, setProgress] = useState(0);
-  const widthBody = document.body;
-  useEffect(() => {
-    let isCancelled = false;
-    setFrondLoading(true);
-
-    const updateProgress = (value) => {
-      setProgress((prev) => {
-        const next = Math.min(100, Math.max(prev, value));
-        return next;
-      });
-    };
-
-    async function waitForResources() {
-      let progress = 0;
-      updateProgress(progress);
-
-      const images = Array.from(document.images).filter(
-        (img) => img.loading !== "lazy"
-      );
-
-      const totalSteps = images.length + 1; // +1 for fonts
-      let completedSteps = 0;
-
-      // ---- Image Loading ----
-      await Promise.all(
-        images.map((img) => {
-          if (img.complete) {
-            completedSteps++;
-            updateProgress(Math.floor((completedSteps / totalSteps) * 100));
-            return Promise.resolve();
-          }
-
-          return new Promise((resolve) => {
-            img.onload = img.onerror = () => {
-              completedSteps++;
-              updateProgress(Math.floor((completedSteps / totalSteps) * 100));
-              resolve();
-            };
-          });
-        })
-      );
-
-      // ---- Fonts Loading ----
-      if (document.fonts && document.fonts.ready) {
-        await document.fonts.ready;
-        completedSteps++;
-        updateProgress(Math.floor((completedSteps / totalSteps) * 100));
-      }
-      // Optional smooth delay before complete
-      await new Promise((res) => setTimeout(res, 300));
-
-      if (!isCancelled) {
-        updateProgress(100);
-        setFrondLoading(false);
-      }
-    }
-
-    waitForResources();
-
-    return () => {
-      isCancelled = true;
-    };
-  }, [widthBody, setFrondLoading]);
-
+  // const [progress, setProgress] = useState(0);
+  useEffect(()=>{
+    setFrondLoading(false)
+  })
   const switchtheme = () => {
     toggleTheme();
     if (rotate === "rotate(135deg)") {
@@ -91,10 +29,8 @@ export default function App() {
   };
   return (
     <div className={`App-${listcolor.settheme}`}>
-      <FrondLoader loading={frondloading} valueloading={progress} />
+      <FrondLoader loading={frondloading} valueloading={100} />
       <Backspace loading={frondloading} />
-      {/* <div className="smallstar"></div> */}
-      {/* <div className="spacearound" ref={WebSpace}></div> */}
       <section className="mainswitchmod">
         <div
           className="switchmod"
