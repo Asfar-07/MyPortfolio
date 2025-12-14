@@ -13,10 +13,35 @@ export default function App() {
   const [rotate, setRotate] = useState(() => {
     return localStorage.getItem("angle") || "rotate(135deg)";
   });
-  // const [progress, setProgress] = useState(0);
-  useEffect(()=>{
-    setFrondLoading(false)
-  })
+
+   useEffect(() => {
+    let isCancelled = false;
+    setFrondLoading(true);
+    async function waitForResources() {
+      const images = Array.from(document.images).filter(
+        (img) => img.loading !== "lazy"
+      );
+      await Promise.all(
+        images.map((img) => {
+          if (img.complete) return Promise.resolve();
+          return new Promise((resolve) => {
+            img.onload = img.onerror = resolve;
+          });
+        })
+      );
+
+      await new Promise((res) => setTimeout(res, 300));
+
+      if (!isCancelled) setFrondLoading(false);
+    }
+
+    waitForResources();
+
+    return () => {
+      isCancelled = true;
+    };
+  }, [setFrondLoading]);
+
   const switchtheme = () => {
     toggleTheme();
     if (rotate === "rotate(135deg)") {
@@ -29,7 +54,7 @@ export default function App() {
   };
   return (
     <div className={`App-${listcolor.settheme}`}>
-      <FrondLoader loading={frondloading} valueloading={100} />
+      <FrondLoader/>
       <Backspace loading={frondloading} />
       <section className="mainswitchmod">
         <div
