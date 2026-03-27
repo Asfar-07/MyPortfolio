@@ -76,7 +76,6 @@ export default function useContactpart() {
 
           <ul>
             <li><i className="fas fa-envelope"></i> asfarmuhammedns@gmail.com</li>
-            <li><i className="fas fa-phone"></i> +91 9745872676</li>
             <li><i className="fas fa-map-marker-alt"></i> Kerala, India</li>
           </ul>
           <div className="contactiocn">
